@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="step-bar.css">
+
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <h1>Website Title</h1>
+        </div>
+    </nav>
+
+    <div id="step-bar-wrapper" class="step-bar-wrapper">
+    </div>
+    <div style="margin-bottom: 100px;"></div>
+
+    <div class="title-container">
+        <h1 id="dataset-title" style="color:red">
+            Data Title
+        </h1>
+    </div>
+    <button id="nextButton" class="control-btn next">
+        <!-- <span class="arrow">&#10132;</span> -->
+        <span class="arrow">&#8594;</span>
+        <span class="text">Next</span>
+    </button>
+    <button id="prevButton" class="control-btn prev">
+        <span class="text">Prev</span>
+        <span class="arrow">&#8592;</span>
+    </button>
+    <div id="review-content" class="">
+
+        <div id="content-container" class="content-container">
+            <h3>Content here</h3>
+        </div>
+        <div id="labels" class="labels-container">
+
+        </div>
+    </div>
+
+    <div id="download-content" class="hidden">
+        <div class="title-container">
+            <form id="download-form">
+                <label for="user">Reviewer name:</label>
+                <input id="user-input" type="text" name="user" required>
+                <button id="download-btn" type="submit">Donwload</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+<script src="index.js"></script>
+<script src="helper.js"></script>
+
+</html>

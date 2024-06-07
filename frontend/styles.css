@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+#navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-bottom: 48px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.container h1 {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+}
+
+li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+li a:hover {
+    background-color: #555;
+}
+
+.labels-container {
+    position: fixed;
+    bottom: 0;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 60%;
+    min-width: 960px;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 10px 10px 0 0;
+    min-height: 30%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.label-row {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.label-button {
+    min-width: 200px;
+    min-height: 50px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.label-button:hover {
+    background-color: grey;
+}
+
+.selected {
+    background-color: green;
+}
+
+.control-btn {
+    position: fixed;
+    top: 50%;
+    /* Center-height */
+    transform: translateY(-50%);
+    /* Center the button vertically */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    height: 70px;
+    font-size: large;
+}
+
+.control-btn:hover {
+    background-color: #115196;
+}
+
+.next {
+    right: -15px;
+}
+
+.prev {
+    left: -15px;
+}
+
+.control-btn .arrow {
+    margin-right: 5px;
+}
+
+.control-btn .text {
+    display: none;
+}
+
+.control-btn:hover .text {
+    display: inline;
+}
+
+.btn-disabled {
+    background-color: grey;
+}
+
+.btn-disabled:hover {
+    background-color: grey;
+    cursor: default;
+}
+
+.btn-disabled:hover .text {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
