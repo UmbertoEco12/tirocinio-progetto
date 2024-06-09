@@ -149,6 +149,9 @@ function createStepBar(dataset) {
 
         container.appendChild(number);
         container.appendChild(label);
+        container.addEventListener("click", () => {
+            moveToStep(index);
+        })
         wrapper.appendChild(container);
         steps.push(container);
     }
@@ -166,6 +169,9 @@ function createStepBar(dataset) {
 
     container.appendChild(number);
     container.appendChild(label);
+    container.addEventListener("click", () => {
+        moveToStep(dataset.length);
+    })
     wrapper.appendChild(container);
     steps.push(container);
 }
@@ -179,9 +185,13 @@ function updateStepBar() {
         element.classList.remove("completed");
         if (index == currentStep) {
             element.classList.add("active");
+            if (index != steps.length - 1) // do not set the download step
+                element.querySelector(".step-counter").textContent = index + 1;
+
         }
         if (answer != null) {
             element.classList.add("completed");
+            element.querySelector(".step-counter").textContent = "✓";
         }
     }
 }
@@ -196,7 +206,7 @@ function setTitle(text) {
 
 
 function fetchData() {
-    fetch('/execute_writer')
+    fetch('/dataset')
         .then(response => response.json())
         .then(data => {
             if (data.error) {
@@ -236,7 +246,7 @@ downloadForm.addEventListener("submit", (event) => {
 
         choices.push({
             title: title,
-            answer: answer.label
+            answer: answer ? answer.label : null
         });
     }
     const user = document.getElementById("user-input").value;

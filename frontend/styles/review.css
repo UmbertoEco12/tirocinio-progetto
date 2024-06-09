@@ -1,0 +1,120 @@
+.title-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    color: #4d77f5;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow-y: auto;
+}
+
+
+
+.control-btn {
+    position: fixed;
+    top: 50%;
+    /* Center-height */
+    transform: translateY(-50%);
+    /* Center the button vertically */
+    background-color: #b0c2f8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    height: 70px;
+    font-size: large;
+}
+
+.control-btn:hover {
+    background-color: #4d77f5;
+}
+
+.next {
+    right: -15px;
+}
+
+.prev {
+    left: -15px;
+}
+
+.control-btn .arrow {
+    margin-right: 5px;
+
+}
+
+.control-btn .text {
+    display: none;
+}
+
+.control-btn:hover .text {
+    display: inline;
+}
+
+.btn-disabled {
+    background-color: grey;
+    display: none;
+}
+
+.btn-disabled:hover {
+    background-color: grey;
+    cursor: default;
+}
+
+.btn-disabled:hover .text {
+    display: none;
+}
+
+/* download form */
+#download-form {
+    max-width: 300px;
+    /* Adjust as needed */
+    margin: 0 auto;
+}
+
+#download-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#user-input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    /* Bottom line */
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+    outline: none;
+    /* Disable selection outline */
+    color: #4d77f5;
+}
+
+#download-btn {
+    display: block;
+    margin: 0 auto;
+    width: 190px;
+    border-radius: 10px;
+    background-color: white;
+    color: #4d77f5;
+    height: 45px;
+    font-size: large;
+    border: 2px solid #b0c2f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+#download-btn:hover {
+    background-color: #b0c2f8;
+}
