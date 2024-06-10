@@ -45,7 +45,7 @@ function moveToStep(step) {
         // last step
         document.getElementById("review-content").setAttribute("class", "hidden");
         document.getElementById("download-content").setAttribute("class", "");
-        setTitle("Donwload");
+        setTitle("Download");
     }
     else {
         document.getElementById("review-content").setAttribute("class", "");

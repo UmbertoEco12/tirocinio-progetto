@@ -9,7 +9,6 @@ app = Flask(__name__)
 @app.route('/')
 def main():
     return redirect("home")
-    # return send_file('../frontend/home.html')
 
 @app.route('/dataset')
 def get_dataset():
@@ -23,6 +22,10 @@ def get_dataset():
 def get_compare_results():
     res = aggregate_and_structure_data('../reviews/.')
     return jsonify(res)
+
+@app.route('/res/<path:filename>')
+def get_plugin_res(filename):
+    return send_file(f'../plugin/res/{filename}')
 
 # route that returns a frontend file
 @app.route('/<path:filename>')
@@ -41,6 +44,7 @@ def go_to_compare():
 @app.route("/home")
 def go_to_home():
     return send_file('../frontend/pages/home.html')
+
 # Run the app
 if __name__ == '__main__':
     app.run(debug=True)

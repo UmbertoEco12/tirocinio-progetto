@@ -1,0 +1,13 @@
+{
+  "user": "a",
+  "choices": [
+    {
+      "title": "First data",
+      "answer": "answer 1"
+    },
+    {
+      "title": "Second data",
+      "answer": "answer 1"
+    }
+  ]
+}

@@ -29,6 +29,17 @@ class HtmlDataView:
     def add_data(self, html_content) :
         self.content += (html_content)
         return self
+    def add_external_html(self, source_path:str):
+        # add main path:
+        source_path = '../plugin/'+ source_path
+        try:
+            with open(source_path, 'r') as file:
+                content = file.read()
+                self.content += ('\n' + content + '\n')
+            return self
+        except Exception as e:
+            self.content += (f'\nError loading {source_path}, {e}\n')
+            return self
     
     def add_text(self, text: str):
         self.content += (f"<p> {text} </p>")
