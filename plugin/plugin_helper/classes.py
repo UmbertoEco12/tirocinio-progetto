@@ -31,7 +31,7 @@ class HtmlDataView:
         return self
     def add_external_html(self, source_path:str):
         # add main path:
-        source_path = '../plugin/'+ source_path
+        source_path = 'plugin/'+ source_path
         try:
             with open(source_path, 'r') as file:
                 content = file.read()
