@@ -22,3 +22,32 @@ function downloadJSON(jsonData, fileName) {
     // Revoke the URL to release the resources associated with it
     URL.revokeObjectURL(url);
 }
+
+function getPathParameterAt(index) {
+    const path = window.location.pathname;
+    const segments = path.split('/');
+    segments.splice(0, 1); // remove host
+    if (index > segments.length - 1)
+        return null;
+    else
+        return segments[index];
+}
+
+function getArg(name) {
+    // Get the query string from the URL
+    const queryString = window.location.search;
+
+    // Create a URLSearchParams object
+    const urlParams = new URLSearchParams(queryString);
+
+    // Get the value of the 'name' query parameter
+    return urlParams.get(name);
+}
+
+function redirect(path) {
+    window.location.href = path;
+}
+
+function updateUrl(path) {
+    history.pushState({ path: path }, '', path);
+}

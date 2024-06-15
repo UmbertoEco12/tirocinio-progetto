@@ -19,8 +19,6 @@
     overflow-y: auto;
 }
 
-
-
 .control-btn {
     position: fixed;
     top: 50%;
@@ -79,18 +77,18 @@
 }
 
 /* download form */
-#download-form {
+.review-form {
     max-width: 300px;
     /* Adjust as needed */
     margin: 0 auto;
 }
 
-#download-form label {
+.review-form label {
     display: block;
     margin-bottom: 10px;
 }
 
-#user-input {
+.review-input {
     border: none;
     border-bottom: 1px solid #ccc;
     /* Bottom line */
@@ -102,7 +100,7 @@
     color: #4d77f5;
 }
 
-#download-btn {
+.review-btn {
     display: block;
     margin: 0 auto;
     width: 190px;
@@ -115,6 +113,32 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-#download-btn:hover {
+.review-btn:hover {
+    background-color: #b0c2f8;
+}
+
+.name-download-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 20px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+
+}
+
+.download-btn {
+    display: block;
+    margin: 0 auto;
+    margin-left: 20px;
+    border-radius: 10px;
+    background-color: white;
+    color: #4d77f5;
+    border: 2px solid #b0c2f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.download-btn:hover {
     background-color: #b0c2f8;
 }

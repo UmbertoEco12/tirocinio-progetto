@@ -23,6 +23,8 @@ class LabelGroup :
 class HtmlDataView:
     def __init__(self) -> None:
         self.content = ""
+        self.title = None
+
     def set_title(self, title: str) :
         self.title = title
         return self
@@ -49,7 +51,8 @@ class HtmlDataView:
         return self
 
 class DataSet :
-    def __init__(self) -> None:
+    def __init__(self,name :str) -> None:
+        self.name = name
         self.labels = []
         self.dataset = []
         pass
@@ -58,9 +61,13 @@ class DataSet :
         self.labels.append( labels.get_labels())
         return self
     
-    def add_data(self, data : HtmlDataView, label_group: LabelGroup) :
+    def add_data(self,title:str, data : HtmlDataView, label_group: LabelGroup) :
+        # set title of html view if is none
+        if data.title is None:
+            data.set_title(title)
+            
         self.dataset.append({
-            "title" : data.title,
+            "title" : title,
             "content": data.content,
             "label" : label_group.name
             })
@@ -69,6 +76,7 @@ class DataSet :
     def build(self) :
         # Send data to js
         d = {
+            "name" : self.name,
             "labels" : self.labels,
             "dataset" : self.dataset
         }

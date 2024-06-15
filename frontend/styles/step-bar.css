@@ -75,6 +75,11 @@
     background-color: #4d77f5;
 }
 
+.step-bar-item.active.completed .step-counter {
+    font-weight: bold;
+    background-color: #32862e;
+}
+
 .step-bar-item.active .step-counter:hover {
     cursor: default;
 }
@@ -91,7 +96,7 @@
     background-color: #67ff60;
 }
 
-.step-bar-item.completed::after {
+/* .step-bar-item.completed::after {
     position: absolute;
     content: "";
     border-bottom: 2px solid #67ff60;
@@ -99,7 +104,7 @@
     top: 20px;
     left: 50%;
     z-index: 3;
-}
+} */
 
 .step-bar-item:first-child::before {
     content: none;

@@ -46,13 +46,3 @@ def aggregate_and_structure_data(folder_path):
     choice_answer_counts = aggregate_choices_data(folder_path)
     structured_data = structure_data(choice_answer_counts)
     return structured_data
-
-# if __name__ == "__main__":
-#     folder_path = '.'  # Change this to the path of your folder
-#     structured_data = aggregate_and_structure_data(folder_path)
-    
-#     # Print the structured data or write it to a file
-#     print(json.dumps(structured_data, indent=2))
-#     # To write to a file:
-#     # with open('output.json', 'w') as outfile:
-#     #     json.dump(structured_data, outfile, indent=2)

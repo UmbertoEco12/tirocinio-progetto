@@ -7,63 +7,60 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 
-    <link rel="stylesheet" href="styles/common.css">
-    <link rel="stylesheet" href="styles/review.css">
+    <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="/styles/review.css">
 
-    <link rel="stylesheet" href="styles/navbar.css">
-    <link rel="stylesheet" href="styles/label.css">
-    <link rel="stylesheet" href="styles/step-bar.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/label.css">
+    <link rel="stylesheet" href="/styles/step-bar.css">
 </head>
 
 <body>
     <nav id="navbar">
         <div class="container">
             <h1>
-                <a href="home" style="text-decoration: none; color: white;">Website Title</a>
+                <a href="/home" style="text-decoration: none; color: white;">Website Title</a>
             </h1>
+            <div class="name-download-container">
+                <h3 id="nav-username"></h3>
+                <button class="download-btn" id="download-button">⭳</button>
+            </div>
+
         </div>
     </nav>
+    <div style="margin-bottom: 55px;"></div>
 
-    <div id="step-bar-wrapper" class="step-bar-wrapper">
+    <div id="step-bar">
+        <div id="step-bar-wrapper" class="step-bar-wrapper">
+        </div>
+        <div style="margin-bottom: 110px;"></div>
     </div>
-    <div style="margin-bottom: 100px;"></div>
 
     <div class="title-container">
         <h1 id="dataset-title">
-            Data Title
         </h1>
     </div>
-    <button id="nextButton" class="control-btn next">
-        <!-- <span class="arrow">&#10132;</span> -->
+    <button id="next-button" class="control-btn next">
         <span class="arrow">&#8594;</span>
         <span class="text">Next</span>
     </button>
-    <button id="prevButton" class="control-btn prev">
+    <button id="prev-button" class="control-btn prev">
         <span class="text">Prev</span>
         <span class="arrow">&#8592;</span>
     </button>
     <div id="review-content" class="">
-
         <div id="content-container" class="content-container">
-            <h3>Content here</h3>
+            <h3></h3>
         </div>
         <div id="labels" class="labels-container">
 
         </div>
     </div>
-
-    <div id="download-content" class="hidden">
-        <div class="title-container">
-            <form id="download-form">
-                <label for="user">Reviewer:</label>
-                <input id="user-input" type="text" name="user" required>
-                <button id="download-btn" type="submit">Download</button>
-            </form>
-        </div>
-    </div>
-
 </body>
-<script src="src/review.js"></script>
-<script src="src/helper.js"></script>
+
+<script src="/src/helper.js"></script>
+<script src="/src/annotate-page.js"></script>
+
+<script src="/src/review.js"></script>
 
 </html>
