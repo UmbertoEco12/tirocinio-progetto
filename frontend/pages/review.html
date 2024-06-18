@@ -9,9 +9,9 @@
 
     <link rel="stylesheet" href="/styles/common.css">
     <link rel="stylesheet" href="/styles/review.css">
+    <link rel="stylesheet" href="/styles/label.css">
 
     <link rel="stylesheet" href="/styles/navbar.css">
-    <link rel="stylesheet" href="/styles/label.css">
     <link rel="stylesheet" href="/styles/step-bar.css">
 </head>
 
@@ -22,7 +22,9 @@
                 <a href="/home" style="text-decoration: none; color: white;">Website Title</a>
             </h1>
             <div class="name-download-container">
-                <h3 id="nav-username"></h3>
+                <h3>
+                    <a id="nav-username" href="" style="text-decoration: none; color: white;"></a>
+                </h3>
                 <button class="download-btn" id="download-button">⭳</button>
             </div>
 
@@ -31,15 +33,18 @@
     <div style="margin-bottom: 55px;"></div>
 
     <div id="step-bar">
-        <div id="step-bar-wrapper" class="step-bar-wrapper">
-        </div>
-        <div style="margin-bottom: 110px;"></div>
+        <button id="prev-unanswered-btn" class="unanswered-btn prev">
+            <img src="/images/back-arrow.png" width="20px">
+        </button>
+        <button id="next-unanswered-btn" class="unanswered-btn next">
+            <img src="/images/forward-arrow.png" width="20px">
+        </button>
+        <div id="step-bar-wrapper" class="step-bar-wrapper"></div>
+
+        <div style="margin-bottom: 50px;"></div>
     </div>
 
-    <div class="title-container">
-        <h1 id="dataset-title">
-        </h1>
-    </div>
+
     <button id="next-button" class="control-btn next">
         <span class="arrow">&#8594;</span>
         <span class="text">Next</span>
@@ -48,12 +53,15 @@
         <span class="text">Prev</span>
         <span class="arrow">&#8592;</span>
     </button>
-    <div id="review-content" class="">
+    <div id="review-content" class="review-content">
+        <div class="title-container">
+            <h1 id="dataset-title">
+            </h1>
+        </div>
         <div id="content-container" class="content-container">
             <h3></h3>
         </div>
         <div id="labels" class="labels-container">
-
         </div>
     </div>
 </body>

@@ -1,7 +1,13 @@
+html,
 body {
     margin: 0;
     font-family: "Roboto", sans-serif;
     height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
 }
 
 .container h1 {

@@ -1,14 +1,15 @@
 .labels-container {
-    position: fixed;
+    /* position: fixed;
     bottom: 0;
     transform: translateX(-50%);
-    left: 50%;
-    width: 60%;
-    min-width: 960px;
+    left: 50%; */
+    margin-top: 20px;
+    width: 90%;
+    max-width: 1280px;
     background-color: white;
     border: 2px solid #b0c2f8;
     border-radius: 10px 10px 0 0;
-    min-height: 30%;
+    /* min-height: 30%; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -16,7 +17,8 @@
 }
 
 .label-row {
-    margin-top: 30px;
+    /* margin-top: 30px; */
+    padding: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;

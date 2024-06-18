@@ -27,6 +27,15 @@ def go_to_review_username(username):
 def go_to_review():
     return redirect('/username/')
 
+@app.route("/compare/<index>")
+def go_to_compare_at(index):
+    try:
+        index = int(index)
+        return send_file('../frontend/pages/compare-at.html')
+
+    except :
+        return redirect('/compare')
+
 @app.route("/compare")
 def go_to_compare():
     return send_file('../frontend/pages/compare.html')
@@ -45,5 +54,3 @@ def get(filename):
 @app.route('/res/<path:filename>')
 def get_plugin_res(filename):
     return send_file(f'../plugin/res/{filename}')
-
-# dataset

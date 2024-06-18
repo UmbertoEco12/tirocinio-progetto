@@ -1,8 +1,8 @@
 from flask import jsonify, request, make_response
-from server.compare_results import aggregate_and_structure_data
+from server.compare_results import aggregate_and_structure_data, get_dataset_results
 from server.database import Database, Answer
 from server.server import app
-from server.datset import Dataset
+from server.dataset import Dataset
 
 
 db : None | Database = None
@@ -12,7 +12,7 @@ dataset : None | Dataset = None
 def get_data_at(user, index):
     try:
         index = int(index) - 1
-        data = dataset.get_data_at(index, user)
+        data = dataset.get_user_data_at(index, user)
         answered_steps = dataset.get_answered_indices(user)
         return jsonify({'dataset':dataset.name,
                         'labels': data.labels, 
@@ -25,6 +25,38 @@ def get_data_at(user, index):
                         'answers': answered_steps})        
     except ValueError:
         return jsonify(None)
+
+@app.route("/compare/<index>/json")
+def get_compare_at_json(index):
+    try:
+        index = int(index) - 1
+        data = dataset.get_data_at(index)
+        res = get_dataset_results('reviews/.', dataset.name)
+        answers = {}
+        for r in res:
+            answers[r['user']] = None
+            for a in r['answers']:
+                if a['title'] == data.title:
+                    answers[r['user']] = a['label']
+                    break
+        return jsonify({'dataset':dataset.name,
+                        'labels': data.labels, 
+                        'data': {
+                            'title' : data.title,
+                            'content' : data.content
+                        },
+                        'answers': answers})
+    except ValueError:
+        return jsonify(None)
+
+
+@app.route('/dataset/answers/<user>')
+def get_answers(user):
+    answered_steps = dataset.get_answered_indices(user)
+    return jsonify({
+        'answers' : answered_steps,
+        'count' : dataset.get_data_count()
+    })
 
 @app.route('/dataset/<user>', methods=['POST'])
 def save_dataset_label( user):
@@ -51,6 +83,14 @@ def download_datset(user):
     res["answers"] = answers
     print(res)
     return jsonify(res)
+
+@app.route('/dataset/results')
+def get_results():
+    res = get_dataset_results('reviews/.', dataset.name)
+    data = dataset.get_titles_and_labels()
+    return jsonify({
+        'data' : data,
+        'answers':res})
 
 def run():
     global db, dataset

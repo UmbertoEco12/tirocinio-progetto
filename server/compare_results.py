@@ -46,3 +46,29 @@ def aggregate_and_structure_data(folder_path):
     choice_answer_counts = aggregate_choices_data(folder_path)
     structured_data = structure_data(choice_answer_counts)
     return structured_data
+
+class UserAsnwers:
+    def __init__(self, user, answers):
+        self.user = user
+        self.answers = answers
+    def to_dict(self):
+        return {
+            'user' : self.user,
+            'answers' : self.answers
+        }
+
+def get_dataset_results(folder_path, dataset_name):
+    json_files = gather_json_files(folder_path)
+    users = []
+    for json_file in json_files:
+        file_path = os.path.join(folder_path, json_file)
+        data = load_json_file(file_path)
+        try:
+            if data['dataset'] != dataset_name:
+                # not the right dataset result
+                continue
+            user = UserAsnwers(data['user'], data['answers'])
+            users.append(user.to_dict())
+        except KeyError:
+            continue
+    return users

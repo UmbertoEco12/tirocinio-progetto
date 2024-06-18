@@ -6,6 +6,8 @@ class Labels {
         this.selectedButton = null;
         this.divChildren = [];
         this.onSetLabel = onSetLabel;
+        this.lastShow = null;
+        this.onResize();
     }
     #update() {
         this.labelButtons.forEach(button => {
@@ -22,9 +24,27 @@ class Labels {
         })
         this.divChildren.length = 0;
     }
-    set(labels, answer = null) {
+    static maxButtonInRow = 4;
+    onResize() {
+        const desktopSize = 750;
+        const bigDesktop = 1000;
+        if (window.innerWidth >= bigDesktop)
+            Labels.maxButtonInRow = 4;
+        else if (window.innerWidth >= desktopSize)
+            Labels.maxButtonInRow = 3;
+        else if (window.innerWidth < desktopSize) {
+            Labels.maxButtonInRow = 2;
+        }
+        if (this.lastShow)
+            this.show(this.lastShow.labels, this.lastShow.answer);
+    }
+
+    show(labels, answer = null) {
         this.#clear();
-        const maxButtonInRow = 3;
+        this.lastShow = {
+            labels: labels, answer: answer
+        }
+        const maxButtonInRow = Labels.maxButtonInRow;
         function createButtonRowDiv(children) {
             const div = document.createElement("div");
             div.setAttribute("class", "label-row");
@@ -77,16 +97,9 @@ class Labels {
     }
 }
 
-class AnnotatePage {
-    constructor(username, goNext, goPrev, onSetLabel) {
-        this.title = document.getElementById("dataset-title");
-        this.contentContainer = document.getElementById("content-container");
-        this.stepBar = document.getElementById("step-bar");
-        this.nextButton = document.getElementById("next-button");
-        this.prevButton = document.getElementById("prev-button");
-        this.reviewContent = document.getElementById("review-content");
-        this.navUsername = document.getElementById("nav-username");
-        this.navUsername.textContent = username;
+class MoveButtons {
+    constructor(goNext, goPrev) {
+
         this.nextButton = document.getElementById("next-button");
         this.prevButton = document.getElementById("prev-button");
 
@@ -96,15 +109,9 @@ class AnnotatePage {
         this.prevButton.addEventListener("click", () => {
             goPrev();
         });
-        this.labels = new Labels(onSetLabel);
     }
 
-    show(dataset, max, currentIndex) {
-        this.title.textContent = dataset.title;
-        this.contentContainer.innerHTML = dataset.htmlContent;
-
-        this.labels.set(dataset.labels, dataset.answer);
-
+    show(max, currentIndex) {
         this.nextButton.classList.remove("hidden");
         this.prevButton.classList.remove("hidden");
         if (currentIndex <= 1) {
@@ -115,6 +122,20 @@ class AnnotatePage {
             // hide next
             this.nextButton.classList.add("hidden");
         }
+    }
+}
+
+class AnnotateContent {
+    constructor() {
+        this.title = document.getElementById("dataset-title");
+        this.contentContainer = document.getElementById("content-container");
+        this.reviewContent = document.getElementById("review-content");
+
+    }
+
+    show(dataset) {
+        this.title.textContent = dataset.title;
+        this.contentContainer.innerHTML = dataset.htmlContent;
     }
 }
 
@@ -134,6 +155,7 @@ class StepBar {
         this.steps = [];
         this.onStepClicked = onStepClicked;
         this.lastShow = null;
+        this.onResize();
     }
     #clear() {
         this.steps.forEach((step) => {

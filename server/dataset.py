@@ -18,7 +18,7 @@ class Dataset:
         self.name = ""
         self.db = database
 
-    def get_data_at(self, index: int, user: str):
+    def get_user_data_at(self, index: int, user: str):
         if index < 0 or index > self.dataset.__len__() - 1:
             return None
         # get data at index
@@ -32,6 +32,15 @@ class Dataset:
                 answer = label
                 break
         return Data(self.name, labels, data['title'], data['content'], answer)
+    
+    def get_data_at(self, index: int):
+        if index < 0 or index > self.dataset.__len__() - 1:
+            return None
+        # get data at index
+        data = self.dataset[index]
+        # get the labels associated with this data
+        labels = self.labels[int(data["label"])]
+        return Data(self.name, labels, data['title'], data['content'], None)
     
     def get_answered_indices(self, user: str):
         answers = self.db.get_answers(user, self.name)
@@ -67,3 +76,13 @@ class Dataset:
             return True
         except subprocess.CalledProcessError as e:
             return False
+    def get_titles_and_labels(self):
+        res = []
+        for data in self.dataset:            
+            # get the labels associated with this data
+            labels = self.labels[int(data["label"])]
+            res.append({
+                'title' : data['title'],
+                'labels' : labels
+            })
+        return res

@@ -8,15 +8,34 @@
     color: #4d77f5;
 }
 
+.review-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    align-items: center;
+}
+
 .content-container {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 100%;
-    overflow-y: auto;
+    padding-right: 50px;
+    padding-left: 50px;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 500px) {
+    .content-container {
+        max-width: 350px;
+    }
+}
+
+.fake-label-margin {
+    height: 30%;
 }
 
 .control-btn {
@@ -141,4 +160,40 @@
 
 .download-btn:hover {
     background-color: #b0c2f8;
+    transform: scale(1.5);
+}
+
+.unanswered-btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+}
+
+.unanswered-btn {
+    position: fixed;
+    top: 0;
+    margin-top: 55px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    z-index: 50;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 20%;
+
+    background-color: #b0c2f8;
+}
+
+.unanswered-btn:hover {
+    background-color: #4d77f5;
+}
+
+.unanswered-btn.prev {
+    left: 0;
+}
+
+.unanswered-btn.next {
+    right: 0;
 }
