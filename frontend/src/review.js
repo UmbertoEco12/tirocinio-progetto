@@ -102,7 +102,7 @@ function fetchDatasetAt(index, updatePath = true) {
         .catch(error => console.error('Error:', error));
 }
 
-function setLabelOf(label) {
+function onSetLabel(label) {
     fetch(`/dataset/${username}`, {
         method: 'POST',
         headers: {
@@ -126,7 +126,7 @@ function start() {
         })
     annotatePage = new AnnotateContent();
     stepBar = new StepBar(fetchDatasetAt);
-    labels = new Labels(setLabelOf)
+    labels = new Labels(onSetLabel)
     updateUnansweredBtnsVisibility();
     fetchDatasetAt(currentIndex);
     // other stuff

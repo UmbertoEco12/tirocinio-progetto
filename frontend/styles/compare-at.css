@@ -1,0 +1,16 @@
+.answer-info-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.answer-info-label {
+    color: #4d77f5;
+}
+
+.answer-info-text {
+    color: #4d77f5;
+}

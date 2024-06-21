@@ -7,14 +7,17 @@ class Answer:
         self.title = title
         self.label = label
 
+class FixedAnswer:
+    def __init__(self, dataset: str, title: str, label: str) -> None:
+        self.dataset = dataset
+        self.title = title
+        self.label = label
+
 class Database:
     def __init__(self):
         self.db_name = 'data.db'
         conn = sqlite3.connect(self.db_name)
         self.create_tables(conn)
-
-
-        
 
     def create_tables(self, conn):
         cur = conn.cursor()
@@ -26,13 +29,21 @@ class Database:
                             title TEXT NOT NULL,
                             label TEXT,
                             UNIQUE(user, dataset, title)
-                            )
+                            );
             ''')
+        cur.execute('''
+                CREATE TABLE IF NOT EXISTS fixedAnswers(
+                            id INTEGER PRIMARY KEY,                            
+                            dataset TEXT NOT NULL,
+                            title TEXT NOT NULL,
+                            label TEXT,
+                            UNIQUE(dataset, title)
+                            );
+                    ''')
         conn.commit()
-        cur.close()
-        
+        cur.close()        
 
-    def insert_or_update_value(self, answer : Answer):
+    def insert_or_update_answer(self, answer : Answer):
         try:
             conn = sqlite3.connect(self.db_name)
             cur = conn.cursor()
@@ -56,4 +67,39 @@ class Database:
         conn.close()
         return res
 
+    def insert_or_update_fixed_answer(self, answer: FixedAnswer ) :
+        try:
+            conn = sqlite3.connect(self.db_name)
+            cur = conn.cursor()
+            cur.execute('''
+                INSERT OR REPLACE INTO fixedAnswers (dataset, title, label) VALUES (?, ?, ?)
+            ''', (answer.dataset, answer.title, answer.label))
+            conn.commit()
+            cur.close()
+            conn.close()
+        except sqlite3.IntegrityError as e:
+            print(f"IntegrityError: {e}")
         
+    def get_fixed_answer(self, dataset: str, title: str) -> str | None:
+        conn = sqlite3.connect(self.db_name)
+        cur = conn.cursor()
+        cur.execute('''
+            SELECT label FROM fixedAnswers WHERE dataset = ? AND title = ?
+        ''', (dataset, title))
+        res = cur.fetchall()
+        cur.close()
+        conn.close()
+        if res.__len__() > 0:
+            return res[0][0]
+        else:
+            return None
+    def get_fixes(self, dataset: str):
+        conn = sqlite3.connect(self.db_name)
+        cur = conn.cursor()
+        cur.execute('''
+            SELECT title, label FROM fixedAnswers WHERE dataset = ?;
+        ''', (dataset,))
+        res = cur.fetchall()
+        cur.close()
+        conn.close()
+        return res

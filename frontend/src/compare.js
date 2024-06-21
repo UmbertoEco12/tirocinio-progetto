@@ -1,81 +1,60 @@
-// const chartsContainer = document.getElementById("charts-container");
+const datasetName = document.getElementById("dataset-title");
 
-// google.charts.load('current', { 'packages': ['corechart'] });
+const annotatePage = new AnnotateContent()
+const labels = new Labels(onSetLabel);
 
-// function drawChart(title, answers, element) {
+const resultsTable = new Table(5, document.getElementById("results-table"));
+let tabelPaginationControl = new TablePaginationControls(5, () => {
+    if (resultsTable.currentPage < resultsTable.getPageCount()) {
+        goToTablePage(resultsTable.currentPage + 1);
+    }
 
-//     const answerArray = [['Answers', 'Count']];
+},
+    () => {
+        if (resultsTable.currentPage > 1) {
+            goToTablePage(resultsTable.currentPage - 1);
+        }
+    },
+    (i) => {
+        goToTablePage(i);
+    },
+    document.getElementById("pagination-container"));
+let currentPage = Number(getArg("page")) ? Number(getArg("page")) : 1;
 
-//     answers.forEach(answer => {
-//         let ans = answer.label;
-//         if (ans == null) {
-//             ans = "no answer";
-//         }
-//         answerArray.push([ans, answer.count]);
-//     });
-//     const data = google.visualization.arrayToDataTable(answerArray);
-//     const options = {
-//         title: title,
-//         titleTextStyle: {
-//             color: '#4d77f5'
-//         },
-//         legend: {
-//             textStyle: {
-//                 color: '#4d77f5'
-//             }
-//         }
-//     };
-//     let chart = new google.visualization.PieChart(element);
-//     chart.draw(data, options);
-// }
+// Add the event listener for the popstate event
+window.addEventListener('popstate', handleUrlChange);
 
-// function fetchData() {
-//     fetch('/compare-res')
-//         .then(response => response.json())
-//         .then(data => {
-//             if (data.error) {
-//                 console.error('Error:', data.error);
-//             } else {
-//                 console.log('Output:', data);
-//                 // parse stuff and add to dom
-//                 data.results.forEach((res) => {
-//                     let node = document.createElement("div");
-//                     node.setAttribute("class", "piechart");
-//                     chartsContainer.appendChild(node);
-//                     drawChart(res.title, res.answers, node);
-//                 })
-//             }
-//         })
-//         .catch(error => console.error('Error:', error));
-// }
+fetchResults();
 
-// // fetch results when packages are loaded
-// google.charts.setOnLoadCallback(fetchData);
+class AnswerPercentage {
+    constructor(label, percentage) {
+        this.label = label;
+        this.percentage = percentage;
+    }
+};
 
-const resultsTable = document.getElementById("results-table");
+function goToTablePage(page, updatePath = true) {
+    resultsTable.showPage(page);
+    tabelPaginationControl.show(page);
+    if (updatePath)
+        updateUrl(`/compare?page=${page}`);
+}
 
 function fetchResults() {
     fetch('/dataset/results')
         .then(response => response.json())
         .then(res => {
-            console.log("results", res);
             const usersCount = res.answers.length;
-            console.log(usersCount);
             let index = 1;
+            resultsTable.clear();
             res.data.forEach(element => {
-                // create table row
-                const row = document.createElement("tr");
-                // create title name
-                const title = document.createElement("td");
-                title.textContent = element.title;
-                row.appendChild(title);
-                //const answerMap = new Map();
+
                 // create labels map
                 const labelsMap = new Map();
                 element.labels.forEach(label => {
                     labelsMap.set(label, 0);
                 });
-
+                datasetName.textContent = res.dataset;
                 // gather results
                 res.answers.forEach(userAnswer => {
                     // try and find the answer with this title
@@ -85,46 +64,62 @@ function fetchResults() {
                         }
                     })
                 })
-                //answerMap.set(element.title, labelsMap);
-
                 // write answers
-                const resData = document.createElement("td");
-                let answerOverall = "";
+                let answers = [];
                 let totalAnswers = 0;
                 labelsMap.forEach((value, key) => {
                     if (value != 0) {
-                        answerOverall += `${key}: ${(value / usersCount) * 100}%`;
-
+                        answers.push(new AnswerPercentage(key, (value / usersCount) * 100));
                     }
                     totalAnswers += value;
                 });
                 if (totalAnswers < usersCount) {
-                    answerOverall += `no answer: ${((usersCount - totalAnswers) / usersCount) * 100}%`;
+                    answers.push(new AnswerPercentage("no answer", ((usersCount - totalAnswers) / usersCount) * 100));
                 }
-                if (answerOverall == "") {
-                    answerOverall = "No answers";
+                if (answers.length == 0) {
+                    answers.push(new AnswerPercentage("No answers", 0));
                 }
-                resData.textContent = answerOverall;
-                row.appendChild(resData);
                 const i = index;
-                row.addEventListener("click", () => {
+                let fix = null;
+                res.fixes.forEach(elem => {
+                    if (elem[0] == element.title) {
+                        fix = elem[1];
+                        return;
+                    }
+                })
+                // add all rows
+                resultsTable.addRow(createDataRow(element.title, answers, fix, () => {
                     fetchCompareAt(i);
-                });
-                resultsTable.appendChild(row);
+                }));
                 index++;
             });
-
+            tabelPaginationControl.setup(resultsTable.getPageCount(), currentPage);
+            goToTablePage(currentPage);
         });
 }
-
-fetchResults();
 
 function onSetLabel(label) {
     console.log(`${label} selected`);
 }
 
-const annotatePage = new AnnotateContent()
-const labels = new Labels(onSetLabel);
 function fetchCompareAt(index) {
     redirect(`/compare/${index}`);
 }
+
+function handleUrlChange(event) {
+    const path = event.state ? event.state.path : window.location.pathname;
+    console.log("moving to ", path);
+    if (Number(getArg("page"))) {
+        currentIndex = Number(getArg("page")) ? Number(getArg("page")) : 1;
+        goToTablePage(currentIndex, false);
+    }
+    else {
+        redirect("/home");
+    }
+}
+function onReload(event) {
+    // Fetch updated values if needed
+    fetchResults();
+}
+
+window.addEventListener('pageshow', onReload);

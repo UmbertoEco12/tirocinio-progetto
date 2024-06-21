@@ -19,34 +19,32 @@
     <nav id="navbar">
         <div class="container">
             <h1>
-                <a href="home" style="text-decoration: none; color: white;">Website Title</a>
+                <a href="/home" style="text-decoration: none; color: white;">Website Title</a>
             </h1>
         </div>
     </nav>
     <div style="margin-bottom: 50px;"></div>
 
-    <h3>Dataset name</h3>
-
-    <table id="results-table">
-        <tr>
-            <th>Title</th>
-            <th>Result</th>
-        </tr>
-    </table>
-    <div id="review-content" class="review-content">
-        <div class="title-container">
-            <h1 id="dataset-title">
-            </h1>
-        </div>
-        <div id="content-container" class="content-container">
-            <h3></h3>
-        </div>
-        <div id="labels" class="labels-container">
-        </div>
+    <div class="title-container">
+        <h1 id="dataset-title">
+        </h1>
     </div>
+    <div class="title-container">
+        <table id="results-table" class="results-table">
+            <tr>
+                <th>Title</th>
+                <th>Result</th>
+            </tr>
+        </table>
+
+    </div>
+    <div id="pagination-container" class="title-container">
+    </div>
+
 </body>
 <script src="/src/helper.js"></script>
 <script src="/src/annotate-page.js"></script>
+<script src="/src/table-pagination.js"></script>
 <script src="/src/compare.js"></script>
 
 </html>

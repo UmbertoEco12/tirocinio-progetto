@@ -1,6 +1,6 @@
 from flask import jsonify, request, make_response
 from server.compare_results import aggregate_and_structure_data, get_dataset_results
-from server.database import Database, Answer
+from server.database import Database, Answer, FixedAnswer
 from server.server import app
 from server.dataset import Dataset
 
@@ -39,13 +39,16 @@ def get_compare_at_json(index):
                 if a['title'] == data.title:
                     answers[r['user']] = a['label']
                     break
+        fixed_answer = db.get_fixed_answer(dataset.name, data.title)
+        print(fixed_answer)
         return jsonify({'dataset':dataset.name,
                         'labels': data.labels, 
                         'data': {
                             'title' : data.title,
                             'content' : data.content
                         },
-                        'answers': answers})
+                        'answers': answers,
+                        'fix': fixed_answer})
     except ValueError:
         return jsonify(None)
 
@@ -61,7 +64,13 @@ def get_answers(user):
 @app.route('/dataset/<user>', methods=['POST'])
 def save_dataset_label( user):
     req= request.get_json()
-    db.insert_or_update_value(Answer(user,dataset.name, req["title"], req["label"]))
+    db.insert_or_update_answer(Answer(user,dataset.name, req["title"], req["label"]))
+    return make_response('', 200)
+
+@app.route('/dataset/fix', methods=['POST'])
+def save_dataset_fix():
+    req = request.get_json()
+    db.insert_or_update_fixed_answer(FixedAnswer(dataset.name, req["title"], req["label"]))
     return make_response('', 200)
 
 @app.route('/compare-res')
@@ -88,9 +97,12 @@ def download_datset(user):
 def get_results():
     res = get_dataset_results('reviews/.', dataset.name)
     data = dataset.get_titles_and_labels()
+    fixes = db.get_fixes(dataset.name)
     return jsonify({
         'data' : data,
-        'answers':res})
+        'fixes' : fixes,
+        'answers':res,
+        'dataset': dataset.name})
 
 def run():
     global db, dataset

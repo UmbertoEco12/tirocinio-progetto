@@ -16,9 +16,6 @@ def go_to_username(username):
 @app.route("/review/", defaults={'username': None})
 @app.route("/review/<username>")
 def go_to_review_username(username):
-    index = request.args.get("index")
-    if index is None:
-        index = 1
     if(username is None):
         return redirect('/username/')
     return send_file('../frontend/pages/review.html')

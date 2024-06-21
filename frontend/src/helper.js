@@ -49,5 +49,16 @@ function redirect(path) {
 }
 
 function updateUrl(path) {
-    history.pushState({ path: path }, '', path);
+    if (window.location.pathname !== path)
+        history.pushState({ path: path }, '', path);
+}
+
+function clamp(x, min = 0, max = Number.MAX_VALUE) {
+    if (x < min) {
+        return min;
+    }
+    else if (x > max) {
+        return max;
+    }
+    else return x;
 }

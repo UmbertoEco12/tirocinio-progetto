@@ -139,16 +139,6 @@ class AnnotateContent {
     }
 }
 
-function clamp(x, min = 0, max = Number.MAX_VALUE) {
-    if (x < min) {
-        return min;
-    }
-    else if (x > max) {
-        return max;
-    }
-    else return x;
-}
-
 class StepBar {
     constructor(onStepClicked) {
         this.stepBar = document.getElementById("step-bar-wrapper");
