@@ -115,6 +115,19 @@ function onSetLabel(label) {
     });
 }
 
+function downloadResults() {
+    fetch(`/download/dataset/${username}`)
+        .then((response) => response.json())
+        .then(res => {
+            if (res == null) {
+                alert("Answer all the questions first");
+            }
+            else {
+                downloadJSON(res, `${username}-results.json`);
+            }
+        });
+}
+
 function start() {
     const navUsername = document.getElementById("nav-username");
     navUsername.textContent = username;
@@ -137,10 +150,7 @@ function start() {
             labels.onResize();
     })
 
-    document.getElementById("download-button").addEventListener("click", () => {
-        fetch(`/download/dataset/${username}`)
-            .then((response) => response.json()).then(res => downloadJSON(res, `${username}-results.json`));
-    })
+    document.getElementById("download-button").addEventListener("click", downloadResults);
     function handleUrlChange(event) {
         const path = event.state ? event.state.path : window.location.pathname;
         // Call your function to handle the URL change

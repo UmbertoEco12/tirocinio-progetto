@@ -55,12 +55,16 @@ class DataSet :
         self.name = name
         self.labels = []
         self.dataset = []
+        self.blank_labels = True
         pass
 
     def add_labels(self, labels : LabelGroup) :
         self.labels.append( labels.get_labels())
         return self
     
+    def set_allow_blank_labels(self, value: bool):
+        self.blank_labels = value
+
     def add_data(self,title:str, data : HtmlDataView, label_group: LabelGroup) :
         # set title of html view if is none
         if data.title is None:
@@ -76,6 +80,7 @@ class DataSet :
     def build(self) :
         # Send data to js
         d = {
+            "allowBlank" : self.blank_labels,
             "name" : self.name,
             "labels" : self.labels,
             "dataset" : self.dataset

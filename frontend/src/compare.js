@@ -26,12 +26,12 @@ window.addEventListener('popstate', handleUrlChange);
 
 fetchResults();
 
-class AnswerPercentage {
-    constructor(label, percentage) {
-        this.label = label;
-        this.percentage = percentage;
-    }
-};
+// class AnswerPercentage {
+//     constructor(label, percentage) {
+//         this.label = label;
+//         this.percentage = percentage;
+//     }
+// };
 
 function goToTablePage(page, updatePath = true) {
     resultsTable.showPage(page);
@@ -39,60 +39,26 @@ function goToTablePage(page, updatePath = true) {
     if (updatePath)
         updateUrl(`/compare?page=${page}`);
 }
-
+const currentDatasetResult = new DatasetResults();
 function fetchResults() {
     fetch('/dataset/results')
         .then(response => response.json())
         .then(res => {
-            const usersCount = res.answers.length;
-            let index = 1;
+            // clear the table
             resultsTable.clear();
-            res.data.forEach(element => {
-
-                // create labels map
-                const labelsMap = new Map();
-                element.labels.forEach(label => {
-                    labelsMap.set(label, 0);
-                });
-                datasetName.textContent = res.dataset;
-                // gather results
-                res.answers.forEach(userAnswer => {
-                    // try and find the answer with this title
-                    userAnswer.answers.forEach(answer => {
-                        if (answer.title == element.title) {
-                            labelsMap.set(answer.label, labelsMap.get(answer.label) + 1);
-                        }
-                    })
-                })
-                // write answers
-                let answers = [];
-                let totalAnswers = 0;
-                labelsMap.forEach((value, key) => {
-                    if (value != 0) {
-                        answers.push(new AnswerPercentage(key, (value / usersCount) * 100));
-                    }
-                    totalAnswers += value;
-                });
-                if (totalAnswers < usersCount) {
-                    answers.push(new AnswerPercentage("no answer", ((usersCount - totalAnswers) / usersCount) * 100));
-                }
-                if (answers.length == 0) {
-                    answers.push(new AnswerPercentage("No answers", 0));
-                }
-                const i = index;
-                let fix = null;
-                res.fixes.forEach(elem => {
-                    if (elem[0] == element.title) {
-                        fix = elem[1];
-                        return;
-                    }
-                })
-                // add all rows
-                resultsTable.addRow(createDataRow(element.title, answers, fix, () => {
+            // create current dataset results object
+            currentDatasetResult.init(res.dataset, res.answers, res.data, res.fixes);
+            // set dataset name
+            datasetName.textContent = currentDatasetResult.datasetName;
+            // add the table data
+            for (let index = 0; index < currentDatasetResult.dataResults.length; index++) {
+                const data = currentDatasetResult.dataResults[index];
+                const i = index + 1;
+                resultsTable.addRow(createDataRow(data.title, data.answers, data.fix, () => {
                     fetchCompareAt(i);
                 }));
-                index++;
-            });
+            }
+            // show the table
             tabelPaginationControl.setup(resultsTable.getPageCount(), currentPage);
             goToTablePage(currentPage);
         });
@@ -123,3 +89,23 @@ function onReload(event) {
 }
 
 window.addEventListener('pageshow', onReload);
+
+const downloadBtn = document.getElementById("download-button");
+
+function downloadFixedResults() {
+    fetch('/dataset/results')
+        .then(response => response.json())
+        .then(res => {
+            // create current dataset results object
+            const dataset = new DatasetResults();
+            dataset.init(res.dataset, res.answers, res.data, res.fixes);
+            if (dataset.isFixed()) {
+                downloadJSON(dataset.getFixedResults(), `${dataset.datasetName}_results.json`);
+            }
+            else {
+                alert("fix all data first");
+            }
+        });
+}
+
+downloadBtn.addEventListener("click", downloadFixedResults);

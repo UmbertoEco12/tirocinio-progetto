@@ -216,7 +216,6 @@ class TablePaginationControls {
         this.#clearContainer();
         this.container.appendChild(this.prevBtn);
         const indices = this.#getIndices(currentPage);
-        console.log(indices);
         for (let index = indices.start; index < indices.end; index++) {
             const pageBtn = this.pageBtns[index - 1];
 
@@ -226,5 +225,115 @@ class TablePaginationControls {
 
         this.container.appendChild(this.nextBtn);
         this.#updateGfx(currentPage);
+    }
+}
+
+class AnswerPercentage {
+    constructor(label, percentage) {
+        this.label = label;
+        this.percentage = percentage;
+    }
+};
+
+class DatasetDataResult {
+    constructor(title, labels, userAnswers, fixes) {
+        this.title = title;
+        this.answers = [];
+        this.fix = null;
+        this.hasConflict = false;
+        const labelsMap = new Map();
+        const usersCount = userAnswers.length;
+
+        // name and count
+        labels.forEach(label => {
+            labelsMap.set(label, 0);
+        });
+        // assign value
+        userAnswers.forEach(userAnswer => {
+            userAnswer.answers.forEach(answer => {
+                if (answer.title == title) {
+                    labelsMap.set(answer.label, labelsMap.get(answer.label) + 1);
+                }
+
+            })
+        })
+        let totalAnswers = 0;
+        labelsMap.forEach((answersCount, label) => {
+            const percentage = (answersCount / usersCount) * 100;
+            if (answersCount != 0)
+                this.answers.push(new AnswerPercentage(label, percentage));
+            totalAnswers += answersCount;
+        })
+        // some users didn t answer this
+        if (totalAnswers < usersCount) {
+            this.answers.push(new AnswerPercentage("no answer", ((usersCount - (totalAnswers)) / usersCount) * 100));
+        }
+        // no user answered this
+        else if (this.answers.length == 0) {
+            this.answers.push(new AnswerPercentage("No answers", 0));
+        }
+        // check if there is a fix for this data
+        for (let index = 0; index < fixes.length; index++) {
+            const elem = fixes[index];
+            if (elem.title == title) {
+                this.fix = elem.label;
+                break;
+            }
+        }
+        // check if it has conflicts
+        this.hasConflict = this.fix == null && this.answers.length > 1;
+    }
+
+    getResult() {
+        if (this.hasConflict) return null;
+
+        const res = {
+            title: this.title,
+            label: null
+        };
+        if (this.fix)
+            res.label = this.fix;
+        else {
+            res.label = this.answers[0].label;
+        }
+        return res;
+    }
+}
+
+class DatasetResults {
+    constructor() {
+        this.datasetName = "";
+        this.dataResults = [];
+    }
+
+    init(datasetName, answers, data, fixes) {
+        // clear 
+        this.dataResults.length = 0;
+        this.datasetName = datasetName;
+        data.forEach(element => {
+            this.dataResults.push(new DatasetDataResult(element.title, element.labels, answers, fixes));
+        })
+    }
+
+    isFixed() {
+        for (let index = 0; index < this.dataResults.length; index++) {
+            const element = this.dataResults[index];
+            if (element.hasConflict) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    getFixedResults() {
+        if (!this.isFixed()) return null;
+        const res = {
+            dataset: this.datasetName,
+            answers: []
+        };
+        this.dataResults.forEach(r => {
+            res.answers.push(r.getResult());
+        })
+        return res;
     }
 }

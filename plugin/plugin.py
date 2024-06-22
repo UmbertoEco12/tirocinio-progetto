@@ -19,5 +19,6 @@ dataset.add_labels(label2)
 for i in range(1, 9):
     dataset.add_data(f'data {i}',HtmlDataView().add_external_html('res/data1.html'), label1)
 
+# dataset.set_allow_blank_labels(False)
 dataset.add_data("Second data", second_data,  label2)
 dataset.build()

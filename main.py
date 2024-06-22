@@ -30,6 +30,9 @@ def get_data_at(user, index):
 def get_compare_at_json(index):
     try:
         index = int(index) - 1
+        if index < 0 :
+            return jsonify(None)
+
         data = dataset.get_data_at(index)
         res = get_dataset_results('reviews/.', dataset.name)
         answers = {}
@@ -40,7 +43,6 @@ def get_compare_at_json(index):
                     answers[r['user']] = a['label']
                     break
         fixed_answer = db.get_fixed_answer(dataset.name, data.title)
-        print(fixed_answer)
         return jsonify({'dataset':dataset.name,
                         'labels': data.labels, 
                         'data': {
@@ -89,6 +91,13 @@ def download_datset(user):
             answers.append({
                 "title" : title,
                 'label' : label})
+    data = dataset.get_titles_and_labels()
+    # return null if the dataset requires all the answer answered
+    # and if the answers len is different to all the answers len
+    if (not dataset.allow_blank_labels) and data.__len__() != answers.__len__():
+        print("")
+        return jsonify(None)
+
     res["answers"] = answers
     print(res)
     return jsonify(res)

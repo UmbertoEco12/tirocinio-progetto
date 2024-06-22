@@ -17,6 +17,7 @@ class Dataset:
         self.labels = []
         self.name = ""
         self.db = database
+        self.allow_blank_labels = True
 
     def get_user_data_at(self, index: int, user: str):
         if index < 0 or index > self.dataset.__len__() - 1:
@@ -72,6 +73,7 @@ class Dataset:
                 self.labels.insert(int(label['name']) + 1,label["labels"])
             self.dataset = json_obj["dataset"]
             self.name = json_obj["name"]
+            self.allow_blank_labels = json_obj["allowBlank"]
             # print(self.dataset)
             return True
         except subprocess.CalledProcessError as e:

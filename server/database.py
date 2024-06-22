@@ -99,7 +99,13 @@ class Database:
         cur.execute('''
             SELECT title, label FROM fixedAnswers WHERE dataset = ?;
         ''', (dataset,))
+        result = []
         res = cur.fetchall()
+        for title, label in res :
+            result.append({
+                'title' : title,
+                'label' : label,
+            })
         cur.close()
         conn.close()
-        return res
+        return result
