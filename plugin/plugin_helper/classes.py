@@ -28,7 +28,7 @@ class HtmlDataView:
     def set_title(self, title: str) :
         self.title = title
         return self
-    def add_data(self, html_content) :
+    def add_html(self, html_content) :
         self.content += (html_content)
         return self
     def add_external_html(self, source_path:str):

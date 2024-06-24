@@ -3,7 +3,8 @@ const datasetName = document.getElementById("dataset-title");
 const annotatePage = new AnnotateContent()
 const labels = new Labels(onSetLabel);
 
-const resultsTable = new Table(5, document.getElementById("results-table"));
+const rowsPerPage = 10;
+const resultsTable = new Table(rowsPerPage, document.getElementById("results-table"));
 let tabelPaginationControl = new TablePaginationControls(5, () => {
     if (resultsTable.currentPage < resultsTable.getPageCount()) {
         goToTablePage(resultsTable.currentPage + 1);
@@ -36,6 +37,7 @@ fetchResults();
 function goToTablePage(page, updatePath = true) {
     resultsTable.showPage(page);
     tabelPaginationControl.show(page);
+    currentPage = page;
     if (updatePath)
         updateUrl(`/compare?page=${page}`);
 }
@@ -69,6 +71,7 @@ function onSetLabel(label) {
 }
 
 function fetchCompareAt(index) {
+    window.history.pushState({}, '', `/compare?page=${currentPage}`);
     redirect(`/compare/${index}`);
 }
 

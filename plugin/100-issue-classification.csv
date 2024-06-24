@@ -1,0 +1,3267 @@
+id,labels,title,body,author_association
+1199051804,documentation,setting a logging Handler name,"BPO | [43058](https://bugs.python.org/issue43058)
+--- | :---
+Nosy | @vsajip
+
+<sup>*Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state.*</sup>
+
+<details><summary>Show more details</summary><p>
+
+GitHub fields:
+```python
+assignee = None
+closed_at = None
+created_at = <Date 2021-01-28.20:17:02.239>
+labels = ['3.8', 'type-feature', 'library', 'docs']
+title = 'setting a logging Handler name'
+updated_at = <Date 2021-01-28.20:17:02.239>
+user = 'https://bugs.python.org/bcohen'
+```
+
+bugs.python.org fields:
+```python
+activity = <Date 2021-01-28.20:17:02.239>
+actor = 'bcohen'
+assignee = 'docs@python'
+closed = False
+closed_date = None
+closer = None
+components = ['Documentation', 'Library (Lib)']
+creation = <Date 2021-01-28.20:17:02.239>
+creator = 'bcohen'
+dependencies = []
+files = []
+hgrepos = []
+issue_num = 43058
+keywords = []
+message_count = 1.0
+messages = ['385880']
+nosy_count = 3.0
+nosy_names = ['vinay.sajip', 'docs@python', 'bcohen']
+pr_nums = []
+priority = 'normal'
+resolution = None
+stage = None
+status = 'open'
+superseder = None
+type = 'enhancement'
+url = 'https://bugs.python.org/issue43058'
+versions = ['Python 3.8']
+```
+
+</p></details>
+",MANNEQUIN
+1199074324,documentation,Improve documentation for typing._GenericAlias,"BPO | [46589](https://bugs.python.org/issue46589)
+--- | :---
+Nosy | @gvanrossum, @JelleZijlstra, @Fidget-Spinner, @mrahtz
+PRs | <li>python/cpython#31026</li>
+
+<sup>*Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state.*</sup>
+
+<details><summary>Show more details</summary><p>
+
+GitHub fields:
+```python
+assignee = None
+closed_at = None
+created_at = <Date 2022-01-30.19:55:28.395>
+labels = ['3.11', 'type-feature', 'library', 'docs']
+title = 'Improve documentation for typing._GenericAlias'
+updated_at = <Date 2022-02-07.01:59:39.743>
+user = 'https://github.com/mrahtz'
+```
+
+bugs.python.org fields:
+```python
+activity = <Date 2022-02-07.01:59:39.743>
+actor = 'gvanrossum'
+assignee = 'docs@python'
+closed = False
+closed_date = None
+closer = None
+components = ['Documentation', 'Library (Lib)']
+creation = <Date 2022-01-30.19:55:28.395>
+creator = 'matthew.rahtz'
+dependencies = []
+files = []
+hgrepos = []
+issue_num = 46589
+keywords = ['patch']
+message_count = 2.0
+messages = ['412171', '412703']
+nosy_count = 5.0
+nosy_names = ['gvanrossum', 'docs@python', 'JelleZijlstra', 'kj', 'matthew.rahtz']
+pr_nums = ['31026']
+priority = 'normal'
+resolution = None
+stage = 'patch review'
+status = 'open'
+superseder = None
+type = 'enhancement'
+url = 'https://bugs.python.org/issue46589'
+versions = ['Python 3.11']
+```
+
+</p></details>
+",MANNEQUIN
+1199022454,documentation,Description of '\w' behavior is vague in `re` documentation,"BPO | [38566](https://bugs.python.org/issue38566)
+--- | :---
+Nosy | @serhiy-storchaka, @MojoVampire, @snoopjedi
+
+<sup>*Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state.*</sup>
+
+<details><summary>Show more details</summary><p>
+
+GitHub fields:
+```python
+assignee = None
+closed_at = None
+created_at = <Date 2019-10-23.16:28:38.284>
+labels = ['type-bug', 'docs']
+title = ""Description of '\\w' behavior is vague in `re` documentation""
+updated_at = <Date 2019-10-24.08:02:46.475>
+user = 'https://github.com/snoopjedi'
+```
+
+bugs.python.org fields:
+```python
+activity = <Date 2019-10-24.08:02:46.475>
+actor = 'xtreak'
+assignee = 'docs@python'
+closed = False
+closed_date = None
+closer = None
+components = ['Documentation']
+creation = <Date 2019-10-23.16:28:38.284>
+creator = 'snoopjedi'
+dependencies = []
+files = []
+hgrepos = []
+issue_num = 38566
+keywords = []
+message_count = 3.0
+messages = ['355239', '355250', '355257']
+nosy_count = 4.0
+nosy_names = ['docs@python', 'serhiy.storchaka', 'josh.r', 'snoopjedi']
+pr_nums = []
+priority = 'normal'
+resolution = None
+stage = None
+status = 'open'
+superseder = None
+type = 'behavior'
+url = 'https://bugs.python.org/issue38566'
+versions = []
+```
+
+</p></details>
+",MANNEQUIN
+1199028356,documentation,add docstrings to functions in pdb module,"BPO | [39278](https://bugs.python.org/issue39278)
+--- | :---
+Nosy | @carlbordum, @j9ac9k
+PRs | <li>python/cpython#17924</li>
+
+<sup>*Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state.*</sup>
+
+<details><summary>Show more details</summary><p>
+
+GitHub fields:
+```python
+assignee = None
+closed_at = None
+created_at = <Date 2020-01-09.17:37:23.602>
+labels = ['3.9', 'docs']
+title = 'add docstrings to functions in pdb module'
+updated_at = <Date 2020-02-10.22:10:33.968>
+user = 'https://github.com/carlbordum'
+```
+
+bugs.python.org fields:
+```python
+activity = <Date 2020-02-10.22:10:33.968>
+actor = 'Ognyan Moore'
+assignee = 'docs@python'
+closed = False
+closed_date = None
+closer = None
+components = ['Documentation']
+creation = <Date 2020-01-09.17:37:23.602>
+creator = 'carlbordum'
+dependencies = []
+files = []
+hgrepos = []
+issue_num = 39278
+keywords = ['patch']
+message_count = 2.0
+messages = ['359689', '361732']
+nosy_count = 3.0
+nosy_names = ['docs@python', 'carlbordum', 'Ognyan Moore']
+pr_nums = ['17924']
+priority = 'normal'
+resolution = None
+stage = 'patch review'
+status = 'open'
+superseder = None
+type = None
+url = 'https://bugs.python.org/issue39278'
+versions = ['Python 3.9']
+```
+
+</p></details>
+",MANNEQUIN
+1199055394,documentation,Documentation needs to declare CalledProcessError as potentially resulting from subprocess.run(),"BPO | [43635](https://bugs.python.org/issue43635)
+--- | :---
+Nosy | @jennievh
+
+<sup>*Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state.*</sup>
+
+<details><summary>Show more details</summary><p>
+
+GitHub fields:
+```python
+assignee = None
+closed_at = None
+created_at = <Date 2021-03-26.19:47:45.295>
+labels = ['type-feature', '3.9', 'docs']
+title = 'Documentation needs to declare CalledProcessError as potentially resulting from subprocess.run()'
+updated_at = <Date 2021-03-26.19:47:45.295>
+user = 'https://github.com/jennievh'
+```
+
+bugs.python.org fields:
+```python
+activity = <Date 2021-03-26.19:47:45.295>
+actor = 'jennievh'
+assignee = 'docs@python'
+closed = False
+closed_date = None
+closer = None
+components = ['Documentation']
+creation = <Date 2021-03-26.19:47:45.295>
+creator = 'jennievh'
+dependencies = []
+files = []
+hgrepos = []
+issue_num = 43635
+keywords = []
+message_count = 1.0
+messages = ['389564']
+nosy_count = 2.0
+nosy_names = ['docs@python', 'jennievh']
+pr_nums = []
+priority = 'normal'
+resolution = None
+stage = None
+status = 'open'
+superseder = None
+type = 'enhancement'
+url = 'https://bugs.python.org/issue43635'
+versions = ['Python 3.9']
+```
+
+</p></details>
+",MANNEQUIN
+1199016826,documentation,The results from os.path.isdir(...) an Path(...).is_dir() are not equivalent for empty path strings.,"BPO | [37688](https://bugs.python.org/issue37688)
+--- | :---
+Nosy | @brettcannon, @pitrou, @serhiy-storchaka, @godaygo
+
+<sup>*Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state.*</sup>
+
+<details><summary>Show more details</summary><p>
+
+GitHub fields:
+```python
+assignee = None
+closed_at = None
+created_at = <Date 2019-07-26.07:23:57.873>
+labels = ['type-feature', 'library', 'docs']
+title = 'The results from os.path.isdir(...) an Path(...).is_dir() are not equivalent for empty path strings.'
+updated_at = <Date 2019-07-29.18:50:44.722>
+user = 'https://github.com/godaygo'
+```
+
+bugs.python.org fields:
+```python
+activity = <Date 2019-07-29.18:50:44.722>
+actor = 'brett.cannon'
+assignee = 'docs@python'
+closed = False
+closed_date = None
+closer = None
+components = ['Documentation', 'Library (Lib)']
+creation = <Date 2019-07-26.07:23:57.873>
+creator = 'godaygo'
+dependencies = []
+files = []
+hgrepos = []
+issue_num = 37688
+keywords = []
+message_count = 8.0
+messages = ['348475', '348477', '348478', '348482', '348495', '348497', '348528', '348679']
+nosy_count = 5.0
+nosy_names = ['brett.cannon', 'pitrou', 'docs@python', 'serhiy.storchaka', 'godaygo']
+pr_nums = []
+priority = 'normal'
+resolution = None
+stage = None
+status = 'open'
+superseder = None
+type = 'enhancement'
+url = 'https://bugs.python.org/issue37688'
+versions = []
+```
+
+</p></details>
+",MANNEQUIN
+1198880203,documentation,TypeError: truncate() takes no keyword arguments,"BPO | [14586](https://bugs.python.org/issue14586)
+--- | :---
+Nosy | @birkenfeld, @pitrou, @bitdancer, @berkerpeksag, @vadmium
+Files | <li>[test.py](https://bugs.python.org/file25219/test.py ""Uploaded as text/plain at 2012-04-15.02:04:32 by TheBiggerGuy""): Test file</li><li>[truncate.ver1.patch](https://bugs.python.org/file25246/truncate.ver1.patch ""Uploaded as text/plain at 2012-04-16.21:56:04 by TheBiggerGuy""): First Version allowing both positional and keyword parameters</li><li>[truncate.ver2.patch](https://bugs.python.org/file25251/truncate.ver2.patch ""Uploaded as text/plain at 2012-04-17.09:40:30 by TheBiggerGuy""): Second Version (still needs work)</li>
+
+<sup>*Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state.*</sup>
+
+<details><summary>Show more details</summary><p>
+
+GitHub fields:
+```python
+assignee = None
+closed_at = None
+created_at = <Date 2012-04-15.02:04:32.463>
+labels = ['interpreter-core', 'type-bug', '3.10', 'docs']
+title = 'TypeError: truncate() takes no keyword arguments'
+updated_at = <Date 2020-12-15.23:28:33.148>
+user = 'https://bugs.python.org/TheBiggerGuy'
+```
+
+bugs.python.org fields:
+```python
+activity = <Date 2020-12-15.23:28:33.148>
+actor = 'iritkatriel'
+assignee = 'docs@python'
+closed = False
+closed_date = None
+closer = None
+components = ['Documentation', 'Interpreter Core']
+creation = <Date 2012-04-15.02:04:32.463>
+creator = 'TheBiggerGuy'
+dependencies = []
+files = ['25219', '25246', '25251']
+hgrepos = []
+issue_num = 14586
+keywords = ['patch']
+message_count = 14.0
+messages = ['158308', '158388', '158403', '158410', '158494', '158495', '158507', '158509', '158513', '158535', '158547', '158548', '244937', '251139']
+nosy_count = 7.0
+nosy_names = ['georg.brandl', 'pitrou', 'r.david.murray', 'docs@python', 'berker.peksag', 'martin.panter', 'TheBiggerGuy']
+pr_nums = []
+priority = 'normal'
+resolution = None
+stage = 'needs patch'
+status = 'open'
+superseder = None
+type = 'behavior'
+url = 'https://bugs.python.org/issue14586'
+versions = ['Python 3.10']
+```
+
+</p></details>
+",MANNEQUIN
+1214256398,bug,[SR-9577] Associated type inference fails depending on name of associated type,"
+   |                  |                 |
+   |------------------|-----------------|
+   |Previous ID       | SR-9577      |
+   |Radar             | None         |
+   |Original Reporter | @lattner      |
+   |Type              | Bug    |
+
+   <details>
+  <summary>Additional Detail from JIRA</summary>
+
+   |                  |                 |
+   |------------------|-----------------|
+   |Votes             | 0         |
+   |Component/s       | Compiler    |
+   |Labels            | Bug, AssociatedTypeInference        |
+   |Assignee          | None      |
+   |Priority          | Medium      |
+
+   
+
+   md5: 09335bcbf125fdc2adc6cf703a1965fa
+
+  </details>
+
+
+
+
+
+**Issue Description:**
+
+
+Jeremy Howard sent me this bug report, it repros with Swift 4.2 and 4.2.1 at least.
+
+This code is relying on associated type inference to infer the type of ""Elle"" in the VectorF struct. This should happen due to the init requirement in the protocol VectorBase, and the init implementation in VectorF.
+
+Two bugs here:
+
+1\) The associated type isn't inferred correctly in this case.  
+2) **Even weirder**, if you globally rename Elle to Eele, then it works (!!!)
+
+I assume there is some sort of memory smasher or corruption going on here inside the compiler?
+
+``` none
+public protocol VectorBase :
+    RandomAccessCollection where Index==Int, Elle==Element {
+  associatedtype Elle
+  var data:Array<Elle> {get set}
+  init(_ data_:Array<Elle>)
+}
+
+public protocol Vector: VectorBase {
+}
+
+extension Vector where Elle: FloatingPoint {
+  public var count:Int {get {return data.count}}
+
+  // RandomAccessCollection
+  public var indices: Range<Int> { return 0..<count }
+  public var startIndex: Int { return 0 }
+  public var endIndex: Int { return count }
+  // MutableCollection
+  public subscript(i: Index) -> Elle {
+    get { return data[i] }
+    set { data[i] = newValue }
+  }
+}
+
+public struct VectorF: Vector {
+  //public typealias Elle = Float
+
+  public var data:Array<Float>
+  public init(_ data_:Array<Float>) {data=data_}
+}
+```
+
+
+   ",MANNEQUIN
+1198963266,documentation,Fix code example in Python 3.5 telnetlib documentation,"BPO | [28661](https://bugs.python.org/issue28661)
+--- | :---
+Nosy | @jackdied, @bitdancer, @tiabc, @normanlorrain
+Files | <li>[weather.py](https://bugs.python.org/file50124/weather.py ""Uploaded as text/plain at 2021-06-22.18:58:45 by @normanlorrain"")</li>
+
+<sup>*Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state.*</sup>
+
+<details><summary>Show more details</summary><p>
+
+GitHub fields:
+```python
+assignee = None
+closed_at = None
+created_at = <Date 2016-11-10.19:16:31.542>
+labels = ['easy', '3.9', '3.10', '3.11', 'type-feature', 'docs']
+title = 'Fix code example in Python 3.5 telnetlib documentation'
+updated_at = <Date 2021-06-22.18:58:45.391>
+user = 'https://github.com/tiabc'
+```
+
+bugs.python.org fields:
+```python
+activity = <Date 2021-06-22.18:58:45.391>
+actor = 'Norman Lorrain'
+assignee = 'none'
+closed = False
+closed_date = None
+closer = None
+components = ['Documentation']
+creation = <Date 2016-11-10.19:16:31.542>
+creator = 'tiabc'
+dependencies = []
+files = ['50124']
+hgrepos = []
+issue_num = 28661
+keywords = ['easy']
+message_count = 5.0
+messages = ['280536', '280549', '280563', '280586', '396357']
+nosy_count = 5.0
+nosy_names = ['jackdied', 'r.david.murray', 'docs@python', 'tiabc', 'Norman Lorrain']
+pr_nums = []
+priority = 'normal'
+resolution = None
+stage = None
+status = 'open'
+superseder = None
+type = 'enhancement'
+url = 'https://bugs.python.org/issue28661'
+versions = ['Python 3.9', 'Python 3.10', 'Python 3.11']
+```
+
+</p></details>
+",MANNEQUIN
+1199046831,documentation,Warning filter message/module documentation is misleading,"BPO | [42272](https://bugs.python.org/issue42272)
+--- | :---
+Nosy | @kevinoid
+PRs | <li>python/cpython#23172</li>
+
+<sup>*Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state.*</sup>
+
+<details><summary>Show more details</summary><p>
+
+GitHub fields:
+```python
+assignee = None
+closed_at = None
+created_at = <Date 2020-11-05.20:06:37.165>
+labels = ['type-feature', '3.10', 'docs']
+title = 'Warning filter message/module documentation is misleading'
+updated_at = <Date 2021-08-28.08:27:10.953>
+user = 'https://github.com/kevinoid'
+```
+
+bugs.python.org fields:
+```python
+activity = <Date 2021-08-28.08:27:10.953>
+actor = 'ananyadatta88'
+assignee = 'docs@python'
+closed = False
+closed_date = None
+closer = None
+components = ['Documentation']
+creation = <Date 2020-11-05.20:06:37.165>
+creator = 'kevinoid'
+dependencies = []
+files = ['50238']
+hgrepos = []
+issue_num = 42272
+keywords = ['patch']
+message_count = 2.0
+messages = ['380429', '400464']
+nosy_count = 3.0
+nosy_names = ['docs@python', 'kevinoid', 'ananyadatta88']
+pr_nums = ['23172']
+priority = 'normal'
+resolution = None
+stage = 'patch review'
+status = 'open'
+superseder = None
+type = 'enhancement'
+url = 'https://bugs.python.org/issue42272'
+versions = ['Python 3.10']
+```
+
+</p></details>
+",MANNEQUIN
+1198897739,documentation,[doc] Possibly ambiguous phrasing in tutorial/modules#more-on-modules,"BPO | [17383](https://bugs.python.org/issue17383)
+--- | :---
+Nosy | @ezio-melotti, @merwok, @berkerpeksag, @ashwch
+Files | <li>[issue17383.patch](https://bugs.python.org/file34446/issue17383.patch ""Uploaded as text/plain at 2014-03-16.20:04:18 by nitika"")</li>
+
+<sup>*Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state.*</sup>
+
+<details><summary>Show more details</summary><p>
+
+GitHub fields:
+```python
+assignee = None
+closed_at = None
+created_at = <Date 2013-03-07.23:55:00.898>
+labels = ['3.11', 'type-bug', 'docs']
+title = '[doc] Possibly ambiguous phrasing in tutorial/modules#more-on-modules'
+updated_at = <Date 2021-11-28.13:21:44.318>
+user = 'https://bugs.python.org/PiotrKuchta'
+```
+
+bugs.python.org fields:
+```python
+activity = <Date 2021-11-28.13:21:44.318>
+actor = 'iritkatriel'
+assignee = 'docs@python'
+closed = False
+closed_date = None
+closer = None
+components = ['Documentation']
+creation = <Date 2013-03-07.23:55:00.898>
+creator = 'Piotr.Kuchta'
+dependencies = []
+files = ['34446']
+hgrepos = []
+issue_num = 17383
+keywords = ['patch']
+message_count = 13.0
+messages = ['183715', '183716', '183742', '183744', '183745', '183746', '183747', '183748', '183751', '184900', '213746', '213750', '213767']
+nosy_count = 8.0
+nosy_names = ['ezio.melotti', 'eric.araujo', 'docs@python', 'berker.peksag', 'jeffknupp', 'ashwch', 'Piotr.Kuchta', 'nitika']
+pr_nums = []
+priority = 'normal'
+resolution = None
+stage = 'needs patch'
+status = 'open'
+superseder = None
+type = 'behavior'
+url = 'https://bugs.python.org/issue17383'
+versions = ['Python 3.11']
+```
+
+</p></details>
+",MANNEQUIN
+1316955675,feature,Show subscriber count on User profile,"As an author, I would like to see how many subscribers I have.
+
+**Given** an author wants to view its own profile
+**When** they performs a gesture to open its own profile
+**And** the author has some subscribers
+**Then** there should be an indication on the profile displaying number of subscribers
+
+
+
+",NONE
+1290570500,bug,New Custom Recipes - Stonecutter not detecting CustomModelData,"### Description of Issue
+
+Im trying to make customrecipes where in the stonecutter, applying a shield you can select a lot of other shields usind CustomModelData, but i cant, it says the recipe already exists even if the custom model data is different 
+
+### Version Information
+
+```shell
+CMI 9.2.1.0
+CMILIB 1.2.0.4
+Purpur 1.18.2
+```
+
+
+### Errors
+
+_No response_
+
+### Relevant Config Sections
+
+_No response_
+
+### Relevant Plugins
+
+_No response_
+
+### Agreements
+
+- [X] My server is supported by CMI.
+- [X] My version of CMI at the time of this report is up to date.
+- [X] I have searched the github and asked around before making this report.",NONE
+1289142188,bug,"Problems trying to render ""custom"" react components inside the Properties Panel","__Describe the Bug__
+
+Depending on the Webpack configuration, Properties Panel Extension components cannot render.
+
+If you clone any example repos out there that use TextEntryField to customize the properties panel, if you export that library to Camunda Modeler (instead of using a React web-modeler), several issues emerge, that can be fixed by a webpack configuration, but then... no component that is custom gets rendered (a ""react-calendar"" for example).
+
+__Steps to Reproduce__
+
+1. Build or clone any repo with a Properties Panel Extension, something like: https://github.com/bpmn-io/bpmn-js-examples/tree/master/properties-panel-extension
+2. Update the imports to ""@bpmn-io/properties-panel:^13.2"" and ""bpmn-js-properties-panel:^1.0.0""
+3. Change the webpack distribuition to be able to import the plugin to Camunda Modeler: https://github.com/pinussilvestrus/camunda-modeler-excel-import-plugin/blob/main/webpack.config.js
+4. Add a ""react-calendar"" (npm install react-calendar) component and render it somewhere inside the Properties Panel
+5. Export the plugin to Camunda Modeler
+6. Issues emerge.
+
+Option 1: Change the webpack to something like: https://github.com/pinussilvestrus/camunda-modeler-excel-import-plugin/blob/main/webpack.config.js
+- <Calendar /> does not render inside the Properties Panel. useState does not work for your components, for the TextField it does.
+
+Option 2: Change the webpack to somethin like: https://github.com/bpmn-io/bpmn-js-examples/blob/master/properties-panel-extension/webpack.config.js
+- TextFieldEntry does not render/hooks don't work.
+
+__Expected Behavior__
+
+Both components to render (`<Calendar />` and `<TextFieldEntry />`) and be able to import and use ""useState"" and other hooks, those are ALWAYS null/undefined.
+
+
+__Environment__
+
+- OS: Windows 10
+- Camunda Modeler Version: 5.0.0
+",NONE
+796031597,bug,Newly created AnimationTree appears with previously deleted content,"<!-- Please search existing issues for potential duplicates before filing yours:
+https://github.com/godotengine/godot/issues?q=is%3Aissue
+-->
+
+**Godot version:**
+<!-- Specify commit hash if using non-official build. -->
+3.2.4.beta6.mono.official
+
+**OS/device including version:**
+<!-- Specify GPU model, drivers, and the backend (GLES2, GLES3, Vulkan) if graphics-related. -->
+Win10
+
+**Issue description:**
+<!-- What happened, and what was expected. -->
+See the following gif; an AnimationTree is deleted and a new one created afterwards. The newly created one contains the content of the previously deleted one:
+![6YtyAXf8se](https://user-images.githubusercontent.com/8841352/106148506-677b4100-6179-11eb-8179-925ece3da8fe.gif)
+
+**Steps to reproduce:**
+Just follow the displayed steps in the gif, create an AnimationTree, configure something inside it, delete the node, create a new AnimationTree. See it having the old content.
+",NONE
+1231132072,bug,Requesting Telegram shouldn't be only with number,"Users should be able to type @ or a link to fill the Telegram information, not only numbers. 
+",NONE
+386073844,bug,no-unused-state doesn't respect usage in gDSFP,"
+```javascript
+class Foo extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      foo: props.foo // is reporting ""[eslint] Unused state field: 'foo' [react/no-unused-state]""
+    };
+  }
+
+  static getDerivedStateFromProps(props, state) {
+    
+    // am using state.foo
+    if (state.foo) {
+      return { bar: 123 };
+    }
+
+    return null;
+  }
+}
+```",NONE
+998736744,bug,Corrupted Gauntlet and Gauntlet Tearing Issues,"There is a lot of tearing in the Gauntlet lobby room, as well as the Illuminated symbols on the walls in the Gauntlet.  It seems like for the lobby it might be related to the dynamic textures (Teleport Platform, and Gauntlet minigame entrance).  I attached images below.  It is best to visit these places to see them yourself.
+
+![image](https://user-images.githubusercontent.com/89177521/133694887-0a6c30e3-448c-4fe6-babe-b07654538cce.png)
+![image](https://user-images.githubusercontent.com/89177521/133694899-48d2770b-21e5-4f37-a9f3-843eea7ac4e3.png)
+![image](https://user-images.githubusercontent.com/89177521/133694928-bfb9ba33-cd65-48c3-bb43-9d1bb99785bf.png)
+![image](https://user-images.githubusercontent.com/89177521/133694948-a6225ca8-933a-47d6-a807-e06e6c96ea73.png)",NONE
+1307411334,bug,Invoke-AzRestMethod doesn't throw any confirmation when the -Confirm option is supplied,"### Description
+
+When I use `Invoke-AzRestMethod` with the `-Confirm` option to purge key vault, I don't get any confirmation before the API request is executed. However, the [documentation](https://docs.microsoft.com/en-us/powershell/module/az.accounts/invoke-azrestmethod?view=azps-8.1.0) shows it does support the `-Confirm` option.
+
+### Issue script & Debug output
+
+```PowerShell
+PS> Invoke-AzRestMethod -Path ""subscriptions/$SubID/providers/Microsoft.KeyVault/locations/$ResourceGroupLocation/deletedVaults/$KeyVaultName/purge?api-version=$PurgeApiVersion"" -Method POST -Confirm
+```
+
+
+### Environment data
+
+```PowerShell
+Name                           Value
+----                           -----
+PSVersion                      7.2.5
+PSEdition                      Core
+GitCommitId                    7.2.5
+OS                             Microsoft Windows 10.0.19044
+Platform                       Win32NT
+PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0…}
+PSRemotingProtocolVersion      2.3
+SerializationVersion           1.1.0.1
+WSManStackVersion              3.0
+```
+
+
+### Module versions
+
+```PowerShell
+ModuleType Version    PreRelease Name                                ExportedCommands
+---------- -------    ---------- ----                                ----------------
+Script     2.9.0                 Az.Accounts                         {Add-AzEnvironment, Clear-AzConfig, Clear-AzContext, Clear-AzDefault…}
+Script     4.6.0                 Az.KeyVault                         {Add-AzKeyVaultCertificate, Add-AzKeyVaultCertificateContact, Add-AzKeyVaultKey, Add-AzKeyVaultManagedStorageAccount…}
+Script     6.0.1                 Az.Resources                        {Export-AzResourceGroup, Export-AzTemplateSpec, Get-AzDenyAssignment, Get-AzDeployment…}
+```
+
+
+### Error output
+
+```PowerShell
+No error, just confirmation being skipped.
+```
+",NONE
+1313052995,bug,The links in the Download page are broken,"## Description
+All the links in the **Other installation options** section in [1] return a 404 error.
+
+[1] https://dev.ballerina.io/downloads/
+
+## Steps to reproduce
+Click on any link in [1] https://dev.ballerina.io/downloads/
+
+## Affected version(s)
+> [The versions that are affected by the issue.](https://dev.ballerina.io/downloads/)
+
+## Related website/documentation area
+
+
+<!--Area/BBEs-->
+<!--Area/HomePageSamples-->
+<!--Area/LearnPages-->
+Area/CommonPages
+<!--Area/Backend-->
+<!--Area/UIUX-->
+<!--Area/Workflows-->
+<!--Area/Blog-->
+
+## Related issue(s) (optional)
+> Any related issues such as sub tasks and issues reported in other repositories (e.g., component repositories), similar problems, etc. 
+
+## Suggested label(s) (optional)
+website revamp
+
+## Suggested assignee(s) (optional)
+
+",NONE
+1266063747,feature,Switch from `aioredis` to `redis`,"Code from `aioredis` was incorporated into the official `redis` package in v4.2 to adopt the async support.  As a result, `aioredis` will no longer be well maintained.  The switch to `redis` will be relatively painless since the functions+parameters are basically the same.
+
+References:
+
+- https://github.com/aio-libs/aioredis-py#-aioredis-is-now-in-redis-py-420rc1-
+- https://github.com/redis/redis-py#python-notice",NONE
+635318979,feature,Revoking certificates produces high CPU load,"<!-- Please reserve GitHub issues for bug reports and feature requests.
+
+For questions, the best place to get answers is on our [mailing list](https://groups.google.com/forum/#!forum/vault-tool), as they will get more visibility from experienced users than the issue tracker.
+
+Please note: We take Vault's security and our users' trust very seriously. If you believe you have found a security issue in Vault, please responsibly disclose by contacting us at security@hashicorp.com. Our PGP key is available at [our security page](https://www.hashicorp.com/security/).
+
+-->
+
+**Describe the bug**
+Revoking certificates takes a long time while producing heavy CPU load.
+It takes up to 2-3 seconds to revoke a single certificate, and produces > 70% CPU load while revoking.
+Our CRL contains 16.9k revoked certs.
+
+**To Reproduce**
+* run a vault containing a CRL with ~17k revoked certs
+* issue and revoke certs
+* ""measure"" time and CPU usage
+
+**Expected behavior**
+I would have expected that a revocation is more like a ""cheaper"" operation, like adding the Cert to the CRL and signing it again.
+
+**Environment:**
+We've originally experienced this issue with vault 1.1.2, and then also checked with vault 1.4.2.
+1.4.2 seems to be a little quicker, but still takes up to two seconds per revocation.
+
+The CRL contains 16.9k revoked certs and has a size of ~650k.
+
+Originally, we were using the Postgres Backend, and were suspicious that this issue could be related to the Postgres. 
+But the DB has shown max. 10% CPU usage with max. 15 IOPs (both read and write), and it also occured with a stronger DB instance (AWS m5.large)
+
+We've also tested with the filesystem backend, the issue also occurs. 
+
+vault has been running on different Machines, amongst them an AWS m5.large",NONE
+1115945046,feature,devtoolset-11 for manylinux_2014,"Last year we had the upgrade to devtoolset-10 for manylinux_2014 see #1141 and #1155.
+
+Now the devtoolset-11 is also released for CentOS 7. See below:
+https://centos.pkgs.org/7/centos-sclo-rh-x86_64/devtoolset-11-toolchain-11.0-3.el7.x86_64.rpm.html
+
+Maybe it is time to upgrade again? The C++20 support can be more improved.",NONE
+1302142735,question,Bug or misuse not sure : Issue using envoy with upgrade connect and npm,"*Title*: *Issue using envoy with upgrade connect and npm*
+
+*Description*:
+I am trying to use envoy as an outgoing proxy, the one that you define through http_proxy env vars.
+I can not use it as a ""transparent"" proxy (aka forwarding) for internal reasons.
+
+For some reasong whenever i try to run an npm install of provided package.json, it never succeed even if i run it 2 or 3 times in a row. You can find attached my envoy config file (envoy-cfg.yaml), package.json, node output and error, and envoy debug logs. In addition i can provide a tcpdump but it's quite heavy. I made 2 run. The second one i kept already downloaded files by npm.
+
+I have noticed that when i set a proxy, npm becomes really aggressive and opens a tcp conversation for each call (over 1000) where as without a proxy it does only open a few tcp conversations.
+With and without a proxy, it's using http1/1
+
+I setup a test bed with a local registry to check that remote registry, registry.npmjs.org doesn't create a kind of rate limit and i was able to reproduce my issue.
+
+I tried several tunning parameters but didn't succeed. My latests ones are in the file.
+
+I am using nodejs 18.4.0 with npm 8.12.1. Envoy version is 1.22.2.
+
+If you can help me i would be really grateful. I can provide any additional information required.
+[optional *Relevant Links*:]
+>Any extra documentation required to understand the issue.
+[github.zip](https://github.com/envoyproxy/envoy/files/9093909/github.zip)
+
+",NONE
+695324178,bug,"Add GROIE into HTC network, the mask AP AR values are zero","Thanks for your error report and we appreciate it a lot.
+
+**Checklist**
+1. I have searched related issues but cannot get the expected help.
+2. The bug has not been fixed in the latest version.
+
+**Describe the bug**
+I add GROIE configuration into HTC network.  when I do test, the BBOX have normal AP AR value, but segm part are zeros.
+Evaluating bbox...
+Loading and preparing results...
+DONE (t=0.03s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=9.60s).
+Accumulating evaluation results...
+DONE (t=0.15s).
+Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.559
+Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.840
+Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.644
+Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = -1.000
+Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.154
+Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.563
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.668
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.668
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.668
+Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = -1.000
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.184
+Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.672
+
+Evaluating segm...
+Loading and preparing results...
+DONE (t=0.12s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=10.46s).
+Accumulating evaluation results...
+DONE (t=0.14s).
+Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.015
+Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.092
+Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.000
+Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = -1.000
+Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.030
+Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.015
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.070
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.070
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.070
+Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = -1.000
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.040
+Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.070
+
+Then I used mmdet provided ""mask_rcnn_r50_fpn_groie_1x_coco.py"" to train my dataset, the test results are normal.
+By the way, my dataset is correct. I already used my dataset train and test a lot of models provided by mmdet.
+
+
+**Environment**
+2020-09-05 18:34:17,418 - mmdet - INFO - Environment info:
+------------------------------------------------------------
+sys.platform: linux
+Python: 3.7.7 (default, May  7 2020, 21:25:33) [GCC 7.3.0]
+CUDA available: True
+CUDA_HOME: /usr/local/cuda
+NVCC: Cuda compilation tools, release 10.1, V10.1.243
+GPU 0: GeForce RTX 2080 Ti
+GCC: gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
+PyTorch: 1.5.0
+PyTorch compiling details: PyTorch built with:
+  - GCC 7.3
+  - C++ Version: 201402
+  - Intel(R) Math Kernel Library Version 2020.0.1 Product Build 20200208 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v0.21.1 (Git Hash 7d2fd500bc78936d1d648ca713b901012f470dbc)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - NNPACK is enabled
+  - CPU capability usage: AVX2
+  - CUDA Runtime 10.2
+  - NVCC architecture flags: -gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_61,code=sm_61;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_37,code=compute_37
+  - CuDNN 7.6.5
+  - Magma 2.5.2
+  - Build settings: BLAS=MKL, BUILD_TYPE=Release, CXX_FLAGS= -Wno-deprecated -fvisibility-inlines-hidden -fopenmp -DNDEBUG -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DUSE_INTERNAL_THREADPOOL_IMPL -O2 -fPIC -Wno-narrowing -Wall -Wextra -Werror=return-type -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-error=deprecated-declarations -Wno-stringop-overflow -Wno-error=pedantic -Wno-error=redundant-decls -Wno-error=old-style-cast -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-stringop-overflow, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, USE_CUDA=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=ON, USE_NNPACK=ON, USE_OPENMP=ON, USE_STATIC_DISPATCH=OFF, 
+
+TorchVision: 0.6.0a0+82fd1c8
+OpenCV: 4.3.0
+MMCV: 1.0.4
+MMDetection: 2.3.0rc0+d06b352
+MMDetection Compiler: GCC 7.5
+MMDetection CUDA Compiler: 10.2
+------------------------------------------------------------
+[20200905_195657.log.txt](https://github.com/open-mmlab/mmdetection/files/5184479/20200905_195657.log.txt)
+[htc_x50_32x4d_fpn_groie_mask_full_wheat_segm.py.txt](https://github.com/open-mmlab/mmdetection/files/5184480/htc_x50_32x4d_fpn_groie_mask_full_wheat_segm.py.txt)
+",NONE
+1205517049,documentation,[Docs] #12714 [Bug]-[480]:Tree select widget - dropdown flickers when we click on the default selection area and filter has text entered.,"> TODO 
+
+ - [ ] Evaluate if this task is needed. If not add the ""Skip Docs"" label on the parent ticket 
+- [ ] Fill these fields 
+- [ ] Prepare first draft 
+- [ ] Add label: ""Ready for Docs Team"" 
+
+Field | Details 
+-----|----- 
+**POD** | App Viewers Pod 
+**Parent Ticket** | #12714
+Engineer | 
+Release Date | 
+Live Date | 
+First Draft | 
+Auto Assign | 
+Priority | 
+Environment |",NONE
+693952887,question,Multiple policies,"# Question
+
+Is it possible to have multiple separate policies on a single table?
+
+## Additional context
+
+- I tried to add separate policies for SELECT and for INSERT.
+- The ""Apply to SELECT' policy was added first and successfully saved.
+- Adding the ""Apply to INSERT"" policy did not save.
+- Both policies had policy rule of `(role() = 'authenticated'::text)`.
+
+",NONE
+1315999664,question,Is it possible to add custom items with an itemadder?,"Is it possible to add item support itemadder?
+",NONE
+1136348977,feature,Roadside decor incomplete,"Thank you for expanding this Roadside Pikmin checklist to sticker letters! However, Pikmin Roadside stickers can be represented by numbers, as well as various colors of stickers as well (green, blue, yellow-orange I believe?) Not sure if there is interest in expanding the checklist to these variants.  Thank you!",NONE
+1249397028,bug,tests.unit.gapic.vision_v1.test_product_search: test_list_products_async_pager failed,"This test failed!
+
+To configure my behavior, see [the Flaky Bot documentation](https://github.com/googleapis/repo-automation-bots/tree/main/packages/flakybot).
+
+If I'm commenting on this issue too often, add the `flakybot: quiet` label and
+I will stop commenting.
+
+---
+
+commit: efdf70b5fc392955aea93597669df3a5cfd4a04f
+buildURL: [Build Status](https://source.cloud.google.com/results/invocations/69bdfd0a-638f-4356-a5ce-25d0e1f4bff8), [Sponge](http://sponge2/69bdfd0a-638f-4356-a5ce-25d0e1f4bff8)
+status: failed
+<details><summary>Test output</summary><br><pre>@pytest.mark.asyncio
+    async def test_list_products_async_pager():
+        client = ProductSearchAsyncClient(
+            credentials=ga_credentials.AnonymousCredentials,
+        )
+    
+        # Mock the actual call within the gRPC stub, and fake the request.
+        with mock.patch.object(
+            type(client.transport.list_products), ""__call__"", new_callable=mock.AsyncMock
+        ) as call:
+            # Set the response to a series of pages.
+            call.side_effect = (
+                product_search_service.ListProductsResponse(
+                    products=[
+                        product_search_service.Product(),
+                        product_search_service.Product(),
+                        product_search_service.Product(),
+                    ],
+                    next_page_token=""abc"",
+                ),
+                product_search_service.ListProductsResponse(
+                    products=[],
+                    next_page_token=""def"",
+                ),
+                product_search_service.ListProductsResponse(
+                    products=[
+                        product_search_service.Product(),
+                    ],
+                    next_page_token=""ghi"",
+                ),
+                product_search_service.ListProductsResponse(
+                    products=[
+                        product_search_service.Product(),
+                        product_search_service.Product(),
+                    ],
+                ),
+                RuntimeError,
+            )
+            async_pager = await client.list_products(
+                request={},
+            )
+            assert async_pager.next_page_token == ""abc""
+            responses = []
+            async for response in async_pager:  # pragma: no branch
+                responses.append(response)
+    
+            assert len(responses) == 6
+>           assert all(isinstance(i, product_search_service.Product) for i in responses)
+E           assert False
+E            +  where False = all(<generator object test_list_products_async_pager.<locals>.<genexpr> at 0x7f0f4153c200>)
+
+tests/unit/gapic/vision_v1/test_product_search.py:2744: AssertionError</pre></details>",NONE
+1249397101,bug,tests.unit.gapic.vision_v1.test_product_search: test_list_reference_images_async_pager failed,"This test failed!
+
+To configure my behavior, see [the Flaky Bot documentation](https://github.com/googleapis/repo-automation-bots/tree/main/packages/flakybot).
+
+If I'm commenting on this issue too often, add the `flakybot: quiet` label and
+I will stop commenting.
+
+---
+
+commit: efdf70b5fc392955aea93597669df3a5cfd4a04f
+buildURL: [Build Status](https://source.cloud.google.com/results/invocations/69bdfd0a-638f-4356-a5ce-25d0e1f4bff8), [Sponge](http://sponge2/69bdfd0a-638f-4356-a5ce-25d0e1f4bff8)
+status: failed
+<details><summary>Test output</summary><br><pre>@pytest.mark.asyncio
+    async def test_list_reference_images_async_pager():
+        client = ProductSearchAsyncClient(
+            credentials=ga_credentials.AnonymousCredentials,
+        )
+    
+        # Mock the actual call within the gRPC stub, and fake the request.
+        with mock.patch.object(
+            type(client.transport.list_reference_images),
+            ""__call__"",
+            new_callable=mock.AsyncMock,
+        ) as call:
+            # Set the response to a series of pages.
+            call.side_effect = (
+                product_search_service.ListReferenceImagesResponse(
+                    reference_images=[
+                        product_search_service.ReferenceImage(),
+                        product_search_service.ReferenceImage(),
+                        product_search_service.ReferenceImage(),
+                    ],
+                    next_page_token=""abc"",
+                ),
+                product_search_service.ListReferenceImagesResponse(
+                    reference_images=[],
+                    next_page_token=""def"",
+                ),
+                product_search_service.ListReferenceImagesResponse(
+                    reference_images=[
+                        product_search_service.ReferenceImage(),
+                    ],
+                    next_page_token=""ghi"",
+                ),
+                product_search_service.ListReferenceImagesResponse(
+                    reference_images=[
+                        product_search_service.ReferenceImage(),
+                        product_search_service.ReferenceImage(),
+                    ],
+                ),
+                RuntimeError,
+            )
+            async_pager = await client.list_reference_images(
+                request={},
+            )
+            assert async_pager.next_page_token == ""abc""
+            responses = []
+            async for response in async_pager:  # pragma: no branch
+                responses.append(response)
+    
+            assert len(responses) == 6
+>           assert all(
+                isinstance(i, product_search_service.ReferenceImage) for i in responses
+            )
+E           assert False
+E            +  where False = all(<generator object test_list_reference_images_async_pager.<locals>.<genexpr> at 0x7fba33f312d0>)
+
+tests/unit/gapic/vision_v1/test_product_search.py:4418: AssertionError</pre></details>",NONE
+1021313188,bug,Certain images get downloaded wrong,"### Steps to reproduce
+
+1. Download a chapter that has a ~~animated~~(Edit: seems to happen with non animated to) webp image with `RIFF (little-endian) data, Web/P image` encoding.
+2. Read the chapter.
+
+### Expected behavior
+
+The image gets loaded.
+And saved as a .webp file
+
+### Actual behavior
+
+The image gets not loaded.
+And gets saved as a .bin file
+
+### Crash logs
+
+_No response_
+
+### Tachiyomi version
+
+r408
+
+### Android version
+
+10
+
+### Device
+
+Samsung s10+
+
+### Other details
+
+Does not happen if you open the chapter before downloading.
+This works fine in the regular tachiyomi version.
+Same file format as in tachiyomiorg/tachiyomi#5139
+
+### Acknowledgements
+
+- [X] I have searched the existing issues and this is a new ticket, **NOT** a duplicate or related to another open issue.
+- [X] I have written a short but informative title.
+- [X] If this is an issue with an extension, I should be opening an issue in the [extensions repository](https://github.com/tachiyomiorg/tachiyomi-extensions/issues/new/choose).
+- [X] I have tried the [troubleshooting guide](https://tachiyomi.org/help/guides/troubleshooting/).
+- [X] I have updated the app to version **[1.7.0](https://github.com/jobobby04/tachiyomisy/releases/latest)**.
+- [X] I have updated all installed extensions.
+- [X] I will fill out all of the requested information in this form.",NONE
+946814390,question,Please check this repo using SonarQube.,"Please check this project using SonarQube.
+
+I added this C# project on CI integration with SonarQube. Here's some (not all) of the QA analysis I get:
+
+Nreco\src\NReco.Data\RecordSet.cs(536,10): warning CS1570: XML comment has badly formed XML -- 'End tag 'summary' does not match the start tag 'T'.' [Nreco\src\NReco.Data\NReco.Data.csproj]
+
+Nreco\src\NReco.Data\RecordSet.cs(540,1): warning CS1570: XML comment has badly formed XML -- 'Expected an end tag for element 'summary'.' [Nreco\src\NReco.Data\NReco.Data.csproj]
+
+Nreco\src\NReco.Data\Query\QConst.cs(23,15): warning CS0660: 'QConst' defines operator == or operator != but does not override Object.Equals(object o) [Nreco\src\NReco.Data\NReco.Data.csproj]
+
+Nreco\src\NReco.Data\Query\QConst.cs(23,15): warning CS0661: 'QConst' defines operator == or operator != but does not override Object.GetHashCode() [Nreco\src\NReco.Data\NReco.Data.csproj]
+
+Nreco\src\NReco.Data\Query\QField.cs(23,15): warning CS0660: 'QField' defines operator == or operator != but does not override Object.Equals(object o) [Nreco\src\NReco.Data\NReco.Data.csproj]
+
+Nreco\src\NReco.Data\Query\QField.cs(23,15): warning CS0661: 'QField' defines operator == or operator != but does not override Object.GetHashCode() [Nreco\src\NReco.Data\NReco.Data.csproj]
+
+Nreco\src\NReco.Data\DbBatchCommandBuilder.cs(39,10): warning CS1591: Missing XML comment for publicly visible type or member 'DbBatchCommandBuilder.DbBatchCommandBuilder(IDbFactory)' [Nreco\src\NReco.Data\NReco.Data.csproj]
+
+Nreco\src\NReco.Data\DbBatchCommandBuilder.cs(43,15): warning CS1591: Missing XML comment for publicly visible type or member 'DbBatchCommandBuilder.BeginBatch()' [Nreco\src\NReco.Data\NReco.Data.csproj]
+
+Nreco\src\NReco.Data\DbBatchCommandBuilder.cs(47,21): warning CS1591: Missing XML comment for publicly visible type or member 'DbBatchCommandBuilder.EndBatch()' [Nreco\src\NReco.Data\NReco.Data.csproj]
+
+Nreco\src\NReco.Data\DbBatchCommandBuilder.cs(55,33): warning CS1591: Missing XML comment for publicly visible type or member 'DbBatchCommandBuilder.GetCommand()' [Nreco\src\NReco.Data\NReco.Data.csproj]
+
+Nreco\src\NReco.Data\DbBatchCommandBuilder.cs(61,27): warning CS1591: Missing XML comment for publicly visible type or member 'DbBatchCommandBuilder.SetCommandText(IDbCommand, string)' [Nreco\src\NReco.Data\NReco.Data.csproj]
+
+Nreco\src\NReco.Data\DbCommandBuilder.cs(121,35): warning CS1591: Missing XML comment for publicly visible type or member 'DbCommandBuilder.GetSqlBuilder(IDbCommand)' [Nreco\src\NReco.Data\NReco.Data.csproj]
+
+Nreco\src\NReco.Data\DbCommandBuilder.cs(127,32): warning CS1591: Missing XML comment for publicly visible type or member 'DbCommandBuilder.GetCommand()' [Nreco\src\NReco.Data\NReco.Data.csproj]
+
+Nreco\src\NReco.Data\DbCommandBuilder.cs(131,26): warning CS1591: Missing XML comment for publicly visible type or member 'DbCommandBuilder.SetCommandText(IDbCommand, string)'
+
+",NONE
+1155016874,bug,Memory usage and Turtle inserting at the ressource parsing,"### To reproduce 
+Use case TAXREF-LD : https://taxref.i3s.unice.fr/~fmichel/taxrefld_singlefile_agropportal.ttl
+```java
+java -DentityExpansionLimit=2500000 -Xmx10240M -jar /srv/ontoportal/ncbo_cron_deployments/shared/bundle/ruby/2.6.0/bundler/gems/ontologies_linked_data-ac4a68542c33/bin/owlapi-wrapper.jar -m /srv/ontoportal/data/repository/TAXREF-LD/2/taxrefld_singlefile_agropportal.ttl -o /srv/ontoportal/data/repository/TAXREF-LD/2 -r true
+```
+We get a `java.lang.OutOfMemoryError: Java heap space` exception even with our default 10gb of max heap size 
+
+Instead  with **20gb of  max heap size** it worked 
+### Solution
+Add a configuration variable for setting owlapi_wrapper java heap size (see https://github.com/ncbo/ontologies_linked_data/issues/124)
+
+### Todo 
+
+- [x] https://github.com/ncbo/ontologies_linked_data/pull/130
+- [x] Updated configuration files to set heap size to 20gb ( see https://gite.lirmm.fr/bioportal/bioportal-configs/-/commit/cfe9bc4a2ea0ca06231c7c84605c7eb3dbec6027)
+- [x] Deploy on Agroportal ( and the others after)
+- [x] Process TAXREF-LD
+
+#### Questions ?
+
+- How much heap size should we use ?
+- Is it normal that 10gb isn't enough ? ",NONE
+1352075251,question,Flask restx multipart/form request with file and body documented properly with swagger,"Hi,
+
+I am trying to implement an endpoint which will take both formData (a list of files, to be more precise) and a body as JSON. My code looks as follows:
+
+Multiple file param in another module:
+
+```python
+def authorization_param(ns: Namespace, parser: Optional[RequestParser] = None) -> RequestParser:
+    if not parser:
+        parser = ns.parser()
+    parser.add_argument('Authorization', location='headers', required=False, default='Bearer ')
+    return parser
+
+def multiple_file_param(arg_name: str, ns: Namespace, parser: Optional[RequestParser] = None) -> RequestParser:
+    if not parser:
+        parser = ns.parser()
+    parser.add_argument(arg_name, type=FileStorage, location='files', required=True, action='append')
+    return parser
+```
+
+Model:
+```python
+some_form_model = api.model('form', {'field': fields.String())
+```
+
+And the endpoint itself:
+
+```python
+ns = Namespace('sth', description='Some stuff'))
+auth_param = authorization_param(ns=ns)
+file_param = multiple_file_param(arg_name='File', ns=ns)
+
+
+@ns.route('/files')
+@ns.expect(auth_param)
+class PreprocessFiles(Resource):
+    @ns.response(code=201, description='Job created', model=some_model)
+    @ns.response(code=400, description='Bad request', model=None)
+    @ns.response(code=401, description='Authentication Error', model=None)
+    @ns.response(code=403, description='Forbidden', model=None)
+    @ns.response(
+        code=422,
+        description='Input data validation Error',
+        model=some_model
+    )
+    @ns.expect(some_form_model)
+    @ns.expect(file_param)
+    def post(self):
+        payload = request.get_json()
+        # do some stuff..
+        return {'text': 'ok'}, 201
+```
+
+The endpoint is registered in an API object:
+```python
+api.add_namespace(ns)
+```
+
+My problem is that in swagger I get either input body or file parameter, depending on the order of decorators I use. If I try to pass both form model and file param into one `ns.expect` as so:
+```python
+@ns.expect(some_form_model, file_param)
+```
+
+I get the following error in the console, and the schema is not rendered:
+
+```
+2022-08-26 12:19:45.764 ERROR flask_restx.api api.__schema__: Unable to render schema
+Traceback (most recent call last):
+  File ""D:\Project\venv\lib\site-packages\flask_restx\api.py"", line 571, in __schema__
+    self._schema = Swagger(self).as_dict()
+  File ""D:\Project\venv\lib\site-packages\flask_restx\swagger.py"", line 239, in as_dict
+    serialized = self.serialize_resource(
+  File ""D:\Project\venv\lib\site-packages\flask_restx\swagger.py"", line 446, in serialize_resource
+    path[method] = self.serialize_operation(doc, method)
+  File ""D:\Project\venv\lib\site-packages\flask_restx\swagger.py"", line 469, in serialize_operation
+    if any(p[""type""] == ""file"" for p in all_params):
+  File ""D:\Project\venv\lib\site-packages\flask_restx\swagger.py"", line 469, in <genexpr>
+    if any(p[""type""] == ""file"" for p in all_params):
+KeyError: 'type'
+```
+
+Is there any way to go around this? I would really like to have good swagger docs for the front-end folks.
+
+Thanks in advance!
+
+Best,
+Mateusz
+",NONE
+940095698,bug,stripClassNames behaves erratically depending on what is passed into preserveClassNames,"https://github.com/udecode/slate-plugins/blob/e4bb252f8140d19b81f4f658e281f20eb74384a4/packages/serializers/html-serializer/src/serializer/serializeHTMLFromNodes.ts#L26
+
+Passing in an empty [] into `serializeHTMLFromNodes.preserveClassNames` causes it to render a set of empty spaces.
+
+In addition, if you were to pass in an arbitrary string to `serializeHTMLFromNodes.preserveClassNames` (ie. preserveClassNames = ['foo']), the class names are all removed, but the remaining html element is left with a space in its string.
+
+I have a fix/PR I'm going to submit for this but wanted to get an issue created first.",NONE
+1129216328,bug,Watcom Resource Editor,"Platform: NT64
+Version: Git February 4, 2022
+
+The menu section of the resource editor is not restoring the values
+for the menu IDs. It saves the values in a header file, requests that
+the header file be loaded, and then it puts the wrong IDs in for the 
+menus.
+
+Here's a simple menu that the IDE cannot handle correctly
+
+```
+#include ""main.h""
+MENU_1   MENU
+BEGIN
+       POPUP    &File
+       BEGIN
+             MENUITEM    E&xit,    IDM_EXIT
+`      END
+END
+```
+
+Main.h just has one #define statement: #define IDM_EXIT   101
+When the user clicks on the Menu item in the ide, the ide 
+puts an arbitrary value in for IDM_EXIT. This takes place 
+after the file has been saved. It happens whether you are 
+using the IDE directly to create the Resource menu, or whether
+you use a resource script file (.rc). I believe the other resource
+editors handle this correctly and save the ID numbers on 
+returning to edit the resource. I checked the behavior on Watcom 1.9
+and the Menu Resource Editor handled the IDs correctly 
+restoring the correct values which were entered and saved
+from a previous session.
+
+Thanks,
+
+Henry",NONE
+1244860938,documentation,Functionality and proposed technologies - Technical solution documentation,"## Summary
+
+Functionality and proposed technologies - Technical solution documentation
+
+## Expected Behaviour
+
+Functionality and proposed technologies - Technical solution documentation
+
+technical framework
+## Solution
+
+doc or pic
+
+### Alternative
+
+Describe alternatives you've considered
+A clear and concise description of any alternative solutions or features you've considered.
+
+## Additional context
+
+Add any other context or screenshots about the feature request here.
+
+## Roadmap
+
+Maintainer could use this section to record issue roadmap.
+",NONE
+1238664609,bug,"CentOS7 - cri-o-1.24 has missing requirements of containernetworking-plugins >= ('0', '1.0.0', '1')","### What happened?
+
+When installing cri-o-1.24 from the rpm out of the opensuse.org repositories it denies the installation because there is no needed version of containernetworking-plugins (1.0.0) available. There is still the old RC1 containernetworking-plugins-1.0.0-0.2.rc1.el7.1.2.x86_64.rpm which worked with cri-o-1.23.
+In this way there is no possibility to update cri-o and even K8S, as both versions must be the same.
+
+Worked around like this, but leaves a mess on my systems:
+
+Going to the projects github page https://github.com/containernetworking/plugins we find under releases a cni-plugins-linux-amd64-v1.1.1.tgz to download which fits our cpu architecture.
+The rpm installs here: /usr/libexec/cni/ So we find everything from the tgz also here installed by the rpm. Let’s try to manually place the newer version here to successful update crio.
+Let's backup, what yum installed, change into /tmp get the package and untar it:
+mv /usr/libexec/cni/ /usr/libexec/cni_old && cd /tmp && wget https://github.com/containernetworking/plugins/releases/download/v1.1.1/cni-plugins-linux-amd64-v1.1.1.tgz && mkdir -p /usr/libexec/cni && tar xvf cni-plugins-linux-amd64-v1.1.1.tgz -C /usr/libexec/cni
+
+Install crio with the --skip-broken option, to work around the problem also didn’t work. But downloading the rpm and install with options while still in /tmp:
+[root@k8s1 tmp]# wget https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable:/cri-o:/1.24/CentOS_7/x86_64/cri-o-1.24.0-5.1.el7.x86_64.rpm
+
+[root@k8s1 tmp]# rpm -ivh --nodeps --replacefiles cri-o-1.24.0-5.1.el7.x86_64.rpm
+
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:cri-o-0:1.24.0-5.1.el7           warning: /etc/crio/crio.conf created as /etc/crio/crio.conf.rpmnew
+################################# [100%]
+
+
+Cluster runs on 1.24 as you see below.
+
+
+### What did you expect to happen?
+
+cri-o-1.24 installs from rpm with all dependencies and is ready to use.
+
+### How can we reproduce it (as minimally and precisely as possible)?
+
+[root@k8s1]# yum update cri-o
+
+--> Running transaction check
+---> Package cri-o.x86_64 0:1.23.2-5.1.el7 will be updated
+---> Package cri-o.x86_64 0:1.24.0-5.1.el7 will be an update
+
+Error: Package: cri-o-1.24.0-5.1.el7.x86_64 (devel_kubic_libcontainers_stable_cri-o_1.24)
+           Requires: containernetworking-plugins >= 1.0.0-1
+           Installed: containernetworking-plugins-1.0.0-0.2.rc1.el7.1.2.x86_64 (@devel_kubic_libcontainers_stable)
+               containernetworking-plugins = 1.0.0-0.2.rc1.el7.1.2
+           Available: containernetworking-plugins-0.8.1-1.el7.centos.x86_64 (extras)
+               containernetworking-plugins = 0.8.1-1.el7.centos
+           Available: containernetworking-plugins-0.8.1-2.el7.centos.x86_64 (extras)
+               containernetworking-plugins = 0.8.1-2.el7.centos
+           Available: containernetworking-plugins-0.8.1-4.el7.centos.x86_64 (extras)
+               containernetworking-plugins = 0.8.1-4.el7.centos
+           Available: containernetworking-plugins-0.8.3-3.el7.centos.x86_64 (extras)
+               containernetworking-plugins = 0.8.3-3.el7.centos
+
+
+### Anything else we need to know?
+
+_No response_
+
+### CRI-O and Kubernetes version
+
+<details>
+
+```console
+$ crio --version
+WARN[0000] Failed to decode the keys [""secret"" ""secret.opts""] from ""/usr/share/containers/containers.conf"".
+crio version 1.24.0
+Version:          1.24.0
+GitCommit:        0ba47c9b3e52eee95d898be84500c38c9fe032c9
+GitTreeState:     clean
+BuildDate:        2022-05-13T16:03:45Z
+GoVersion:        go1.18.2
+Compiler:         gc
+Platform:         linux/amd64
+Linkmode:         dynamic
+BuildTags:        exclude_graphdriver_devicemapper, seccomp
+SeccompEnabled:   true
+AppArmorEnabled:  false
+```
+
+```console
+$ kubectl --version
+kubectl --version didn't work
+[root@k8s1]# kubectl version
+WARNING: This version information is deprecated and will be replaced with the output from kubectl version --short.  Use --output=yaml|json to get the full version.
+Client Version: version.Info{Major:""1"", Minor:""24"", GitVersion:""v1.24.0"", GitCommit:""4ce5a8954017644c5420bae81d72b09b735c21f0"", GitTreeState:""clean"", BuildDate:""2022-05-03T13:46:05Z"", GoVersion:""go1.18.1"", Compiler:""gc"", Platform:""linux/amd64""}
+Kustomize Version: v4.5.4
+Server Version: version.Info{Major:""1"", Minor:""24"", GitVersion:""v1.24.0"", GitCommit:""4ce5a8954017644c5420bae81d72b09b735c21f0"", GitTreeState:""clean"", BuildDate:""2022-05-03T13:38:19Z"", GoVersion:""go1.18.1"", Compiler:""gc"", Platform:""linux/amd64""}
+```
+
+</details>
+
+
+### OS version
+
+<details>
+
+```console
+# On Linux:
+$ cat /etc/os-release
+NAME=""CentOS Linux""
+VERSION=""7 (Core)""
+ID=""centos""
+ID_LIKE=""rhel fedora""
+VERSION_ID=""7""
+PRETTY_NAME=""CentOS Linux 7 (Core)""
+ANSI_COLOR=""0;31""
+CPE_NAME=""cpe:/o:centos:centos:7""
+HOME_URL=""https://www.centos.org/""
+BUG_REPORT_URL=""https://bugs.centos.org/""
+
+CENTOS_MANTISBT_PROJECT=""CentOS-7""
+CENTOS_MANTISBT_PROJECT_VERSION=""7""
+REDHAT_SUPPORT_PRODUCT=""centos""
+REDHAT_SUPPORT_PRODUCT_VERSION=""7""
+
+$ uname -a
+Linux k8s1.domain.here 3.10.0-1160.62.1.el7.x86_64 #1 SMP Tue Apr 5 16:57:59 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+```
+
+</details>
+
+
+### Additional environment details (AWS, VirtualBox, physical, etc.)
+
+<details>
+running as virtual machine on VMware platform
+</details>
+",NONE
+687272648,question,It took quite a long time to send out retry request,"I set the retry time to wait 3 seconds, but it looks like waiting longer random time (sometimes 1 minutes) to start another retry.
+From the logs, it shows clearly how long (timestamp in millionseconds) it took to start a new retry. 
+
+-- code --
+setting: 
+    const requestConfig = {
+        url: 'https://xxx',
+        method: 'GET',
+        proxy: 'http://xxx.dat',
+        headers: {
+            Authorization: `Basic ${basicAuth}`
+        },
+        maxAttempts: 5,
+        retryDelay: 3000
+    }
+
+-- add console logs in index.js --
+Request.prototype._tryUntilFail = function () {
+  this.maxAttempts--;
+  this.attempts++;
+  let d = new Date();
+  console.log(`retry: ` + this.attempts + "". time: "" + d.getTime())
+ ....
+}
+
+---attempt logs ---
+// timestamp is millionseconds
+retry: 1. time: 1598535599412
+retry: 2. time: 1598535729952
+retry: 3. time: 1598535860259
+retry: 4. time: 1598535990565
+The number of request attempts: 4
+----
+retry: 1. time: 1598535333396
+retry: 2. time: 1598535463709
+The number of request attempts: 2
+----
+retry: 1. time: 1598536792869
+retry: 2. time: 1598536923236
+retry: 3. time: 1598537053614
+The number of request attempts: 3",NONE
+1115949620,bug,[BUG] Entities and transparent assets turn black,"### Describe the bug
+
+![2022-01-27_09 01 18](https://user-images.githubusercontent.com/98518881/151326221-e61f02ad-8653-41de-b942-d61eb902b58c.png)
+This is the black entities error
+Sadly I dont have the clip of the keyboard error.
+
+### The log file and images/videos
+
+![2022-01-27_09 01 18](https://user-images.githubusercontent.com/98518881/151326882-dc5cd3b4-f067-4210-9870-f1e40222632c.png)
+
+
+### Steps To Reproduce
+
+```markdown
+You have to select opengl 1.4 or 1.5 on a fresh installation of mc 1.8 or 1.8.9
+
+Then open any singleplayer world or multiplayer (depends on client) and give damage to any mob or take damage in survival mode.
+```
+
+
+### Expected Behavior
+
+I expect for all the transparent items held in hand and the mob's face to become black
+
+### Platform
+
+```markdown
+- Device model: 
+- CPU architecture: 
+- Android version: 
+- PojavLauncher version:
+```
+
+
+### Anything else?
+
+No ma'am",NONE
+1118817418,bug,It seems like the new version does not work,https://imgur.com/a/Ed9k0R6,NONE
+1206189203,bug,[Bug] React 18 is not working,"### Describe the bug
+
+When updating to React 18, the error drops:
+```
+reactDomClient.createRoot is not a function. (In 'reactDomClient.createRoot(el)', 'reactDomClient.createRoot' is undefined)
+```
+
+### Steps to reproduce the behavior
+
+1. Run the react-18 example
+2. Click on ""Button""
+
+### Expected behavior
+
+Well at least there shouldn't be a mistake.
+
+### Screenshots and/or logs
+
+<img width=""1489"" alt=""image"" src=""https://user-images.githubusercontent.com/22263836/163687340-1f1ff92b-264b-4211-9cac-7515e6037a48.png"">
+
+### Environment
+
+ - OS: MacOS
+ - Node.js version: v16.14.2
+ - NPM version: 8.5.0
+ - Browser (if applicable): chrome, safari
+
+### Additional context
+
+I checked, the problem started with this line: https://github.com/storybookjs/builder-vite/compare/v0.1.27...v0.1.28?diff=split#diff-bd0c0785607831a0bfe079077208f5a4ec1b10ef8205c7b733c25b2e973312edR13
+",NONE
+1272617520,bug,"Socket2 reports multiple activewindow changes, sometimes out of order.","Socket2 sends two activewindow reports for every workspace change, presumably the parent window of the workspace and the focused window. For some reason they don't always report in the right order and the parent window reports second despite not being the active window.
+
+This is problematic for scripts that subscribe to socket2 to determine the active window.",NONE
+1235547151,documentation,Establish documentation workspace,"- Create doc folder
+- Create Documentation.md",NONE
+1306753053,feature,Ace Whitelist,"**Is your feature request related to a problem? Please describe.**
+There are bunch of possibilty to activate a whitelist on your Server. You can use txAdmin or other ressources. But no one is working or working good with ACE Perms
+
+**Describe the solution you'd like**
+A whitelist system that is working with Ace Perms:
+e.g. only Players with the permission: easyadmin.whitelistare are allowed to join. the server
+
+**Describe alternatives you've considered**
+There is not really a good alternatives that you can put in EasyAdmin.
+
+**Additional context**
+Since Easyadmin has the possibilty of a Permissions System that works with Discord Roles it would be nice to have a ACE Whitelist System. With that you could just give a Player a role in Discord and he is instantly added to the whitelist.",NONE
+1307632435,question,[CoE Starter Kit - QUESTION] Why in Audit Log there is only LuachPowerApps Opration,"### What is your question?
+
+In the Audit Log there is only LuachPowerApps Opration. is there any record about power automate. e.g. someone who lauchPower automate in AuditLog? Thank you
+
+![image](https://user-images.githubusercontent.com/109514509/179480024-7569f255-4165-473c-9f9c-33383ddc9fbb.png)
+
+
+### What solution are you experiencing the issue with?
+
+Audit Log
+
+### What solution version are you using?
+
+_No response_
+
+### What app or flow are you having the issue with?
+
+_No response_",NONE
+1117546922,bug,Docker image cmd = headscale,Shouldn't it be 'headscale serve' ?,NONE
+1336535731,feature,GitHub issue template should explain how to obtain `messages.log`,"**Is your feature request related to a problem? Please describe.**
+The GitHub issue template currently only says:
+https://github.com/oracle/visualvm/blob/0c39bd63aeb5134fa400021509b5bf85192efdd7/.github/ISSUE_TEMPLATE/bug_report.md?plain=1#L24
+
+It might not be clear to users where to find this file.
+
+**Describe the solution you'd like**
+Extend the GitHub issue template to mention that the file can be obtained from ""Help"" > ""About"" > ""Logfile"" (or mention the default file path where it is stored).
+",NONE
+1332961631,bug,"Immersive Vehicles sound error: tried to play sound, but was told no sound slots available","When I opened the door of a car I got this error:
+`IMMERSIVE VEHICLES ERROR: Tried to play a sound, but was told no sound slots were available. Some mod is taking up all slots. If you have Immersive Engineering, set override sound channels to false in that mod's config. If running GregTech, set maxNumSounds to a lower value in that mod's config. Dynamic Surroundings and Optifine also may cause issues. Apply fixes, or complain to those mod's authors. Sounds will not play.`
+
+I have both Optifine and Immersive Engineering with a lot of other vehicle mods.
+I've searched Immersive Engineering mod options, there was no option to disable override sound channels.",NONE
+1078780344,bug,SRVB (Service Binding) is lost in version 1.113.0,"Hi,
+
+after installing the current ababgit version 1.113.0 the SRVB objects was displayed as ""deleted"". With the same system and abapgit version 1.109.0 all is fine. See screenshot. The objects are created in partner namespace (/*).
+
+![grafik](https://user-images.githubusercontent.com/41207683/145857202-cdb15495-5a3f-40ee-b935-0071fdb22247.png)
+
+Please check the last implementations for SRVB. 
+
+Thank You!
+
+Regards
+Joerg
+",NONE
+1344714222,bug,Being unable to launch the game after swpping my CPU.,"### Operating System
+
+Windows Vista SP2
+
+### OpenRCT2 build
+
+OpenRCT2, v0.4.1 (be518f4) provided by GitHub
+
+### Describe the issue
+
+When I wanted to continue my savefile on my Windows Vista VM, the game crashed instantly. 
+
+If you thing this is a joke, this isn't.
+
+### Area(s) with issue?
+
+_No response_
+
+### Steps to reproduce
+
+1. Play the game with an older Intel CPU. (example : Intel Core i5 2320)
+2. Swap with an newer CPU. (example: Intel Core i5 10400F)
+3. Start the VM and launch the game.
+
+### Attachments
+
+_No response_",NONE
+1245740349,feature,Support for Identity Engine (authenitcation policies and rules),"<!--- Please keep this note for the community --->
+
+### Community Note
+
+- Please vote on this issue by adding a 👍 [reaction](https://blog.github.com/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/) to the original issue to help the community and maintainers prioritize this request
+- Please do not leave ""+1"" or other comments that do not add relevant new information or questions, they generate extra noise for issue followers and do not help prioritize the request
+- If you are interested in working on this issue or have submitted a pull request, please leave a comment
+
+<!--- Thank you for keeping this note for the community --->
+
+### Description
+https://developer.okta.com/docs/reference/api/policy/#profile-enrollment-policy this is required to support the example https://developer.okta.com/docs/guides/telephony-inline-hook/nodejs/main/#create-a-group-and-add-a-user where Twilio is used to send SMS using an inline hook
+
+<!--- Please leave a helpful description of the feature request here. --->
+
+### New or Affected Resource(s)
+
+<!--- Please list the new or affected resources and data sources. --->
+
+- okta_XXXXX
+
+### Potential Terraform Configuration
+
+<!--- Information about code formatting: https://help.github.com/articles/basic-writing-and-formatting-syntax/#quoting-code --->
+
+```hcl
+# Copy-paste your Terraform configurations here - for large Terraform configs,
+# please use a service like Dropbox and share a link to the ZIP file. For
+# security, you can also encrypt the files using our GPG public key.
+```
+
+### References
+
+<!---
+Information about referencing Github Issues: https://help.github.com/articles/basic-writing-and-formatting-syntax/#referencing-issues-and-pull-requests
+
+Are there any other GitHub issues (open or closed) or pull requests that should be linked here? Vendor blog posts or documentation?
+--->
+
+- #0000
+",NONE
+1134787591,bug,"bug: After checking for new Northstar versions the ""ns_startup_args.txt"" file gets excluded.","**Describe The Bug**
+After Clicking the ""Check for updates"" button in the Northstar tab, ""ns_startup_args.txt"" is set back to its default filename ""ns_startup_args.txt.excluded""
+
+**To Reproduce**
+Steps to reproduce the behavior:
+1. Navigate to Northstar tab in Viper
+2. Click the ""(Check For Updates)"" button
+3. When you start the game all of your startup arguments will not load.
+
+**Expected behavior**
+The startup args file should not be affected by the checking for updates button.
+
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
+
+**Version:**
+v1.2.1
+
+**Additional Info**
+Any extra info should go here!
+",NONE
+1178663273,bug,Template not applied in the email when it is created via API,"### Mautic Version
+
+4.1.x series
+
+### PHP version
+
+7.4.27
+
+### What browsers are you seeing the problem on?
+
+Not relevant
+
+### What happened?
+
+I'm performing an integration with mautic and for that, I'm using its rest api. However, when I create the segment email via the rest api, even though I enter the template parameter correctly, my email is always blank. Is there any way to create an email with an html that I have previously registered on mautic or will I always have to send the complete html? From the interface, I saw that it only fills the html if you click on the builder, otherwise the content is also blank.
+
+### How can we reproduce this issue?
+
+```shell
+POST /emails/new
+{
+      ""name"": ""Email name"",
+      ""subject"": ""Email subject"",
+      ""emailType"": ""template"",
+      ""lists"": [42],
+      ""template"": ""confirmme""
+}
+```
+
+### Relevant log output
+
+```shell
+API RESPONSE:
+
+{
+	""email"": {
+		""isPublished"": true,
+		""dateAdded"": ""2022-03-23T20:58:06+00:00"",
+		""dateModified"": null,
+		""createdBy"": 1,
+		""createdByUser"": ""Felipe Rita"",
+		""modifiedBy"": null,
+		""modifiedByUser"": null,
+		""id"": 56,
+		""name"": ""Email X"",
+		""subject"": ""SUBJECT TOP"",
+		""language"": ""en"",
+		""category"": null,
+		""fromAddress"": null,
+		""fromName"": null,
+		""replyToAddress"": null,
+		""bccAddress"": null,
+		""useOwnerAsMailer"": false,
+		""utmTags"": {
+			""utmSource"": null,
+			""utmMedium"": null,
+			""utmCampaign"": null,
+			""utmContent"": null
+		},
+		""customHtml"": """",
+		""plainText"": null,
+		""template"": ""confirmme"",
+		""emailType"": ""list"",
+		""publishUp"": null,
+		""publishDown"": null,
+		""readCount"": 0,
+		""sentCount"": 0,
+		""revision"": 1,
+		""assetAttachments"": [],
+		""variantStartDate"": null,
+		""variantSentCount"": 0,
+		""variantReadCount"": 0,
+		""variantParent"": null,
+		""variantChildren"": [],
+		""translationParent"": null,
+		""translationChildren"": [],
+		""unsubscribeForm"": null,
+		""dynamicContent"": [],
+		""lists"": [
+			{
+				""createdByUser"": ""Felipe Rita"",
+				""modifiedByUser"": null,
+				""id"": 56,
+				""name"": ""Segmento da company"",
+				""publicName"": ""Segmento da company"",
+				""alias"": ""segmento-da-company"",
+				""description"": null,
+				""category"": null
+			}
+		],
+		""headers"": []
+	}
+}
+```
+```
+
+
+### Code of Conduct
+
+- [X] I confirm that I have read and agree to follow this project's Code of Conduct",NONE
+1099859461,question,Trouble Installing dependencies,"Hello,
+  Thank you for all your work on the firewire audio drivers!  
+
+I have successfully installed the snd-firewire-improve drivers for my DIGI 002 Rack.  I have some success using the device with snd-firewire-improve but I am getting a lot of xruns and choppy audio when using with jack2.  I am now trying to build & install the snd-firewire-ctl-services as I hope that will help the device work better.  Part of my problem is that I do not have any previous experience with the rust language.  When I try to install the hinawa-rs and alsa-gobject-rs packages I get the following message:
+
+
+
+$ cargo install --git https://github.com/alsa-project/hinawa-rs.git
+    Updating git repository `https://github.com/alsa-project/hinawa-rs.git`
+error: no packages found with binaries or examples
+
+$ cargo install --git https://github.com/alsa-project/alsa-gobject-rs.git
+    Updating git repository `https://github.com/alsa-project/alsa-gobject-rs.git`
+error: no packages found with binaries or examples
+
+
+
+thus when trying to build snd-firewire-ctl-services:
+
+ $ cargo build
+   Compiling hinawa-sys v0.4.0 (https://github.com/alsa-project/hinawa-rs.git?tag=v0.4.0#6865cfd3)
+   Compiling alsatimer-sys v0.2.0 (https://github.com/alsa-project/alsa-gobject-rs.git?tag=v0.2.0#fcab3654)
+error: failed to run custom build command for `hinawa-sys v0.4.0 (https://github.com/alsa-project/hinawa-rs.git?tag=v0.4.0#6865cfd3)`
+
+Caused by:
+  process didn't exit successfully: `/usr/local/src/snd-firewire-ctl-services/snd-firewire-ctl-services/target/debug/build/hinawa-sys-d6c0ffcaf03d9fbd/build-script-build` (exit status: 1)
+  --- stdout
+  cargo:rerun-if-env-changed=HINAWA_NO_PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG
+  cargo:rerun-if-env-changed=HINAWA_STATIC
+  cargo:rerun-if-env-changed=HINAWA_DYNAMIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_ALL_STATIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_ALL_DYNAMIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
+
+  --- stderr
+  `""pkg-config"" ""--libs"" ""--cflags"" ""hinawa"" ""hinawa >= 2.3""` did not exit successfully: exit status: 1
+  error: could not find system library 'hinawa' required by the 'hinawa-sys' crate
+
+  --- stderr
+  Package hinawa was not found in the pkg-config search path.
+  Perhaps you should add the directory containing `hinawa.pc'
+  to the PKG_CONFIG_PATH environment variable
+  No package 'hinawa' found
+  Package hinawa was not found in the pkg-config search path.
+  Perhaps you should add the directory containing `hinawa.pc'
+  to the PKG_CONFIG_PATH environment variable
+  No package 'hinawa' found
+
+warning: build failed, waiting for other jobs to finish...
+error: build failed
+
+
+If you can please offer me some guidance regarding how to resolve this error I would be very appreciative.
+
+Thank you for your time.
+
+-David
+
+",NONE
+1122486993,question,help required on source file export in jar file,"Hey,
+I'm currently trying to export my jar file with the default project creation, with no build tools
+And I want to export the .java file inside of the .jar file is there any way to do it?",NONE
+1245902736,bug,cert-manager-cainjector not work,"**Environment details:**:
+- Kubernetes version: 1.17.x
+- Cloud-provider/provisioner: provisioner
+- cert-manager version:  1.6.3
+- Install method: e.g. helm/static manifests:   manifests
+
+/kind bug
+
+
+```
+I0524 02:38:37.859278       1 controller.go:240] cert-manager/certificate/customresourcedefinition/controller/controller-for-certificate-customresourcedefinition ""msg""=""Shutdown signal received, waiting for all workers to finish""  
+I0524 02:38:37.859279       1 reflector.go:225] Stopping reflector *v1.CustomResourceDefinition (10h49m58.764554377s) from external/io_k8s_client_go/tools/cache/reflector.go:167
+E0524 02:38:37.859386       1 start.go:139] cert-manager/ca-injector ""msg""=""manager goroutine exited"" ""error""=null  
+I0524 02:38:37.859391       1 controller.go:240] cert-manager/certificate/apiservice/controller/controller-for-certificate-apiservice ""msg""=""Shutdown signal received, waiting for all workers to finish""  
+I0524 02:38:37.859433       1 controller.go:242] cert-manager/certificate/apiservice/controller/controller-for-certificate-apiservice ""msg""=""All workers finished""  
+I0524 02:38:37.859460       1 controller.go:240] cert-manager/certificate/mutatingwebhookconfiguration/controller/controller-for-certificate-mutatingwebhookconfiguration ""msg""=""Shutdown signal received, waiting for all workers to finish""  
+I0524 02:38:37.859452       1 reflector.go:225] Stopping reflector *v1.CustomResourceDefinition (9h14m26.595457864s) from external/io_k8s_client_go/tools/cache/reflector.go:167
+I0524 02:38:37.859484       1 controller.go:240] cert-manager/certificate/validatingwebhookconfiguration/controller/controller-for-certificate-validatingwebhookconfiguration ""msg""=""Shutdown signal received, waiting for all workers to finish""  
+I0524 02:38:37.859484       1 controller.go:240] cert-manager/secret/apiservice/controller/controller-for-secret-apiservice ""msg""=""Shutdown signal received, waiting for all workers to finish""  
+I0524 02:38:37.859486       1 reflector.go:225] Stopping reflector *v1.ValidatingWebhookConfiguration (10h4m34.684255596s) from external/io_k8s_client_go/tools/cache/reflector.go:167
+I0524 02:38:37.859539       1 controller.go:240] cert-manager/secret/customresourcedefinition/controller/controller-for-secret-customresourcedefinition ""msg""=""Shutdown signal received, waiting for all workers to finish""  
+I0524 02:38:37.859553       1 controller.go:240] cert-manager/secret/validatingwebhookconfiguration/controller/controller-for-secret-validatingwebhookconfiguration ""msg""=""Shutdown signal received, waiting for all workers to finish""  
+I0524 02:38:37.859565       1 controller.go:240] cert-manager/secret/mutatingwebhookconfiguration/controller/controller-for-secret-mutatingwebhookconfiguration ""msg""=""Shutdown signal received, waiting for all workers to finish""  
+I0524 02:38:37.859564       1 controller.go:242] cert-manager/certificate/customresourcedefinition/controller/controller-for-certificate-customresourcedefinition ""msg""=""All workers finished""  
+I0524 02:38:37.859590       1 controller.go:242] cert-manager/certificate/validatingwebhookconfiguration/controller/controller-for-certificate-validatingwebhookconfiguration ""msg""=""All workers finished""  
+I0524 02:38:37.859590       1 reflector.go:225] Stopping reflector *v1.APIService (9h13m58.50001062s) from external/io_k8s_client_go/tools/cache/reflector.go:167
+I0524 02:38:37.859680       1 reflector.go:225] Stopping reflector *v1.Secret (9h57m39.083932972s) from external/io_k8s_client_go/tools/cache/reflector.go:167
+I0524 02:38:37.859696       1 controller.go:242] cert-manager/secret/customresourcedefinition/controller/controller-for-secret-customresourcedefinition ""msg""=""All workers finished""  
+I0524 02:38:37.859716       1 controller.go:242] cert-manager/secret/mutatingwebhookconfiguration/controller/controller-for-secret-mutatingwebhookconfiguration ""msg""=""All workers finished""  
+I0524 02:38:37.859686       1 controller.go:242] cert-manager/certificate/mutatingwebhookconfiguration/controller/controller-for-certificate-mutatingwebhookconfiguration ""msg""=""All workers finished""  
+I0524 02:38:37.859743       1 controller.go:242] cert-manager/secret/apiservice/controller/controller-for-secret-apiservice ""msg""=""All workers finished""  
+I0524 02:38:37.859739       1 controller.go:242] cert-manager/secret/validatingwebhookconfiguration/controller/controller-for-secret-validatingwebhookconfiguration ""msg""=""All workers finished""  
+I0524 02:38:37.859783       1 reflector.go:225] Stopping reflector *v1.MutatingWebhookConfiguration (10h15m19.057026228s) from external/io_k8s_client_go/tools/cache/reflector.go:167
+
+
+```
+
+
+
+
+",NONE
+1151491702,bug,Pokemon caught after badge 3 in the southeast/sunnyshore section of the Grand Underground are marked illegal.,"**Describe the problem**
+A clear and concise description of what the bug is. This is not to ask why fabricated data does not pass the legality check.
+
+A few pokemon that I legally caught, all in the same day (November 24th), are marked illegal.
+Based on some backtracking, these pokemon were caught in the southeastern/sunnyshore section of the Grand Underground.
+
+
+**To Reproduce**
+Please provide a PKM file or adequate information so that we may quickly replicate the parsing behavior on our end.
+
+[bd_illegals.zip](https://github.com/kwsch/PKHeX/files/8146200/bd_illegals.zip)
+In order to access the relevant area of the Grand Underground, a viable location that is reachable after badge 3 is just on the beach, next to Dr. Footprint's House
+
+
+**Expected behavior**
+A clear and concise description of what you expected to happen.
+
+These pokemon should be legal, given that the relevant section of the Grand Underground (southeastern/sunnyshore) is accessible from route 213, which is a legal area for a person with only 3 badges, meaning the met level range of 29-33 is correct.
+
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
+
+**Additional context**
+Add any other context about the problem here.
+",NONE
+1098761095,bug,[BUG] Powershell-empire bypassuac_fodhelper.py local variable error,"__Note:__ Please fill out all sections (if applicable) and do not delete the below section headers, otherwise the bot will close the issue.
+
+## Empire Version
+- Empire 4.30
+
+## OS Information (Linux flavor, Python version)
+- OS: Debian 5.15.5
+- Python:  2.7.18
+
+## Describe the bug
+Powershell-empire contains an error in the following script ‘/usr/share/powershell-empire/empire/server/modules/powershell/privesc/bypassuac_fodhelper.py’:
+[!] Error: UnboundLocalError(""local variable 'script_end' referenced before assignment"")
+
+Snaptext from bypassuac_fodhelper.py reference to local variable 'script_end' :
+
+else:
+                script_end += ""Invoke-FodHelperBypass -Command \""%s\"""" % (enc_script)
+                if main_menu.obfuscate:
+                    script_end = data_util.obfuscate(main_menu.installPath, psScript=script_end,
+                                                     obfuscationCommand=main_menu.obfuscateCommand)
+                script += script_end
+                script = data_util.keyword_obfuscation(script)
+
+                return script
+
+I have google for possible solution, but I cannot find a good solution for it. So I am unable to continue the empire  exercises
+
+## To Reproduce
+Steps to reproduce the behavior:
+ sudo apt-get update
+ sudo apt-get install powershell-empire
+ sudo powershell-empire server
+
+Open a new terminal
+ sudo powershell-empire client
+
+(Empire: <agent_name>) > usemodule privesc/bypassuac_fodhelper
+(Empire: powershell/privesc/bypassuac_fodhelper) > set Listener http
+(Empire: powershell/privesc/bypassuac_fodhelper) > execute
+[!] Error: UnboundLocalError(""local variable 'script_end' referenced before assignment"")
+
+## Expected behavior
+The output should be as followed: 
+[>] Module is not opsec safe, run? [y/N] y
+
+(Empire: powershell/privesc/bypassuac_fodhelper) > 
+Job started: 4STVDU
+[+] Initial agent <agent_name> from <target_ip> now active (Slack)
+
+(Empire: powershell/privesc/bypassuac_fodhelper) > 
+
+## Expected behavior
+A clear and concise description of what you expected to happen.
+
+## Screenshots
+If applicable, add screenshots to help explain your problem.
+
+## Additional context
+Add any other context about the problem here.
+",NONE
+1106421060,feature,Keep on trying to open an invalid symbol link file,"I think this is an enhancement, not bug.
+
+Description:
+In my K8s cluster, there are some symbol links under /var/log/containers. This means the linked files under /va/lib/docker/containers are not exists. But i do not know when the linked files were removed, or why containers are deleted but the links still there.
+The otel collector keep on trying to open these linked files every seconds. 
+
+Proposed enhancement.
+Although this may not introduce faults, it still waste the system resource. If there is some mechanism to verify the file is valid or limitation on trying, that will be better.
+
+@tigrannajaryan 
+@rockb1017 ",NONE
+1314522504,bug,dynamic create component in library package not work,"### Which @angular/* package(s) are the source of the bug?
+
+compiler, core
+
+### Is this a regression?
+
+No
+
+### Description
+
+Dynamic create a component and npm publish to a package. when using it in an angular app. it shows the error
+
+`Uncaught (in promise): Error: Unexpected value 'dynamicComponent' declared by the module 'class { }  '. Please add a @Pipe/@Directive/@Component annotation`
+
+If I use it as a library project in the app. everything is ok.
+
+### Please provide a link to a minimal reproduction of the bug
+
+_No response_
+
+### Please provide the exception or error you saw
+
+```true
+         @Component({
+            selector: 'Component_' + pageState.PageID + '_' + pageState.PageState,
+            template: pageState.Template,
+            jit: true,
+          })
+          class dynamicComponent implements OnInit {
+
+            constructor() { }
+
+            ngOnInit() { }
+          };
+
+          @NgModule({
+            imports: dynamicDepens,
+            declarations: [dynamicComponent],
+            entryComponents: [dynamicComponent],
+            exports: [dynamicComponent],
+            jit: true,
+          })
+          class dynamicModule { };
+          const parent = this;
+          this.compiler.compileModuleAsync(dynamicModule).then(moduleFactory => {
+            const mod = moduleFactory.create(this.injector);
+            const componentFactory = mod.componentFactoryResolver.resolveComponentFactory(dynamicComponent);
+
+            const component = componentFactory.create(this.injector);
+            component.instance[""parent""] = parent.page.appID;
+            component.instance[""splitterResizeStop""] = function () {
+              parent.cdr.markForCheck();
+            };
+            this.contentTarget.insert(component.hostView);
+            this.cdr.markForCheck();
+          })
+        }).catch((error) => {
+          throw error;
+        })
+```
+
+```
+core.js:4442 ERROR Error: Uncaught (in promise): Error: Unexpected value 'dynamicComponent' declared by the module 'class {
+                    }'. Please add a @Pipe/@Directive/@Component annotation.
+Error: Unexpected value 'dynamicComponent' declared by the module 'class {
+                    }'. Please add a @Pipe/@Directive/@Component annotation.
+    at verifySemanticsOfNgModuleDef (core.js:25967:1)
+    at Function.get (core.js:25902:1)
+    at getInjectorDef (core.js:396:1)
+    at R3Injector.processInjectorType (core.js:11187:1)
+```
+```
+
+
+### Please provide the environment you discovered this bug in (run `ng version`)
+
+```true
+Angular CLI: 10.2.3
+Node: 16.15.0
+OS: win32 x64
+
+Angular: 10.2.5
+... animations, common, compiler, compiler-cli, core, forms
+... platform-browser, platform-browser-dynamic, router
+Ivy Workspace: Yes
+```
+
+
+### Anything else?
+
+_No response_",NONE
+1097047218,feature,Vehicle make and model for PD,"**Name:**
+TheJayNation
+
+**Summary:**
+I'd like to see if there is a way to make it to where when PD pulls someone over or is in an 80 to see the make and model of the vehicle on screen.
+
+**Link:**
+If there are any links to what you're suggesting, please add them here.
+
+**Reason:**
+Make it easier for callouts, not everyone knows make and models of vehicles, especially PDM cars.
+",NONE
+1338126840,bug,Gagal untuk pasang/upgrade mysqlclient 2.1.1,"Saya cuba untuk **upgrade** pakej menggunakan poetry, tetapi gagal.
+
+Berikut adalah maklumat yang berkaitan:
+
+### Info mesin (lokal):
+OS - OSX Monterey 12.5
+Versi Python - 3.9.4
+Versi Poetry - 1.1.14
+
+### Langkah penghasilan semula ralat:
+1. `poetry install`
+2. Semua pakej berjaya diupdate, kecuali `mysqlclient`
+
+### Output:
+
+```
+  • Installing mysqlclient (2.1.1): Failed
+
+  EnvCommandError
+
+  Command ['/Users/alserembani/Library/Caches/pypoetry/virtualenvs/samudra-w3fVXaJ--py3.9/bin/pip', 'install', '--no-deps', 'file:///Users/alserembani/Library/Caches/pypoetry/artifacts/2d/90/d6/339cd2c929c6d8a54167285d71ca5d4c6996063ebeba2e43a6d5e3f698/mysqlclient-2.1.1.tar.gz'] errored with the following return code 1, and output: 
+  Processing /Users/alserembani/Library/Caches/pypoetry/artifacts/2d/90/d6/339cd2c929c6d8a54167285d71ca5d4c6996063ebeba2e43a6d5e3f698/mysqlclient-2.1.1.tar.gz
+    Preparing metadata (setup.py): started
+    Preparing metadata (setup.py): finished with status 'error'
+    error: subprocess-exited-with-error
+    
+    × python setup.py egg_info did not run successfully.
+    │ exit code: 1
+    ╰─> [16 lines of output]
+        /bin/sh: mysql_config: command not found
+        /bin/sh: mariadb_config: command not found
+        /bin/sh: mysql_config: command not found
+        Traceback (most recent call last):
+          File ""<string>"", line 2, in <module>
+          File ""<pip-setuptools-caller>"", line 34, in <module>
+          File ""/private/var/folders/93/vjskgv4j0nx3sqqwnb4wpwmw0000gn/T/pip-req-build-hkh5lbs5/setup.py"", line 15, in <module>
+            metadata, options = get_config()
+          File ""/private/var/folders/93/vjskgv4j0nx3sqqwnb4wpwmw0000gn/T/pip-req-build-hkh5lbs5/setup_posix.py"", line 70, in get_config
+            libs = mysql_config(""libs"")
+          File ""/private/var/folders/93/vjskgv4j0nx3sqqwnb4wpwmw0000gn/T/pip-req-build-hkh5lbs5/setup_posix.py"", line 31, in mysql_config
+            raise OSError(""{} not found"".format(_mysql_config_path))
+        OSError: mysql_config not found
+        mysql_config --version
+        mariadb_config --version
+        mysql_config --libs
+        [end of output]
+    
+    note: This error originates from a subprocess, and is likely not a problem with pip.
+  error: metadata-generation-failed
+  
+  × Encountered error while generating package metadata.
+  ╰─> See above for output.
+  
+  note: This is an issue with the package mentioned above, not pip.
+  hint: See above for details.
+  WARNING: You are using pip version 22.0.3; however, version 22.2.2 is available.
+  You should consider upgrading via the '/Users/alserembani/Library/Caches/pypoetry/virtualenvs/samudra-w3fVXaJ--py3.9/bin/python -m pip install --upgrade pip' command.
+  
+
+  at ~/.poetry/lib/poetry/utils/env.py:1195 in _run
+      1191│                 output = subprocess.check_output(
+      1192│                     cmd, stderr=subprocess.STDOUT, **kwargs
+      1193│                 )
+      1194│         except CalledProcessError as e:
+    → 1195│             raise EnvCommandError(e, input=input_)
+      1196│ 
+      1197│         return decode(output)
+      1198│ 
+      1199│     def execute(self, bin, *args, **kwargs):
+```",NONE
+1316544386,question,Use the command: pyarmor obfuscate --recursive myscript.py,"There are no two files in the dist directory:
+pytransform.key
+license.lic",NONE
+1217352008,feature,1d3+1d4 throws error,parseNotation will make a roll object out of a 1d3 but this can't be rolled by Dicebox and it will cause an error. FDP probably needs to check to ensure sides is equal to a typically die and only pass that to Dicebox. ,NONE
+1222311457,bug,VIP servers,"### Description
+
+It's not clear what is a VIP server for Discord :
+
+![image](https://user-images.githubusercontent.com/29425008/166167040-0658d53d-899e-4c32-a2c6-d5383aaaf2ca.png)
+
+We should replace VIP server with ""lvl 1 boosted server""
+
+### Steps to Reproduce
+
+Go to https://discord.com/developers/docs/resources/channel#modify-channel-json-params-guild-channel page",NONE
+1213498953,bug,1.17 and 1.18 Crashing [offline],"### Describe the bug
+
+Whenever I try and launch a version of 1.18 or 1.17 It loads up the game window and then crashes. It will go strait back to the launcher. No crash log, no error message, no nothing. Its just like it never launched. Same thing happens if I try and launch 1.18 or 1.17 Optifine. Anything bellow 1.17 works fine. At first I thought it was the same incompatible Java Runtime issue from before I updated, but it doesn't tell me that like it used to. It will say game exited and then have me press ok.
+
+### The log file and images/videos
+
+![Screenshot_20220423-203710](https://user-images.githubusercontent.com/104283405/164952054-9fb9c862-49a6-480b-b423-3db2067730f7.png)
+
+
+### Steps To Reproduce
+
+```markdown
+Open PojavLauncher and Login
+Launch MC
+```
+
+
+### Expected Behavior
+
+Launch normaly
+
+### Platform
+
+```markdown
+- Device model: Fire HD 10
+- CPU architecture: arm64-v8a
+- Android version: Fire OS 7.3.2.2
+- PojavLauncher version: 3.3.1.1
+```
+
+
+### Anything else?
+
+_No response_",NONE
+1330629164,bug,"npm start not working in windows: The filename, directory name, or volume label syntax is incorrect.","<!-- Please use the following issue template or your issue will be closed -->
+
+## Prerequisites
+
+<!-- If the following boxes are not ALL checked, your issue is likely to be closed -->
+
+- [x] Using npm
+- [x] Using an up-to-date [`main` branch](https://github.com/electron-react-boilerplate/electron-react-boilerplate/tree/main)
+- [x] Using latest version of devtools. [Check the docs for how to update](https://electron-react-boilerplate.js.org/docs/dev-tools/)
+- [x] Tried solutions mentioned in [#400](https://github.com/electron-react-boilerplate/electron-react-boilerplate/issues/400)
+- [x] For issue in production release, add devtools output of `DEBUG_PROD=true npm run build && npm start`
+
+## Expected Behavior
+App should have started in dev mode.
+<!--- What should have happened? -->
+
+## Current Behavior
+"" The filename, directory name, or volume label syntax is incorrect. "" was getting thrown. 
+All three of cmd, powershell, cmder were giving same error.
+<!--- What went wrong? -->
+
+## Steps to Reproduce
+
+1. npm start
+
+## Possible Solution (Not obligatory)
+I fixed this issue by **replacing** all the scripts of format `abc:xyz` to `abc-xyz` in scripts of package.json.
+Same change is required for `start:preload` and `start:main` in .erb\configs\webpack.config.renderer.dev.ts
+Apparently `abc:xyz` made windows think it was a drive or something.
+<!--- Suggest a reason for the bug or how to fix it. -->
+
+## Context
+I was trying to get the boilderplate setup. I had no issues with `npm install`. I followed the Readme and went on to run `npm start` and came across this issue. I did not make any changes to any file in the cloned repo.
+<!--- How has this issue affected you? What are you trying to accomplish? -->
+<!--- Did you make any changes to the boilerplate after cloning it? -->
+<!--- Providing context helps us come up with a solution that is most useful in the real world -->
+
+## Your Environment
+
+<!--- Include as many relevant details about the environment you experienced the bug in -->
+
+- Node version : v16.14.0
+- electron-react-boilerplate version or branch : main branch v4.6.0. (cloned on the same day when this issue was created.)
+- Operating System and version : windows 10 version 21H2 (OS build 19044.1826)
+- Link to your project : -
+
+<!---
+❗️❗️ Also, please consider donating (https://opencollective.com/electron-react-boilerplate-594) ❗️❗️
+
+Donations will ensure the following:
+
+🔨 Long term maintenance of the project
+🛣 Progress on the roadmap
+🐛 Quick responses to bug reports and help requests
+ -->
+",NONE
+1250188648,bug,DoS vulnerability: adapter-node crashes with malformed URI,"### Describe the bug
+
+Using the latest version of SvelteKit and adatper-node, a malformed URI causes the `node` process to crash.
+
+We recently encountered this in production on the [tradingstrategy.ai](https://tradingstrategy.ai/).
+
+We implemented a work-around by creating a `server.js` wrapper and calling the `handler` function exported by adapter-node. We first tried wrapping `handler` in a `try/catch` … this didn't work / the server still crashed. We ended up manually calling `decodeURI()` in a `try/catch` to detect the error before calling `handler`.
+
+I am open to working on a PR for this. There appears to be a test that _would_ [catch this issue](https://github.com/sveltejs/kit/blob/master/packages/adapter-node/tests/smoke.js#L64-L69), but the test setup appears to be broken. If you can advise me on how to get tests working, I can confirm that this test fails and work on a solution.
+
+
+### Reproduction
+
+This is trivial to reproduce with a vanilla SvelteKit app using adapter-node, so in lieu of a repro repo, here are simple steps to recreate…
+
+## 1. Create vanilla SvelteKit app with adapter-node
+
+Select the most vanilla options: `Skeleton`, `None`, `No`, `No`, `No`
+
+```bash
+npm init svelte adapter-node-crash
+cd adapter-node-crash
+perl -pi -e 's/adapter-auto/adapter-node/' package.json svelte.config.js
+npm install
+```
+
+## 2. Build and preview
+
+```bash
+npm run build
+npm run preview
+```
+
+## 3. Hit it with some malformed URIs
+
+### 3.a. Simple invalid URI
+
+```bash
+curl http://localhost:3000//
+```
+
+See server logs below.
+
+### 3.b. Invalid encoded value
+
+```bash
+curl http://localhost:3000/%CD
+```
+
+See server logs below.
+
+### Logs
+
+```shell
+# 3.a. Simple invalid URI
+
+node:internal/url:553
+  throw new ERR_INVALID_URL(input);
+  ^
+
+TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:372:5)
+    at URL.onParseError (node:internal/url:553:9)
+    at new URL (node:internal/url:629:5)
+    at file:///Users/ken/Code/tradingstrategy/adapter-node-repro/node_modules/@sveltejs/kit/dist/chunks/index5.js:94:25
+    at next (file:///Users/ken/Code/tradingstrategy/adapter-node-repro/node_modules/@sveltejs/kit/dist/chunks/index5.js:229:5)
+    at file:///Users/ken/Code/tradingstrategy/adapter-node-repro/node_modules/@sveltejs/kit/dist/chunks/index5.js:229:29
+    at file:///Users/ken/Code/tradingstrategy/adapter-node-repro/node_modules/@sveltejs/kit/dist/chunks/constants.js:642:28
+    at next (file:///Users/ken/Code/tradingstrategy/adapter-node-repro/node_modules/@sveltejs/kit/dist/chunks/index5.js:229:5)
+    at file:///Users/ken/Code/tradingstrategy/adapter-node-repro/node_modules/@sveltejs/kit/dist/chunks/index5.js:229:29
+    at file:///Users/ken/Code/tradingstrategy/adapter-node-repro/node_modules/@sveltejs/kit/dist/chunks/constants.js:642:28 {
+  input: '//',
+  code: 'ERR_INVALID_URL'
+}
+
+
+
+# 3.b. Invalid encoded value
+
+file:///Users/ken/Code/tradingstrategy/adapter-node-repro/.svelte-kit/output/server/index.js:2022
+  let decoded = decodeURI(url.pathname);
+                ^
+
+URIError: URI malformed
+    at decodeURI (<anonymous>)
+    at respond (file:///Users/ken/Code/tradingstrategy/adapter-node-repro/.svelte-kit/output/server/index.js:2022:17)
+    at Server.respond (file:///Users/ken/Code/tradingstrategy/adapter-node-repro/.svelte-kit/output/server/index.js:2293:12)
+    at async file:///Users/ken/Code/tradingstrategy/adapter-node-repro/node_modules/@sveltejs/kit/dist/chunks/index5.js:161:5
+```
+
+
+### System Info
+
+```shell
+System:
+    OS: macOS 12.3.1
+    CPU: (10) arm64 Apple M1 Pro
+    Memory: 79.53 MB / 16.00 GB
+    Shell: 5.8 - /bin/zsh
+  Binaries:
+    Node: 16.15.0 - ~/.nvm/versions/node/v16.15.0/bin/node
+    Yarn: 1.22.15 - ~/.nvm/versions/node/v16.15.0/bin/yarn
+    npm: 8.5.5 - ~/.nvm/versions/node/v16.15.0/bin/npm
+  Browsers:
+    Brave Browser: 101.1.38.115
+    Chrome: 102.0.5005.61
+    Firefox: 100.0.2
+    Safari: 15.4
+  npmPackages:
+    @sveltejs/adapter-node: next => 1.0.0-next.76
+    @sveltejs/kit: next => 1.0.0-next.345
+    svelte: ^3.44.0 => 3.48.0
+```
+
+
+### Severity
+
+serious, but I can work around it
+
+### Additional Information
+
+This seems to be a regression of something that worked in the past. See:
+* https://github.com/sveltejs/kit/blob/master/packages/adapter-node/tests/smoke.js#L64-L69
+* #2532
+* #2533",NONE
+1031650110,bug,Initial scan with virtual filesystem enabled starts from scratch if it's interrupted,"<!--
+Thanks for reporting issues back to Nextcloud!
+
+This is the **issue tracker of Nextcloud**, please do NOT use this to get answers to your questions or get help for fixing your installation. You can find help debugging your system on our home user forums: https://help.nextcloud.com or, if you use Nextcloud in a large organization, ask our engineers on https://portal.nextcloud.com. See also  https://nextcloud.com/support for support options.
+
+Guidelines for submitting issues:
+
+* Please search the existing issues first, it's likely that your issue was already reported or even fixed.
+    - Go to https://github.com/nextcloud and type any word in the top search/command bar. You probably see something like ""We couldn’t find any repositories matching ..."" then click ""Issues"" in the left navigation.
+    - You can also filter by appending e. g. ""state:open"" to the search string.
+    - More info on search syntax within github: https://help.github.com/articles/searching-issues
+    
+* Please fill in as much of the template below as possible. The logs are absolutely crucial for the developers to be able to help you. Expect us to quickly close issues without logs or other information we need. 
+
+* Also note that we have a https://nextcloud.com/contribute/code-of-conduct/ that applies on Github. To summarize it: be kind. We try our best to be nice, too. If you can't be bothered to be polite, please just don't bother to report issues as we won't feel motivated to help you. 
+-->
+
+<!--- Please keep the note below for others who read your bug report -->
+
+### How to use GitHub
+
+* Please use the 👍 [reaction](https://blog.github.com/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/) to show that you are affected by the same issue.
+* Please don't comment if you have no relevant information to add. It's just extra noise for everyone subscribed to this issue.
+* Subscribe to receive notifications on status change and new comments. 
+
+
+### Expected behaviour
+When setting up Nextcloud with virtual filesystem enabled, it tries to scan every single folder in Nextcloud. This can take a while (hours or days) since TB of data comprising hundreds of thousands of files must be scanned for changes.
+
+Sometimes it's not possible to leave a computer on for such a longs periods, or sometimes there's a small network downtime that interrupts that scan. In those case, I'd expect that the scan continues at the point where it left.
+
+Moreover, I noticed that the ""symbolic links"" (probably not the correct term) to the files stored in the server are not created until all files have been checked for changes once, so it's not possible to access any of them until the very end. It would be more convenient if they were created on the go.
+
+### Actual behaviour
+The initial scan starts from scratch once again. In my case, I have to make sure that the computer that is going to use nextcloud is not turned off for ~15 hours, and make sure there will be network interruptions or nothing accesses the Nextcloud folder, since these things might trigger it to start once again from scratch.
+
+Once workaround that I had used in the past was to exclude the largest folders first, by editing the ignored files options. But since that configuration is also saved in the nextcloud folder, and it's often still not available, it is not until the first scan has finished that you can edit that file.
+
+
+### Steps to reproduce
+1. Install Desktop client. 
+2. Configure your account.
+3. Start the initial sync.
+4. Pause and resume the sync. 
+
+### Client configuration
+Client version: 3.3.5, 
+<!---
+Please try to only report a bug if it happens with the latest version
+The latest version can be seen by checking https://nextcloud.com/install/#install-clients
+--->
+
+Operating system: both in Windows 10 and Ubuntu 20.04.
+
+OS language: English
+
+Installation path of client: C:\Program Files\Nextcloud
+
+
+### Server configuration
+<!---
+Optional section. It depends on the issue.
+--->
+Nextcloud version: 22.1.0
+
+Storage backend (external storage): sshfs
+",NONE
+1240910255,question,Generated setup getting flagged as a virus by windows defender,"I believe this may be a known but has my security team concerned.  I am getting a prompt and log from windows defender indicating malware in the created setup file whenever I attempt to run it:
+
+...\OurSoftwareSetup.exe->(ZipSfx)->lib/native/Squirrel.exe
+
+Name: Program:Win32/Beareuws.A!ml
+ 	Category: Potentially Unwanted Software
+
+It seems to flag a squ***.tmp.exe  file that gets generated in my local temp when I click the setup:
+
+example
+\AppData\Local\Temp\squ8CAB.tmp.exe
+
+Does running the setup generate temp files like this in the profile temp directory, I know it does in an app specific directory at that level?  Assumed a false positive potentially resolved by code sign?
+
+",NONE
+1300013391,feature,GitHub Gist,"### Presence name
+
+GitHub
+
+### Description
+
+Gist is missing: https://gist.github.com/
+
+### Alternatives
+
+N/A
+
+### Additional context
+
+N/A",NONE
+1360500171,bug,Unset chapter-signifier attribute not working as documented,"Version: Asciidoctor PDF 2.3.0 using Asciidoctor 2.0.16
+
+I want to remove the chapter signifier but setting `:!chapter-signifier:` as [documentation says](https://docs.asciidoctor.org/asciidoc/latest/sections/chapters/#chapter-signifier) does not work.
+
+With this simple document:
+
+```
+= Test
+:doctype: book
+:sectnums:
+:!chapter-signifier:
+
+== First chapter
+
+Hello.
+```
+
+this is the output PDF: [test.pdf](https://github.com/asciidoctor/asciidoctor-pdf/files/9480282/test.pdf). I want the output to say ""1. First chapter"" instead of ""Chapter 1. First chapter"".",NONE
+1232924473,feature,View Current User's Posts,"As an author, I would like to see a list of all the Posts I have written so that I can easily view, edit, delete, publish or unpublish them.
+
+**Given** the user is in the Rare application  
+**When** they select the `My Posts` menu option  
+**Then** they should be directed to the ""My Posts"" list page  
+**And** the page should display ALL the Posts authored by the logged-in user  
+**And** each post in the list should display the title, author and category  
+**And** the list should be in order of creation date with the most recent on top  
+
+
+
+
+",NONE
+1306643751,bug,Excercise Bug: 08-adding-styles,"Describe the bug:
+
+**1. Exercise Name:** 08-adding-styles
+
+**2. Repository URL:** https://github.com/breatheco-de/exercise-postcard
+
+I copy and pasted the code from the instructions and it keeps saying ""error"" with the code. But when I build the page, it builds exactly how its supposed to be. I am pretty sure that I typed the code in properly so I feel it may be an issue with the program. However if I am wrong, please let me know ;)",NONE
+1223762500,bug,Remove id field from downloaded schema,"**Actual result:** 
+Id field is present in the downloaded applet schema.
+
+**Expected result:** 
+Unnecessary fields like _id shouldn't be downloaded within a schema
+
+![image.png](https://images.zenhubusercontent.com/60ab57c8916945b978a3da92/8e15dbe6-1286-4544-9ac0-9339f84a3ef9)
+
+Schema:
+[https://app.zenhub.com/files/103405139/f26ff2cd-1989-4979-9257-e1ec0c2dd560/download](https://app.zenhub.com/files/103405139/f26ff2cd-1989-4979-9257-e1ec0c2dd560/download)
+
+Environment:
+https://admin-staging.mindlogger.org/
+Win 10 // Chrome 101
+ml_general_acc@protonmail.com	12345678
+My applet (mobile app)
+Applet password	Qwe123!!!
+",NONE
+1344550771,question,Google Translate Extension proxied endpoint bug or not?,"Hello,
+
+In the wiki page https://github.com/brave/brave-browser/wiki/Deviations-from-Chromium-(features-we-disable-or-remove)#services-we-proxy-through-brave-servers
+
+It mentions:
+https://translate.googleapis.com/translate_a/element.js*
+https://translate.googleapis.com/element/*/js/element/element_main.js
+https://translate.googleapis.com/translate_static/js/element/main.js
+https://translate.googleapis.com/translate_static/css/translateelement.css
+https://www.gstatic.com/images/branding/product/*x/translate_24dp.png
+
+When I use the extension (I was just testing it, I use Brave new translate feature) I see all the connections in DevTools and my Firewall connecting to google translate API IPs, I even blocked the two IPs with my firewall 173.194.68.94 and 173.194.68.95 which are google IPs and the translations didn't work.
+
+So, the question is: wouldn't that mean they should go through Brave servers? 
+
+I don't know to what extend the connections can go through Brave browser, so, are Google Translate supposed to do that or not? or it is like not exactly the translation itself but something else? like to avoid Brave servers getting blocked from the APIs? I tried to find information about this but nothing, and everything seems to be ""it should go through Brave servers"" like Safe Browsing or Component updates, but I better ask or report.
+
+I use Nightly 1.44.53 but I don't think the proxied endpoints stuff only works on Stable or something.
+
+For now I just want to understand if it is meant to be that way or not. but it not, then it is a bug and that's why I am opening this issue.
+
+Thank you.",NONE
+1104249264,question,"issue: ""Illegal constructor"" error when using the classValidatorResolver with a file input","### Version Number
+
+7.15.4
+
+### Codesandbox/Expo snack
+
+https://codesandbox.io/s/flamboyant-breeze-trm2p?file=/src/App.tsx
+
+### Steps to reproduce
+
+1. Create a simple form with a file input e.g.
+
+`<input type=""file"" {...register('test')} />`
+
+2. Create a class for the validation schema e.g. 
+
+```
+class ValidationSchema {
+  test: any;
+}
+```
+
+3. Give the validation class to the useForm hook e.g.
+
+useForm< ValidationSchema >({
+  resolver: classValidatorResolver(ValidationSchema),
+});
+
+4. Submit the form after selecting a .jpg file. You will see a ""Illegal constructor"" error
+
+
+### Expected behaviour
+
+We shouldn't get an error.
+
+### What browsers are you seeing the problem on?
+
+Chrome, Safari
+
+### Relevant log output
+
+```shell
+Unhandled Runtime Error
+TypeError: Illegal constructor
+```
+
+
+### Code of Conduct
+
+- [X] I agree to follow this project's Code of Conduct",NONE
+1194187697,bug,How to change tags picker's file path width?,"### Description
+
+I can not find the way by docs
+
+### Neovim version
+
+```markdown
+0.6.1
+```
+
+
+### Operating system and version
+
+macos 12.0.1
+
+### checkhealth telescope
+
+```markdown
+-- This file can be loaded by calling `lua require('plugins')` from your init.vim
+
+-- Only required if you have packer configured as `opt`
+vim.cmd [[packadd packer.nvim]]
+
+return require('packer').startup(function()
+  -- Packer can manage itself
+	use 'wbthomason/packer.nvim'
+  	use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP client
+	use 'kyazdani42/nvim-web-devicons'
+	use 'overcache/NeoSolarized'
+	use {'neoclide/coc.nvim', branch = 'release'}
+	use 'gfanto/fzf-lsp.nvim'
+	use 'nvim-treesitter/nvim-treesitter'
+	use {
+  		'nvim-lualine/lualine.nvim',
+  		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+	}
+	use {
+    	'kyazdani42/nvim-tree.lua',
+   	 	requires = {
+      		'kyazdani42/nvim-web-devicons', -- optional, for file icon
+    	},
+    	config = function() require'nvim-tree'.setup {} end
+	}
+	use 'bagrat/vim-buffet'
+	use 'voldikss/vim-floaterm'
+	use 'nvim-lua/plenary.nvim'
+	use 'hoschi/yode-nvim'
+	use {
+  		'nvim-telescope/telescope.nvim',
+  		requires = { {'nvim-lua/plenary.nvim'}
+	},
+	use {
+		'nvim-telescope/telescope-fzf-native.nvim',
+		run = 'make' 
+	}
+}
+end)
+```
+
+
+### Steps to reproduce
+
+:Telescope tags
+
+### Expected behavior
+
+_No response_
+
+### Actual behavior
+
+<img width=""1372"" alt=""图片"" src=""https://user-images.githubusercontent.com/20185895/161920215-0560e565-3ecf-4fd4-a106-426983f42f97.png"">
+
+
+### Minimal config
+
+```Lua
+-- This file can be loaded by calling `lua require('plugins')` from your init.vim
+
+-- Only required if you have packer configured as `opt`
+vim.cmd [[packadd packer.nvim]]
+
+return require('packer').startup(function()
+  -- Packer can manage itself
+	use 'wbthomason/packer.nvim'
+  	use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP client
+	use 'kyazdani42/nvim-web-devicons'
+	use 'overcache/NeoSolarized'
+	use {'neoclide/coc.nvim', branch = 'release'}
+	use 'gfanto/fzf-lsp.nvim'
+	use 'nvim-treesitter/nvim-treesitter'
+	use {
+  		'nvim-lualine/lualine.nvim',
+  		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+	}
+	use {
+    	'kyazdani42/nvim-tree.lua',
+   	 	requires = {
+      		'kyazdani42/nvim-web-devicons', -- optional, for file icon
+    	},
+    	config = function() require'nvim-tree'.setup {} end
+	}
+	use 'bagrat/vim-buffet'
+	use 'voldikss/vim-floaterm'
+	use 'nvim-lua/plenary.nvim'
+	use 'hoschi/yode-nvim'
+	use {
+  		'nvim-telescope/telescope.nvim',
+  		requires = { {'nvim-lua/plenary.nvim'}
+	},
+	use {
+		'nvim-telescope/telescope-fzf-native.nvim',
+		run = 'make' 
+	}
+}
+end)
+```
+",NONE
+1100256514,bug,Option to stop hover-over to open pdf-preview,"Hi,
+
+this is an extremely useful plugin, but one thing is kinda detrimental. Obsidian-markdown-files don't necessarily lend themselves to export well because you loose some core functionality such as tag-searches. Hence, most stuff I write in obsidian I also _read_ in it. 
+
+For that, this plugin is a real time-saver over using screen-captures and embedding them as images. However, if I want to embed pages 27-32, I specifically  _don't_ want to open the preview of the entire file whenever I hover over the resulting images in obsidian. Otherwhise, I would just embed the file in its entirety.
+
+As it doesn't seem to be an option right now, would it be possible to include an option to block that behaviour, a simple boolean flag?
+
+Thank you,
+Sincerely,
+~Gw",NONE
+870658100,feature,Custom HTTP headers for datasources,Needed to automate multi-tenancy configuration at loki-datasources to set the X-Scope-OrgID.,NONE
+1094168779,question,The video is not updated with  Sharepoint Admin webpage,"![Invite External Users](https://user-images.githubusercontent.com/42930419/148197372-8e022367-763c-4a10-b04e-79ef3d25e05c.png)
+",NONE
+1067983297,feature,support for chunked file transfers,"## What happened: 
+```
+$ /usr/bin/python3 /usr/bin/xpra control :1025 send-file ./test
+Warning: XDG_RUNTIME_DIR is not defined
+ and '/run/user/1000' does not exist
+ using '/tmp'
+server returned error code 127
+ error processing control command: uncompressed data is too large: 1000MB, limit is 256MB
+```
+
+I use the html5 client and use commands to transfer files.
+xpra told me that the file transfer size limit was exceeded.
+The file transfer size limit configuration only working less than 256MB.
+How can I set the limit to be more than 256MB?
+
+## Information: 
+```
+$ lsb_release -a
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.3 LTS
+Release:	20.04
+Codename:	focal
+
+$ xpra --version
+xpra v4.2.2-r0
+
+$ xpra info :1025 | grep transfer
+Warning: XDG_RUNTIME_DIR is not defined
+ and '/run/user/1000' does not exist
+ using '/tmp'
+client.file-transfers.ask=False
+client.file-transfers.ask-timeout=3600
+client.file-transfers.chunks=65536
+client.file-transfers.enabled=True
+client.file-transfers.open=True
+client.file-transfers.open-ask=False
+client.file-transfers.open-url=True
+client.file-transfers.open-url-ask=False
+client.file-transfers.printing=False
+client.file-transfers.printing-ask=False
+client.file-transfers.remote.file-ask-timeout=0
+client.file-transfers.remote.file-chunks=0
+client.file-transfers.remote.file-size-limit=10485760000000
+client.file-transfers.remote.file-transfer=True
+client.file-transfers.remote.file-transfer-ask=False
+client.file-transfers.remote.open-files=False
+client.file-transfers.remote.open-files-ask=False
+client.file-transfers.remote.open-url=True
+client.file-transfers.remote.open-url-ask=False
+client.file-transfers.remote.printing=True
+client.file-transfers.remote.printing-ask=False
+client.file-transfers.size-limit=10000000000
+features.file-transfer=True
+features.file-transfer-ask=False
+
+$ ps aux | grep ""xpra start :1025"" | grep -v grep
+user       50401  1.7  0.3 2835772 216664 ?      SLl  03:23   0:15 /usr/bin/python3 /usr/bin/xpra start :1025 --tcp-auth=password:value=password --daemon=no --start-child=application --exit-with-children
+
+$ cat /etc/xpra/xpra.conf 
+tcp-auth=allow
+bandwidth-limit=3000Mbps
+opengl=no
+speaker=off
+encoding=jpeg
+notifications=no 
+system-tray=no 
+webcam=no 
+mousewheel=on 
+min-speed=100
+min-quality=88
+auto-refresh-delay=0 
+title=""title"" 
+mdns=no 
+exit-with-children=yes 
+video-scaling=off
+exec-wrapper=/opt/VirtualGL/bin/vglrun -d :5 --
+env=XPRA_CLOSE_GTK_DISPLAY=0 XDG_RUNTIME_DIR=/m/runtime/xdg-start
+sharing=yes
+server-idle-timeout=30
+idle-timeout=10800
+terminate-children=yes
+dbus-launch=no
+bandwidth-detection=no
+file-size-limit=10000M
+clipboard=default
+printing=no
+
+```",NONE
+1093019028,bug,PPO+GAIL performing worse than only PPO,"Hi,
+This is an agent learning to drive and keep in lane
+Red = PPO
+Grey = PPO+GAIL @ 0.5 reward strength
+Demonstrations recorded by PPO (red) model with deterministic inference
+Any suggestions as to why GAIL is not improving the learning process?
+I believe it will not exceed the red graph since demonstrations are recorded with the PPO model (red graph)?
+In this case, it should supposedly improve the learning speed?
+
+Could this be a bug?
+
+**Screenshots**
+![image](https://user-images.githubusercontent.com/67644448/148012749-727782f5-bd1e-46d6-9f45-2b066172468a.png)
+
+![image](https://user-images.githubusercontent.com/67644448/148012445-81322574-1a9d-4f25-92c2-0cf28188e08c.png)
+
+
+**Environment**
+- Unity Version: 2020.3.11
+- OS + version: Ubuntu 18.04
+- _ML-Agents version_: ML-Agents 2.1.0 (main branch)
+- _Torch version_: 1.8.2
+",NONE
+1307754105,bug,Change the text in the confirmation window when registering a domain,"Need to change to  **BANS** register domain
+<img width=""1024"" alt=""2022-07-18_13-36-38"" src=""https://user-images.githubusercontent.com/45556620/179495070-28f8ed97-1f33-40d8-9dfe-29b658a57e3c.png"">"">
+",NONE
+1074517836,documentation,Cross-validation graph: which data is used in cross-validation?,"### Describe the issue linked to the documentation
+
+I think the graph of cross-validation can be improved a bit. It's [here](https://scikit-learn.org/stable/modules/cross_validation.html#computing-cross-validated-metrics) ([direct link](https://scikit-learn.org/stable/_images/grid_search_workflow.png)). As currently shown, it is not clear which part of the data is used in cross-validation.
+
+### Suggest a potential alternative/fix
+
+I think adding an arrow from ""Training data"" to ""Cross-validation"" would make it clear that the test data should always stay independent and should not be included in any of the training or parameter selection.",NONE
+1215258795,question,"APK is too large , 50MB (debug) 46MB (release)","Hi ,
+   upon checking and building tabris app , i noticed that the APK is too large when building , 
+
+and i checked the files that was packed on that APK and found out that there are bunch of files on the android  unused resources folder, i think that is the default android resources 
+
+![image](https://user-images.githubusercontent.com/5191437/165205011-a80bf7e1-630c-4fd3-a92b-720ca751eca9.png)
+
+
+How can i exclude resources files that are not needed ? 
+
+In kivy (python) , those built in android resources are removed automatically ? how can i achieve this on tabris ?
+
+Thanks
+",NONE
+1242781067,bug,[v4] BottomSheet is overlapping the Content," # Bug
+
+BottomSheet is overlapping the Content when BottomSheetTextInput onChangeText event update the variable state, basically when I write something in the input the view slides down which is weird, and only happens if I do change the variable state, which I believe causes the render which provokes this overlapping? 
+
+Anyone faced similar issue?
+
+
+## Video
+
+https://user-images.githubusercontent.com/59499668/169482034-389f83c3-0c52-4b2c-8329-ee7565244e31.mp4
+## Environment info
+
+<!--
+  Please provide the version of the libraries below.
+-->
+
+`
+""react-native"": ""~0.63.4"",
+""react-native-reanimated"": ""^2.3.1"",
+""@gorhom/bottom-sheet"": ""^4.1.5""
+""react-native-gesture-handler"": ""2.3.2"",`
+
+
+## Steps To Reproduce
+
+1. BottomSheetTextInput OnChangeText updating the variable state (useState) is causing re-rendering and keyboard overlap
+
+Describe what you expected to happen:
+
+1. BottomSheetTextInput OnChangeText should update state (useState) without rendering/affecting the keyboard
+
+
+## Reproducible sample code
+
+```
+ <BottomSheet
+      backdropComponent={props => (
+        <BottomSheetBackdrop
+          {...props}
+          appearsOnIndex={0}
+          disappearsOnIndex={-1}
+        />
+      )}
+      style={styles.modalContainer}
+      backgroundStyle={styles.modal}
+      enablePanDownToClose
+      handleComponent={customHandle}
+      keyboardBehavior=""interactive""
+      index={-1}
+      ref={bottomSheetRef}
+      snapPoints={snapPoints}
+      onClose={onClose}>
+           <BottomSheetTextInput
+                    ref={textInputRef}
+                    multiline={false}
+                    onChangeText={(val:string)=>{
+                      setPozPledge(val)
+                      }
+                    onFocus={() => {
+                      setPozPledge(0);
+                    }}
+                    placeholderTextColor={Colors.DARK_PURPLE}
+                    keyboardType={'number-pad'}
+                    placeholder={t('pozzlePledgeSheet.custom')}
+                    style={[
+                      styles.pozText,
+                      styles.customPozText,
+                    ]}></BottomSheetTextInput>
+    </BottomSheet>
+```
+
+**AndroidManifest.xml**
+`android:windowSoftInputMode=""adjustResize""`
+
+
+
+",NONE
+1319993659,feature,"New Feature: Provide extra template slots like footer, rows per page etc","It would be nice to have the table expose some extra slots especially in the footer for custom UI stylings. Take for instance, I really want to change the dropdown select menu for rows-per-page to something else. It would be nice if this can be made available via slots.
+
+See example below
+
+```vue
+<template #rows-per-page=""{ options, isActive }"">
+   <div v-for=""(opt, i) in options"" :key=""i"">
+      <button class=""button"" :class=""{ active: isActive }"">
+	{{ opt }}
+      </button>
+   </div>
+</template>
+```",NONE
+1310474079,bug,"RuntimeError: shape mismatch: value tensor of shape [290, 1] cannot be broadcast to indexing result of shape [290]","`loss.py`里没有`import torch.nn.functional as F`.然后这个修完了之后还有问题（数据集是coco128)：
+```bash
+Traceback (most recent call last):
+  File ""/mnt/data/yolov5_research/train.py"", line 740, in <module>
+    main(opt)
+  File ""/mnt/data/yolov5_research/train.py"", line 637, in main
+    train(opt.hyp, opt, device, callbacks)
+  File ""/mnt/data/yolov5_research/train.py"", line 421, in train
+    loss, loss_items = compute_loss_ota(pred, targets.to(device), imgs) if aux_ota_loss else compute_loss(pred, targets.to(device)) # loss scaled by batch_siz
+  File ""/mnt/data/yolov5_research/utils/loss.py"", line 1002, in __call__
+    tobj[b, a, gj, gi] = (1.0 - self.gr) + self.gr * iou.detach().clamp(0).type(tobj.dtype)  # iou ratio
+RuntimeError: shape mismatch: value tensor of shape [290, 1] cannot be broadcast to indexing result of shape [290]
+```",NONE
+1311531288,bug,Customise border bottom,"### Current behavior
+
+BorderColor does not work on the header of native stack. How can I change the color of the bottom border
+<img width=""372"" alt=""Screenshot 2022-07-20 at 10 27 18 PM"" src=""https://user-images.githubusercontent.com/85466071/180042134-c045fb31-0ac9-4a21-823f-4d5d9c707858.png"">
+k
+
+### Expected behavior
+
+Able to set the color
+
+### Reproduction
+
+-
+
+### Platform
+
+- [X] Android
+- [X] iOS
+- [ ] Web
+- [ ] Windows
+- [ ] MacOS
+
+### Packages
+
+- [ ] @react-navigation/​bottom-tabs
+- [ ] @react-navigation/​drawer
+- [ ] @react-navigation/​material-bottom-tabs
+- [ ] @react-navigation/​material-top-tabs
+- [ ] @react-navigation/​stack
+- [X] @react-navigation/​native-stack
+
+### Environment
+
+""@react-navigation/bottom-tabs"": ""^6.3.2"",
+    ""@react-navigation/native"": ""^6.0.11"",
+    ""@react-navigation/native-stack"": ""^6.7.0"",
+""react"": ""18.0.0"",
+    ""react-native"": ""0.69.1"",",NONE
+975455133,question,No timestamp-like field when loading markets for FTX,"Currently using ccxt on Jupyter Notebook, version: 1.55.20, on Windows 10, python 3.8.11.
+
+When loading markets for exchanges like binance, binancecoinm, binanceusdm there is a timestamp field in the JSON file called ""expiryDatetime"", from which a user can get the expiry of a particular market.
+
+For another exchange like deribit, a user can recover the expiry by looking at the field ""info"" > ""expiration_timestamp"".
+
+However, there is no such timestamp-like field for ftx. Looking at their API, there are two relevant methods:
+ - https://docs.ftx.com/#get-markets
+ - https://docs.ftx.com/#list-all-futures
+and they provide similar/overlapping information, but the second method especially returns the ""expiry"" field.
+
+Is this a bug or is this intentional?",NONE
+1317591096,documentation,Incorrect camera intrinsics (projection params) for rgb camera,"When accessing the camera projection params and retrieving intrinsics, the rgb camera params are not properly resized. In the following code
+
+```python
+import pyark
+reader = pyark.datatools.sensors.RecordFileReader()
+reader.openFile('example_annotation.vrs')
+deviceModel = pyark.datatools.sensors.DeviceModel.fromJson(pyark.datatools.sensors.getCalibrationFromVrsFile(reader))
+projection_params = deviceModel.getCameraCalib('camera-rgb').projectionModel.projection_params
+```
+The fx (fy), cx, and cy parameters are not properly aligned with the image height width. It seems like the original image resolution was 2880 x 2880 but the image size retrieved using  `CameraPlayer.getConfigRecord` gives a resolution of 1408 x 1408. For some reason it seems like the following line of function did not run.
+https://github.com/facebookresearch/Aria_data_tools/blob/main/src/sensors/models/DeviceModel.cpp#L530",NONE
+1117130940,feature,添加列车优先级或轨道优先级,"**Is your feature request related to a problem? Please describe.**
+no
+
+**Describe the solution you'd like**
+当我在游戏中设置exp列车和普通线列车并线时，慢车总会挡住快车
+
+**Additional Information**
+Add any other context or screenshots about the feature request here.
+",NONE
+1236185670,bug,[Issue] [MacOS] Auto-updater resets to Intel version even if it is on Apple Silicon,The title explains everything. I find it very annoying.,NONE
+1339795157,bug,[Bug] /usr/libexec/gcc/arm-none-eabi/ld: cannot find -lg_nano: No such file or directory,"<!-- Provide a general summary of the bug in the title above. -->
+
+I'm trying to build firmware for a Redragon K580 and get the error message above.
+
+<!--- This template is entirely optional and can be removed, but is here to help both you and us. -->
+<!--- Anything on lines wrapped in comments like these will not show up in the final text. -->
+
+## Describe the Bug
+
+<!-- A clear and concise description of what the bug is. -->
+
+## System Information
+
+ - Keyboard:  Redragon K580
+   - Revision (if applicable):  
+ - Operating system: Gentoo Linux
+ - AVR GCC version: 
+<!-- Run `avr-gcc --version` to find this out. -->
+ - ARM GCC version: 12.1.1
+<!-- Run `arm-none-eabi-gcc --version` to find this out. -->
+ - QMK Firmware version: 0.7.101
+<!-- Run `git describe --abbrev=0 --tags` to find this out. -->
+ - Any keyboard related software installed? 
+   - [ ] AutoHotKey
+   - [ ] Karabiner
+   - [ ] Other:
+
+## Additional Context
+
+<!-- Add any other relevant information about the problem here. -->
+",NONE
+1096668655,question,How to achieve idempotence for incoming events,"I would like to write a bot that will listen to events from Slack and will guarantee that event will be handled not more than one time. For that I need some key  idempotent key, some unique key. In documentation to SlackAPI, I've found that each event has `event_id` as unique identifier:
+> A unique identifier for this specific event, globally unique across all workspaces.
+
+I think I can use that identifier to guarantee that an event will be handled not more than one time. But I haven't found any way to extract that `event_id` from an event that I receive in function decorated by `app.event` decorator: 
+
+```python
+
+@app.event(event=""message"")
+def event_handler(logger, event):
+    print(event)
+
+```
+
+1) How to extract `event_id` from event?
+2) Or is there another way to achieve idempotence by using `slack_bolt` library?
+
+
+#### The `slack_bolt` version
+
+`1.11.1`
+
+",NONE
+716937233,bug,[macOS] album art shows wrong images,"### Steps to reproduce the problem
+1. Enable Album Art column.
+2. Load big (1000+ entries) playlist.
+3. Scroll down for some time.
+
+### What's going on? Describe the problem in as much detail as possible.
+I've updated to the latest nightly just recently and encountered a bug with album arts, when some of them are being replaced by a random image, sometimes on the fly. Restarting deadbeef changes this image to another one, i failed to understand the logic.
+
+I tried resetting album art plugin settings to defaults, but it didn't help. I had no problems with it earlier (except for some minor flickering).  
+
+Video: https://d7.wtf/s/Screen%20Recording%202020-10-08%20at%2002.26.54.mp4
+
+### Information about the software:
+
+Deadbeef version: Version 1.0 (5bcd39b)
+OS: macOS 10.15.5
+
+",NONE
+1291187675,question,Performance implications of StrongBox,"I have some questions in regards of the following post:
+
+>It let's you ""box"" a value type to the heap but in a strongly-typed manner, e.g. instead of doing:
+>```C#
+>object box = 42;
+>... // some time later
+>int i = (int)box;
+>```
+>and then being able to pass around the weakly-typed `box`, you can do:
+>```C#
+>var box = new StrongBox<int>(42);
+>... // some time later
+>int i = box.Value;
+>```
+>and then pass around `box` and access its `Value`, which is strongly typed as `int` (via the generic `T`).  Hence the name ""strong box"", i.e. ""strongly-typed box"". (It's not limited for use with value types, though.)
+>
+>You can see example uses of it here:
+>https://source.dot.net/#System.Private.CoreLib/StrongBox.cs,bdbb335cbbdee41b,references
+>
+>Some typical (advanced) use cases include:
+>- Sharing an individual value type instance between multiple threads in a mutable fashion
+>- Enabling value types of arbitrary size to be atomically written as a reference
+>- Working around the lack of ref fields (by passing around the box with its mutable contents)
+
+_Originally posted by @stephentoub in https://github.com/dotnet/runtime/discussions/47774#discussioncomment-335156_
+
+What are the Performance implications of StrongBox? For example:
+`int i = (int)box;` needs to unbox the value, which has Performance implications. Is this the same for `StrongBox`?
+
+What is the difference between using a StrongBox vs a very simplistic Class as such:
+```
+class MyBox()
+{
+    public decimal Value {get; set;}
+}
+```
+In terms of `StrongBox.Value = X` vs `MyBox.Value = X` 
+or `X = StrongBox.Value` and `X = MyBox.Value` ",NONE

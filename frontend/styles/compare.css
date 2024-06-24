@@ -82,9 +82,10 @@ th {
     text-decoration-line: underline;
     text-align: center;
     color: #4d77f5;
-    max-width: 200px;
-    min-width: 200px;
-    width: 200px;
+    max-width: 250px;
+    min-width: 250px;
+    width: 250px;
+    overflow-x: hidden;
 }
 
 .pagination-control-btn {

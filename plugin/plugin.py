@@ -1,24 +1,24 @@
 from plugin_helper.classes import *
+import pandas as pd
+from csv_html_convert import convert_csv_body_to_html 
+
 
 label1 = LabelGroup()
-label1.add_label("answer 1").add_label("answer 2").add_label("answer 3").add_label("answer 4").add_label("answer 5")
+label1.add_label("bug").add_label("feature").add_label("question").add_label("documentation")
 
-label2 = LabelGroup()
-label2.add_label("answer 1").add_label("answer 2").add_label("answer 3")
-
-first_data = HtmlDataView()
-first_data.set_title("First data").add_external_html('res/data1.html')
-
-second_data = HtmlDataView()
-second_data.add_img("/res/placeholder_graph.png").add_external_html('res/data2.html')
-
-dataset = DataSet("dataset 1")
+dataset = DataSet("github issues")
 dataset.add_labels(label1)
-dataset.add_labels(label2)
+# Load the CSV file
+file_path = 'plugin/100-issue-classification.csv'
+data = pd.read_csv(file_path)
 
-for i in range(1, 9):
-    dataset.add_data(f'data {i}',HtmlDataView().add_external_html('res/data1.html'), label1)
+for index, row in data.iterrows():
+    data = HtmlDataView()
+    data.set_title(row['title'])
+    data.add_html('<link rel="stylesheet" href="/res/styles.css">')
+    data.add_html(f'<div> {row['labels']} </div>')
+    data.add_html(f'<h3> {row['author_association']} </h3>')
+    data.add_html(convert_csv_body_to_html(row['body']))
+    dataset.add_data(row['title'], data, label1)
 
-# dataset.set_allow_blank_labels(False)
-dataset.add_data("Second data", second_data,  label2)
 dataset.build()

@@ -13,7 +13,7 @@ class Data:
 
 class Dataset:
     def __init__(self, database: Database):
-        self.datset = []
+        self.dataset = []
         self.labels = []
         self.name = ""
         self.db = database
@@ -64,7 +64,7 @@ class Dataset:
 
     def update(self):
         self.labels.clear()
-        self.datset.clear()
+        self.dataset.clear()
         try:
             result = subprocess.check_output(['python', 'plugin/plugin.py']).decode('utf-8')
             json_obj = json.loads(result)

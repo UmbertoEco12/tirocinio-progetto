@@ -1,0 +1,59 @@
+.markdown-code {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-family: Consolas, "Courier New", monospace;
+    margin-bottom: 1em;
+    overflow-x: auto;
+    /* Enable horizontal scrolling for long lines */
+}
+
+.markdown-code pre {
+    margin: 0;
+    /* Remove default margins for <pre> element */
+    white-space: pre-wrap;
+    /* Preserve whitespace */
+}
+
+.markdown-code {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+    /* Adjust font size as needed */
+    color: #333;
+    /* Dark text color */
+}
+
+.markdown-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.markdown-table th,
+.markdown-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.markdown-table th {
+    background-color: #f2f2f2;
+}
+
+.markdown-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.csv-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: start;
+    align-content: start;
+
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    border: 2px solid #ccc;
+    padding: 10px;
+}
