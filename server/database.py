@@ -1,16 +1,16 @@
 import sqlite3
 
 class Answer:
-    def __init__(self, user : str, dataset: str, title: str, label: str) -> None:
+    def __init__(self, user : str, dataset: str, id: str, label: str) -> None:
         self.user = user
         self.dataset = dataset
-        self.title = title
+        self.id = id
         self.label = label
 
 class FixedAnswer:
-    def __init__(self, dataset: str, title: str, label: str) -> None:
+    def __init__(self, dataset: str, id: str, label: str) -> None:
         self.dataset = dataset
-        self.title = title
+        self.id = id
         self.label = label
 
 class Database:
@@ -49,7 +49,7 @@ class Database:
             cur = conn.cursor()
             cur.execute('''
                 INSERT OR REPLACE INTO answers (user, dataset, title, label) VALUES (?, ?, ?, ?)
-            ''', (answer.user, answer.dataset, answer.title, answer.label))
+            ''', (answer.user, answer.dataset, answer.id, answer.label))
             conn.commit()
             cur.close()
             conn.close()
@@ -73,7 +73,7 @@ class Database:
             cur = conn.cursor()
             cur.execute('''
                 INSERT OR REPLACE INTO fixedAnswers (dataset, title, label) VALUES (?, ?, ?)
-            ''', (answer.dataset, answer.title, answer.label))
+            ''', (answer.dataset, answer.id, answer.label))
             conn.commit()
             cur.close()
             conn.close()

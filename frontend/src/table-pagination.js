@@ -284,6 +284,14 @@ class DatasetDataResult {
         this.hasConflict = this.fix == null && this.answers.length > 1;
     }
 
+    isConflict() {
+        return this.hasConflict;
+    }
+
+    isFixed() {
+        return this.fix != null;
+    }
+
     getResult() {
         if (this.hasConflict) return null;
 
@@ -335,5 +343,62 @@ class DatasetResults {
             res.answers.push(r.getResult());
         })
         return res;
+    }
+
+    getFixCount() {
+        let c = 0;
+        this.dataResults.forEach(r => {
+            if (r.isFixed()) c++;
+        });
+        return c;
+    }
+
+    getConflictCount() {
+        let c = 0;
+        this.dataResults.forEach(r => {
+            if (r.isConflict()) c++;
+        });
+        return c;
+    }
+}
+const TABLE_ACTIVE_FILTER = {
+    NONE: "n", CONFLICT: "c", FIX: "f"
+};
+class FilterButtons {
+    constructor(fixBtn, conflictBtn, onFilterButtonClick) {
+        this.fixBtn = fixBtn;
+        this.conflictBtn = conflictBtn;
+        this.fixBtn.addEventListener("click", () => onFilterButtonClick(TABLE_ACTIVE_FILTER.FIX));
+        this.conflictBtn.addEventListener("click", () => onFilterButtonClick(TABLE_ACTIVE_FILTER.CONFLICT));
+
+    }
+
+    #resetClassList() {
+        this.conflictBtn.classList.remove("hidden");
+        this.conflictBtn.classList.remove("selected");
+        this.fixBtn.classList.remove("hidden");
+        this.fixBtn.classList.remove("selected");
+    }
+
+    show(dataset, filter) {
+        const conflictsCount = dataset.getConflictCount();
+        const fixCount = dataset.getFixCount();
+        this.#resetClassList();
+        if (conflictsCount == 0) {
+            this.conflictBtn.classList.add("hidden");
+        }
+        if (fixCount == 0) {
+            this.fixBtn.classList.add("hidden");
+        }
+
+        if (filter == TABLE_ACTIVE_FILTER.FIX) {
+            this.fixBtn.classList.add("selected");
+        }
+        else if (filter == TABLE_ACTIVE_FILTER.CONFLICT) {
+            this.conflictBtn.classList.add("selected");
+        }
+
+        this.conflictBtn.textContent = `${conflictsCount} Conflicts`;
+        this.fixBtn.textContent = `${fixCount} Fixes`;
     }
 }

@@ -4,9 +4,10 @@ import json
 from server.database import Database, Answer
 
 class Data:
-    def __init__(self, dataset: str, labels: list, title: str, content: str, answer: str):
+    def __init__(self, dataset: str, labels: list, id: str, title: str, content: str, answer: str):
         self.dataset = dataset
         self.labels = labels
+        self.id = id
         self.title = title
         self.content = content
         self.answer = answer
@@ -32,7 +33,7 @@ class Dataset:
             if title == data['title']:
                 answer = label
                 break
-        return Data(self.name, labels, data['title'], data['content'], answer)
+        return Data(self.name, labels, data['id'], data['title'], data['content'], answer)
     
     def get_data_at(self, index: int):
         if index < 0 or index > self.dataset.__len__() - 1:
@@ -41,7 +42,7 @@ class Dataset:
         data = self.dataset[index]
         # get the labels associated with this data
         labels = self.labels[int(data["label"])]
-        return Data(self.name, labels, data['title'], data['content'], None)
+        return Data(self.name, labels, data['id'],data['title'], data['content'], None)
     
     def get_answered_indices(self, user: str):
         answers = self.db.get_answers(user, self.name)
@@ -53,7 +54,6 @@ class Dataset:
                 continue
             for data in self.dataset:
                 if data["title"] == title:
-                    
                     answered_steps.append(i + 1)
                     break
                 i = i + 1
@@ -84,6 +84,7 @@ class Dataset:
             # get the labels associated with this data
             labels = self.labels[int(data["label"])]
             res.append({
+                'id': data["id"],
                 'title' : data['title'],
                 'labels' : labels
             })

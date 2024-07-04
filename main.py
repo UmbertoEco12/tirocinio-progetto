@@ -3,7 +3,7 @@ from server.compare_results import aggregate_and_structure_data, get_dataset_res
 from server.database import Database, Answer, FixedAnswer
 from server.server import app
 from server.dataset import Dataset
-
+import json
 
 db : None | Database = None
 dataset : None | Dataset = None 
@@ -112,6 +112,68 @@ def get_results():
         'fixes' : fixes,
         'answers':res,
         'dataset': dataset.name})
+
+@app.route('/dataset/download')
+def download_results():
+    res = get_dataset_results('reviews/.', dataset.name)
+    data = dataset.get_titles_and_labels()
+    fixes = db.get_fixes(dataset.name)
+    # create the json value for the file
+    results = []
+    for elem in data:
+        id = elem["id"]
+        title =  elem["title"]
+        labels = elem["labels"]
+        label_map = {}
+        answers = []
+        for label in labels:
+            label_map[label] = 0
+        
+        for userAnswer in res :
+            for answer in userAnswer["answers"]:
+                if answer["title"] == title:
+                    label_map[answer["label"]] = label_map[answer["label"]] + 1
+        
+        total_answers = 0
+
+        for label, count in label_map.items():
+            percentage = (count/ res.__len__()) * 100
+            if( count != 0):
+                answers.append({
+                    "label" : label,
+                    "percentage" : percentage
+                })
+            total_answers += 1
+        
+        
+        answer = None
+        print(f"{title} answer len is {answers.__len__()} ")
+        # check if there is one answer
+        if answers.__len__() == 1:
+            answer = answers[0]["label"]
+        # find fix
+        for fix in fixes:
+            # should change with id
+            if fix["title"] == title and fix["label"] != None:
+                answer = fix["label"]
+        if answer is None:
+            print(f"some questions are not answered in {title}")
+            return jsonify(None)
+        results.append({
+            "id": id,
+            "title" : title,
+            "answer" : answer
+        })
+
+    res_json = {
+        'dataset': dataset.name,
+        'results' : results,
+    }
+    
+    return jsonify({
+        'filename' : f'{dataset.name}_results.json',
+        'data': json.dumps(res_json)
+    })
 
 def run():
     global db, dataset

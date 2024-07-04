@@ -65,13 +65,14 @@ class DataSet :
     def set_allow_blank_labels(self, value: bool):
         self.blank_labels = value
 
-    def add_data(self,title:str, data : HtmlDataView, label_group: LabelGroup) :
+    def add_data(self,id:str, data : HtmlDataView, label_group: LabelGroup) :
         # set title of html view if is none
         if data.title is None:
-            data.set_title(title)
+            data.set_title(id)
             
         self.dataset.append({
-            "title" : title,
+            "id" : id,
+            "title" : data.title,
             "content": data.content,
             "label" : label_group.name
             })

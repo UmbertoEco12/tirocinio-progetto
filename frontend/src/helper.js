@@ -1,7 +1,12 @@
 function downloadJSON(jsonData, fileName) {
     // Create a Blob object from the JSON data
-    const blob = new Blob([JSON.stringify(jsonData, null, 2)], { type: 'application/json' });
+    //    const blob = new Blob([JSON.stringify(jsonData, null, 2)], { type: 'application/json' });
+    download(JSON.stringify(jsonData, null, 2), fileName);
 
+}
+
+function download(data, fileName) {
+    const blob = new Blob([data], { type: 'text' });
     // Create a URL for the Blob
     const url = URL.createObjectURL(blob);
 

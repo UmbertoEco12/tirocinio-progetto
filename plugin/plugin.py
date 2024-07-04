@@ -19,6 +19,6 @@ for index, row in data.iterrows():
     data.add_html(f'<div> {row['labels']} </div>')
     data.add_html(f'<h3> {row['author_association']} </h3>')
     data.add_html(convert_csv_body_to_html(row['body']))
-    dataset.add_data(row['title'], data, label1)
+    dataset.add_data(row['id'], data, label1)
 
 dataset.build()
