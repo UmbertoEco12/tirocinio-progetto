@@ -235,43 +235,44 @@ class AnswerPercentage {
     }
 };
 
+function getLabelsAnswers(userAnswers, title) {
+    const labelsMap = new Map();
+    const usersCount = userAnswers.length;
+    const answers = [];
+    userAnswers.forEach(userAnswer => {
+        userAnswer.answers.forEach(answer => {
+            if (answer.title == title) {
+                if (labelsMap.has(answer.label))
+                    labelsMap.set(answer.label, labelsMap.get(answer.label) + 1);
+                else
+                    labelsMap.set(answer.label, 1);
+            }
+        })
+    })
+    let totalAnswers = 0;
+    labelsMap.forEach((answersCount, label) => {
+        const percentage = (answersCount / usersCount) * 100;
+        if (answersCount != 0)
+            answers.push(new AnswerPercentage(label, percentage));
+        totalAnswers += answersCount;
+    })
+    // some users didn t answer this
+    if (totalAnswers < usersCount) {
+        answers.push(new AnswerPercentage("no answer", ((usersCount - (totalAnswers)) / usersCount) * 100));
+    }
+    // no user answered this
+    else if (answers.length == 0) {
+        answers.push(new AnswerPercentage("No answers", 0));
+    }
+    return answers;
+}
 class DatasetDataResult {
-    constructor(title, labels, userAnswers, fixes) {
+    constructor(title, userAnswers, fixes) {
         this.title = title;
         this.answers = [];
         this.fix = null;
         this.hasConflict = false;
-        const labelsMap = new Map();
-        const usersCount = userAnswers.length;
-
-        // name and count
-        labels.forEach(label => {
-            labelsMap.set(label, 0);
-        });
-        // assign value
-        userAnswers.forEach(userAnswer => {
-            userAnswer.answers.forEach(answer => {
-                if (answer.title == title) {
-                    labelsMap.set(answer.label, labelsMap.get(answer.label) + 1);
-                }
-
-            })
-        })
-        let totalAnswers = 0;
-        labelsMap.forEach((answersCount, label) => {
-            const percentage = (answersCount / usersCount) * 100;
-            if (answersCount != 0)
-                this.answers.push(new AnswerPercentage(label, percentage));
-            totalAnswers += answersCount;
-        })
-        // some users didn t answer this
-        if (totalAnswers < usersCount) {
-            this.answers.push(new AnswerPercentage("no answer", ((usersCount - (totalAnswers)) / usersCount) * 100));
-        }
-        // no user answered this
-        else if (this.answers.length == 0) {
-            this.answers.push(new AnswerPercentage("No answers", 0));
-        }
+        this.answers = getLabelsAnswers(userAnswers, title);
         // check if there is a fix for this data
         for (let index = 0; index < fixes.length; index++) {
             const elem = fixes[index];
@@ -319,7 +320,7 @@ class DatasetResults {
         this.dataResults.length = 0;
         this.datasetName = datasetName;
         data.forEach(element => {
-            this.dataResults.push(new DatasetDataResult(element.title, element.labels, answers, fixes));
+            this.dataResults.push(new DatasetDataResult(element.title, answers, fixes));
         })
     }
 

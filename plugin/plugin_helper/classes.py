@@ -1,5 +1,5 @@
 import json
-
+import sys
 current_name = 0
 
 class LabelGroup :
@@ -16,7 +16,36 @@ class LabelGroup :
 
     def get_labels(self) -> list :
         return {
-            "labels": self.labels,
+            "labels": {
+                'type': 'text',
+                'data':self.labels,},
+            "name": self.name
+        }
+
+class NumberLabelGroup :
+    def __init__(self, min: float = sys.float_info.min, max:float = sys.float_info.max) -> None:
+        global current_name
+        self.labels = []
+        self.name = current_name
+        self.min = min
+        self.max = max
+        current_name = current_name + 1
+        pass
+    
+    def set_min(self, min : float) :
+        self.min = min
+        return self
+    def set_max(self, max : float) :
+        self.max = max
+        return self
+
+    def get_labels(self) -> list :
+        return {
+            "labels": {
+                'type' : 'number',
+                'min' : self.min,
+                'max' : self.max
+            },
             "name": self.name
         }
 

@@ -6,12 +6,18 @@ from csv_html_convert import convert_csv_body_to_html
 label1 = LabelGroup()
 label1.add_label("bug").add_label("feature").add_label("question").add_label("documentation")
 
+label2 = NumberLabelGroup(0, 10)
 dataset = DataSet("github issues")
-dataset.add_labels(label1)
+dataset.add_labels(label1).add_labels(label2)
 # Load the CSV file
 file_path = 'plugin/100-issue-classification.csv'
-data = pd.read_csv(file_path)
 
+data = HtmlDataView()
+data.set_title('number text')
+data.add_html(f'select a number')
+dataset.add_data(0, data, label2)
+
+data = pd.read_csv(file_path)
 for index, row in data.iterrows():
     data = HtmlDataView()
     data.set_title(row['title'])

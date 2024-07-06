@@ -1,0 +1,552 @@
+id,labels,title,body,author_association
+1199051804,documentation,setting a logging Handler name,"BPO | [43058](https://bugs.python.org/issue43058)
+--- | :---
+Nosy | @vsajip
+
+<sup>*Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state.*</sup>
+
+<details><summary>Show more details</summary><p>
+
+GitHub fields:
+```python
+assignee = None
+closed_at = None
+created_at = <Date 2021-01-28.20:17:02.239>
+labels = ['3.8', 'type-feature', 'library', 'docs']
+title = 'setting a logging Handler name'
+updated_at = <Date 2021-01-28.20:17:02.239>
+user = 'https://bugs.python.org/bcohen'
+```
+
+bugs.python.org fields:
+```python
+activity = <Date 2021-01-28.20:17:02.239>
+actor = 'bcohen'
+assignee = 'docs@python'
+closed = False
+closed_date = None
+closer = None
+components = ['Documentation', 'Library (Lib)']
+creation = <Date 2021-01-28.20:17:02.239>
+creator = 'bcohen'
+dependencies = []
+files = []
+hgrepos = []
+issue_num = 43058
+keywords = []
+message_count = 1.0
+messages = ['385880']
+nosy_count = 3.0
+nosy_names = ['vinay.sajip', 'docs@python', 'bcohen']
+pr_nums = []
+priority = 'normal'
+resolution = None
+stage = None
+status = 'open'
+superseder = None
+type = 'enhancement'
+url = 'https://bugs.python.org/issue43058'
+versions = ['Python 3.8']
+```
+
+</p></details>
+",MANNEQUIN
+1199074324,documentation,Improve documentation for typing._GenericAlias,"BPO | [46589](https://bugs.python.org/issue46589)
+--- | :---
+Nosy | @gvanrossum, @JelleZijlstra, @Fidget-Spinner, @mrahtz
+PRs | <li>python/cpython#31026</li>
+
+<sup>*Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state.*</sup>
+
+<details><summary>Show more details</summary><p>
+
+GitHub fields:
+```python
+assignee = None
+closed_at = None
+created_at = <Date 2022-01-30.19:55:28.395>
+labels = ['3.11', 'type-feature', 'library', 'docs']
+title = 'Improve documentation for typing._GenericAlias'
+updated_at = <Date 2022-02-07.01:59:39.743>
+user = 'https://github.com/mrahtz'
+```
+
+bugs.python.org fields:
+```python
+activity = <Date 2022-02-07.01:59:39.743>
+actor = 'gvanrossum'
+assignee = 'docs@python'
+closed = False
+closed_date = None
+closer = None
+components = ['Documentation', 'Library (Lib)']
+creation = <Date 2022-01-30.19:55:28.395>
+creator = 'matthew.rahtz'
+dependencies = []
+files = []
+hgrepos = []
+issue_num = 46589
+keywords = ['patch']
+message_count = 2.0
+messages = ['412171', '412703']
+nosy_count = 5.0
+nosy_names = ['gvanrossum', 'docs@python', 'JelleZijlstra', 'kj', 'matthew.rahtz']
+pr_nums = ['31026']
+priority = 'normal'
+resolution = None
+stage = 'patch review'
+status = 'open'
+superseder = None
+type = 'enhancement'
+url = 'https://bugs.python.org/issue46589'
+versions = ['Python 3.11']
+```
+
+</p></details>
+",MANNEQUIN
+1199022454,documentation,Description of '\w' behavior is vague in `re` documentation,"BPO | [38566](https://bugs.python.org/issue38566)
+--- | :---
+Nosy | @serhiy-storchaka, @MojoVampire, @snoopjedi
+
+<sup>*Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state.*</sup>
+
+<details><summary>Show more details</summary><p>
+
+GitHub fields:
+```python
+assignee = None
+closed_at = None
+created_at = <Date 2019-10-23.16:28:38.284>
+labels = ['type-bug', 'docs']
+title = ""Description of '\\w' behavior is vague in `re` documentation""
+updated_at = <Date 2019-10-24.08:02:46.475>
+user = 'https://github.com/snoopjedi'
+```
+
+bugs.python.org fields:
+```python
+activity = <Date 2019-10-24.08:02:46.475>
+actor = 'xtreak'
+assignee = 'docs@python'
+closed = False
+closed_date = None
+closer = None
+components = ['Documentation']
+creation = <Date 2019-10-23.16:28:38.284>
+creator = 'snoopjedi'
+dependencies = []
+files = []
+hgrepos = []
+issue_num = 38566
+keywords = []
+message_count = 3.0
+messages = ['355239', '355250', '355257']
+nosy_count = 4.0
+nosy_names = ['docs@python', 'serhiy.storchaka', 'josh.r', 'snoopjedi']
+pr_nums = []
+priority = 'normal'
+resolution = None
+stage = None
+status = 'open'
+superseder = None
+type = 'behavior'
+url = 'https://bugs.python.org/issue38566'
+versions = []
+```
+
+</p></details>
+",MANNEQUIN
+1199028356,documentation,add docstrings to functions in pdb module,"BPO | [39278](https://bugs.python.org/issue39278)
+--- | :---
+Nosy | @carlbordum, @j9ac9k
+PRs | <li>python/cpython#17924</li>
+
+<sup>*Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state.*</sup>
+
+<details><summary>Show more details</summary><p>
+
+GitHub fields:
+```python
+assignee = None
+closed_at = None
+created_at = <Date 2020-01-09.17:37:23.602>
+labels = ['3.9', 'docs']
+title = 'add docstrings to functions in pdb module'
+updated_at = <Date 2020-02-10.22:10:33.968>
+user = 'https://github.com/carlbordum'
+```
+
+bugs.python.org fields:
+```python
+activity = <Date 2020-02-10.22:10:33.968>
+actor = 'Ognyan Moore'
+assignee = 'docs@python'
+closed = False
+closed_date = None
+closer = None
+components = ['Documentation']
+creation = <Date 2020-01-09.17:37:23.602>
+creator = 'carlbordum'
+dependencies = []
+files = []
+hgrepos = []
+issue_num = 39278
+keywords = ['patch']
+message_count = 2.0
+messages = ['359689', '361732']
+nosy_count = 3.0
+nosy_names = ['docs@python', 'carlbordum', 'Ognyan Moore']
+pr_nums = ['17924']
+priority = 'normal'
+resolution = None
+stage = 'patch review'
+status = 'open'
+superseder = None
+type = None
+url = 'https://bugs.python.org/issue39278'
+versions = ['Python 3.9']
+```
+
+</p></details>
+",MANNEQUIN
+1199055394,documentation,Documentation needs to declare CalledProcessError as potentially resulting from subprocess.run(),"BPO | [43635](https://bugs.python.org/issue43635)
+--- | :---
+Nosy | @jennievh
+
+<sup>*Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state.*</sup>
+
+<details><summary>Show more details</summary><p>
+
+GitHub fields:
+```python
+assignee = None
+closed_at = None
+created_at = <Date 2021-03-26.19:47:45.295>
+labels = ['type-feature', '3.9', 'docs']
+title = 'Documentation needs to declare CalledProcessError as potentially resulting from subprocess.run()'
+updated_at = <Date 2021-03-26.19:47:45.295>
+user = 'https://github.com/jennievh'
+```
+
+bugs.python.org fields:
+```python
+activity = <Date 2021-03-26.19:47:45.295>
+actor = 'jennievh'
+assignee = 'docs@python'
+closed = False
+closed_date = None
+closer = None
+components = ['Documentation']
+creation = <Date 2021-03-26.19:47:45.295>
+creator = 'jennievh'
+dependencies = []
+files = []
+hgrepos = []
+issue_num = 43635
+keywords = []
+message_count = 1.0
+messages = ['389564']
+nosy_count = 2.0
+nosy_names = ['docs@python', 'jennievh']
+pr_nums = []
+priority = 'normal'
+resolution = None
+stage = None
+status = 'open'
+superseder = None
+type = 'enhancement'
+url = 'https://bugs.python.org/issue43635'
+versions = ['Python 3.9']
+```
+
+</p></details>
+",MANNEQUIN
+1199016826,documentation,The results from os.path.isdir(...) an Path(...).is_dir() are not equivalent for empty path strings.,"BPO | [37688](https://bugs.python.org/issue37688)
+--- | :---
+Nosy | @brettcannon, @pitrou, @serhiy-storchaka, @godaygo
+
+<sup>*Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state.*</sup>
+
+<details><summary>Show more details</summary><p>
+
+GitHub fields:
+```python
+assignee = None
+closed_at = None
+created_at = <Date 2019-07-26.07:23:57.873>
+labels = ['type-feature', 'library', 'docs']
+title = 'The results from os.path.isdir(...) an Path(...).is_dir() are not equivalent for empty path strings.'
+updated_at = <Date 2019-07-29.18:50:44.722>
+user = 'https://github.com/godaygo'
+```
+
+bugs.python.org fields:
+```python
+activity = <Date 2019-07-29.18:50:44.722>
+actor = 'brett.cannon'
+assignee = 'docs@python'
+closed = False
+closed_date = None
+closer = None
+components = ['Documentation', 'Library (Lib)']
+creation = <Date 2019-07-26.07:23:57.873>
+creator = 'godaygo'
+dependencies = []
+files = []
+hgrepos = []
+issue_num = 37688
+keywords = []
+message_count = 8.0
+messages = ['348475', '348477', '348478', '348482', '348495', '348497', '348528', '348679']
+nosy_count = 5.0
+nosy_names = ['brett.cannon', 'pitrou', 'docs@python', 'serhiy.storchaka', 'godaygo']
+pr_nums = []
+priority = 'normal'
+resolution = None
+stage = None
+status = 'open'
+superseder = None
+type = 'enhancement'
+url = 'https://bugs.python.org/issue37688'
+versions = []
+```
+
+</p></details>
+",MANNEQUIN
+1198880203,documentation,TypeError: truncate() takes no keyword arguments,"BPO | [14586](https://bugs.python.org/issue14586)
+--- | :---
+Nosy | @birkenfeld, @pitrou, @bitdancer, @berkerpeksag, @vadmium
+Files | <li>[test.py](https://bugs.python.org/file25219/test.py ""Uploaded as text/plain at 2012-04-15.02:04:32 by TheBiggerGuy""): Test file</li><li>[truncate.ver1.patch](https://bugs.python.org/file25246/truncate.ver1.patch ""Uploaded as text/plain at 2012-04-16.21:56:04 by TheBiggerGuy""): First Version allowing both positional and keyword parameters</li><li>[truncate.ver2.patch](https://bugs.python.org/file25251/truncate.ver2.patch ""Uploaded as text/plain at 2012-04-17.09:40:30 by TheBiggerGuy""): Second Version (still needs work)</li>
+
+<sup>*Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state.*</sup>
+
+<details><summary>Show more details</summary><p>
+
+GitHub fields:
+```python
+assignee = None
+closed_at = None
+created_at = <Date 2012-04-15.02:04:32.463>
+labels = ['interpreter-core', 'type-bug', '3.10', 'docs']
+title = 'TypeError: truncate() takes no keyword arguments'
+updated_at = <Date 2020-12-15.23:28:33.148>
+user = 'https://bugs.python.org/TheBiggerGuy'
+```
+
+bugs.python.org fields:
+```python
+activity = <Date 2020-12-15.23:28:33.148>
+actor = 'iritkatriel'
+assignee = 'docs@python'
+closed = False
+closed_date = None
+closer = None
+components = ['Documentation', 'Interpreter Core']
+creation = <Date 2012-04-15.02:04:32.463>
+creator = 'TheBiggerGuy'
+dependencies = []
+files = ['25219', '25246', '25251']
+hgrepos = []
+issue_num = 14586
+keywords = ['patch']
+message_count = 14.0
+messages = ['158308', '158388', '158403', '158410', '158494', '158495', '158507', '158509', '158513', '158535', '158547', '158548', '244937', '251139']
+nosy_count = 7.0
+nosy_names = ['georg.brandl', 'pitrou', 'r.david.murray', 'docs@python', 'berker.peksag', 'martin.panter', 'TheBiggerGuy']
+pr_nums = []
+priority = 'normal'
+resolution = None
+stage = 'needs patch'
+status = 'open'
+superseder = None
+type = 'behavior'
+url = 'https://bugs.python.org/issue14586'
+versions = ['Python 3.10']
+```
+
+</p></details>
+",MANNEQUIN
+1214256398,bug,[SR-9577] Associated type inference fails depending on name of associated type,"
+   |                  |                 |
+   |------------------|-----------------|
+   |Previous ID       | SR-9577      |
+   |Radar             | None         |
+   |Original Reporter | @lattner      |
+   |Type              | Bug    |
+
+   <details>
+  <summary>Additional Detail from JIRA</summary>
+
+   |                  |                 |
+   |------------------|-----------------|
+   |Votes             | 0         |
+   |Component/s       | Compiler    |
+   |Labels            | Bug, AssociatedTypeInference        |
+   |Assignee          | None      |
+   |Priority          | Medium      |
+
+   
+
+   md5: 09335bcbf125fdc2adc6cf703a1965fa
+
+  </details>
+
+
+
+
+
+**Issue Description:**
+
+
+Jeremy Howard sent me this bug report, it repros with Swift 4.2 and 4.2.1 at least.
+
+This code is relying on associated type inference to infer the type of ""Elle"" in the VectorF struct. This should happen due to the init requirement in the protocol VectorBase, and the init implementation in VectorF.
+
+Two bugs here:
+
+1\) The associated type isn't inferred correctly in this case.  
+2) **Even weirder**, if you globally rename Elle to Eele, then it works (!!!)
+
+I assume there is some sort of memory smasher or corruption going on here inside the compiler?
+
+``` none
+public protocol VectorBase :
+    RandomAccessCollection where Index==Int, Elle==Element {
+  associatedtype Elle
+  var data:Array<Elle> {get set}
+  init(_ data_:Array<Elle>)
+}
+
+public protocol Vector: VectorBase {
+}
+
+extension Vector where Elle: FloatingPoint {
+  public var count:Int {get {return data.count}}
+
+  // RandomAccessCollection
+  public var indices: Range<Int> { return 0..<count }
+  public var startIndex: Int { return 0 }
+  public var endIndex: Int { return count }
+  // MutableCollection
+  public subscript(i: Index) -> Elle {
+    get { return data[i] }
+    set { data[i] = newValue }
+  }
+}
+
+public struct VectorF: Vector {
+  //public typealias Elle = Float
+
+  public var data:Array<Float>
+  public init(_ data_:Array<Float>) {data=data_}
+}
+```
+
+
+   ",MANNEQUIN
+1198963266,documentation,Fix code example in Python 3.5 telnetlib documentation,"BPO | [28661](https://bugs.python.org/issue28661)
+--- | :---
+Nosy | @jackdied, @bitdancer, @tiabc, @normanlorrain
+Files | <li>[weather.py](https://bugs.python.org/file50124/weather.py ""Uploaded as text/plain at 2021-06-22.18:58:45 by @normanlorrain"")</li>
+
+<sup>*Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state.*</sup>
+
+<details><summary>Show more details</summary><p>
+
+GitHub fields:
+```python
+assignee = None
+closed_at = None
+created_at = <Date 2016-11-10.19:16:31.542>
+labels = ['easy', '3.9', '3.10', '3.11', 'type-feature', 'docs']
+title = 'Fix code example in Python 3.5 telnetlib documentation'
+updated_at = <Date 2021-06-22.18:58:45.391>
+user = 'https://github.com/tiabc'
+```
+
+bugs.python.org fields:
+```python
+activity = <Date 2021-06-22.18:58:45.391>
+actor = 'Norman Lorrain'
+assignee = 'none'
+closed = False
+closed_date = None
+closer = None
+components = ['Documentation']
+creation = <Date 2016-11-10.19:16:31.542>
+creator = 'tiabc'
+dependencies = []
+files = ['50124']
+hgrepos = []
+issue_num = 28661
+keywords = ['easy']
+message_count = 5.0
+messages = ['280536', '280549', '280563', '280586', '396357']
+nosy_count = 5.0
+nosy_names = ['jackdied', 'r.david.murray', 'docs@python', 'tiabc', 'Norman Lorrain']
+pr_nums = []
+priority = 'normal'
+resolution = None
+stage = None
+status = 'open'
+superseder = None
+type = 'enhancement'
+url = 'https://bugs.python.org/issue28661'
+versions = ['Python 3.9', 'Python 3.10', 'Python 3.11']
+```
+
+</p></details>
+",MANNEQUIN
+1199046831,documentation,Warning filter message/module documentation is misleading,"BPO | [42272](https://bugs.python.org/issue42272)
+--- | :---
+Nosy | @kevinoid
+PRs | <li>python/cpython#23172</li>
+
+<sup>*Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state.*</sup>
+
+<details><summary>Show more details</summary><p>
+
+GitHub fields:
+```python
+assignee = None
+closed_at = None
+created_at = <Date 2020-11-05.20:06:37.165>
+labels = ['type-feature', '3.10', 'docs']
+title = 'Warning filter message/module documentation is misleading'
+updated_at = <Date 2021-08-28.08:27:10.953>
+user = 'https://github.com/kevinoid'
+```
+
+bugs.python.org fields:
+```python
+activity = <Date 2021-08-28.08:27:10.953>
+actor = 'ananyadatta88'
+assignee = 'docs@python'
+closed = False
+closed_date = None
+closer = None
+components = ['Documentation']
+creation = <Date 2020-11-05.20:06:37.165>
+creator = 'kevinoid'
+dependencies = []
+files = ['50238']
+hgrepos = []
+issue_num = 42272
+keywords = ['patch']
+message_count = 2.0
+messages = ['380429', '400464']
+nosy_count = 3.0
+nosy_names = ['docs@python', 'kevinoid', 'ananyadatta88']
+pr_nums = ['23172']
+priority = 'normal'
+resolution = None
+stage = 'patch review'
+status = 'open'
+superseder = None
+type = 'enhancement'
+url = 'https://bugs.python.org/issue42272'
+versions = ['Python 3.10']
+```
+
+</p></details>
+",MANNEQUIN

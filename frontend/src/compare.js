@@ -1,7 +1,6 @@
 const datasetName = document.getElementById("dataset-title");
 
 const annotatePage = new AnnotateContent()
-const labels = new Labels(onSetLabel);
 
 const rowsPerPage = 10;
 const resultsTable = new Table(rowsPerPage, document.getElementById("results-table"));
@@ -88,6 +87,7 @@ function fetchResults() {
     fetch('/dataset/results')
         .then(response => response.json())
         .then(res => {
+            console.log("answers", res.answers);
             // create current dataset results object
             currentDatasetResult.init(res.dataset, res.answers, res.data, res.fixes);
             // set dataset name
@@ -146,3 +146,13 @@ function downloadFixedResults() {
 }
 
 downloadBtn.addEventListener("click", downloadFixedResults);
+
+const agreementText = document.getElementById("agreement-text");
+
+function setAgreementText() {
+    fetch("dataset/agreement").then(res => res.json()).then(r => {
+        agreementText.textContent = r.agreement;
+    })
+}
+
+setAgreementText();

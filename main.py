@@ -4,6 +4,7 @@ from server.database import Database, Answer, FixedAnswer
 from server.server import app
 from server.dataset import Dataset
 import json
+from server.agreement_function import fleiss_kappa, kappa_to_text
 
 db : None | Database = None
 dataset : None | Dataset = None 
@@ -22,7 +23,8 @@ def get_data_at(user, index):
                             'answer' : data.answer
                         },
                         'count' : dataset.get_data_count(),
-                        'answers': answered_steps})        
+                        'answers': answered_steps,
+                        'percentage': (answered_steps.__len__() / dataset.get_data_count()) * 100})        
     except ValueError:
         return jsonify(None)
 
@@ -126,13 +128,14 @@ def download_results():
         labels = elem["labels"]
         label_map = {}
         answers = []
-        for label in labels:
-            label_map[label] = 0
         
         for userAnswer in res :
             for answer in userAnswer["answers"]:
                 if answer["title"] == title:
-                    label_map[answer["label"]] = label_map[answer["label"]] + 1
+                    if answer["label"] in label_map:
+                        label_map[answer["label"]] = label_map[answer["label"]] + 1
+                    else :
+                        label_map[answer["label"]] = 1
         
         total_answers = 0
 
@@ -145,9 +148,7 @@ def download_results():
                 })
             total_answers += 1
         
-        
         answer = None
-        print(f"{title} answer len is {answers.__len__()} ")
         # check if there is one answer
         if answers.__len__() == 1:
             answer = answers[0]["label"]
@@ -157,7 +158,7 @@ def download_results():
             if fix["title"] == title and fix["label"] != None:
                 answer = fix["label"]
         if answer is None:
-            print(f"some questions are not answered in {title}")
+            print(f"{title} does not have an answer")
             return jsonify(None)
         results.append({
             "id": id,
@@ -173,6 +174,51 @@ def download_results():
     return jsonify({
         'filename' : f'{dataset.name}_results.json',
         'data': json.dumps(res_json)
+    })
+
+@app.route('/dataset/agreement')
+def get_agreement():
+    # get results
+    res = get_dataset_results('reviews/.', dataset.name)
+    labels = {None: 0}
+    answers = {}
+    users = len(res) 
+    for userAnswer in res :
+        user = userAnswer["user"]
+        ans = userAnswer["answers"]
+        for a in ans :
+            if a["title"] in answers:
+                map = answers[a["title"]] 
+                if a["label"] in map:
+                    map[a["label"]] = map[a["label"]] + 1
+                else:
+                    map[a["label"]] = 1
+            else:
+                answers[a["title"]] = {a["label"] : 1}
+            if a['label'] not in labels:
+                labels[a['label']] = len(labels)
+    print(labels)
+    # create matrix
+    matrix = []
+    for ans in answers.values():
+        arr = []
+        # create row with all 0s
+        for i in range(0, users):
+            arr.append(0)
+        for label, count in ans.items():
+            index = labels[label]
+            arr[index] = count
+        # check if row sum is = to users
+        sum = 0
+        for elem in arr :
+            sum += elem
+        # if not add that some user didn t answer
+        if sum < users:
+            arr[0] = users - sum
+        matrix.append(arr)    
+    k = fleiss_kappa(matrix)
+    return jsonify({
+        'agreement' : kappa_to_text(k)
     })
 
 def run():

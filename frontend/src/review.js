@@ -17,7 +17,7 @@ let currentDataset;
 
 const prevUnansweredBtn = document.getElementById("prev-unanswered-btn")
 const nextUnansweredBtn = document.getElementById("next-unanswered-btn")
-
+const percentageText = document.getElementById("percentage-text");
 let nextUnanswered = null;
 let prevUnanswered = null;
 
@@ -73,8 +73,7 @@ function findPreviousNextIncompleteIndices(completedIndices, totalCount, current
 }
 
 function fetchDatasetAt(index, updatePath = true) {
-    fetch(`/dataset/${username}/${index}`)
-        .then(response => response.json())
+    RequestGetDatasetAt(username, index)
         .then(res => {
             console.log(`Dataset ${index}`, res);
             if (res != null && res != "null") {
@@ -88,12 +87,14 @@ function fetchDatasetAt(index, updatePath = true) {
                 moveBtns.show(res.count, currentIndex)
                 stepBar.show(res.count, currentIndex, res.answers);
                 labels.show(currentDataset.labels, currentDataset.answer);
+                //labels = LabelGroup.create(currentDataset.labels, onSetLabel, currentDataset.answer);
 
                 const indices = findPreviousNextIncompleteIndices(res.answers, res.count, currentIndex);
                 prevUnanswered = indices.previousIncomplete;
                 nextUnanswered = indices.nextIncomplete;
                 console.log(indices);
                 updateUnansweredBtnsVisibility();
+                percentageText.textContent = `${res.percentage.toFixed(1)}%`;
                 // update url
                 if (updatePath)
                     updateUrl(`/review/${username}?index=${currentIndex}`);
@@ -103,29 +104,18 @@ function fetchDatasetAt(index, updatePath = true) {
 }
 
 function onSetLabel(label) {
-    fetch(`/dataset/${username}`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            title: currentDataset.title,
-            label: label
-        })
-    });
+    RequestSetLabel(label);
 }
 
 function downloadResults() {
-    fetch(`/download/dataset/${username}`)
-        .then((response) => response.json())
-        .then(res => {
-            if (res == null) {
-                alert("Answer all the questions first");
-            }
-            else {
-                downloadJSON(res, `${username}-results.json`);
-            }
-        });
+    requestDatasetDownload(username).then(res => {
+        if (res == null) {
+            alert("Answer all the questions first");
+        }
+        else {
+            downloadJSON(res, `${username}-results.json`);
+        }
+    });
 }
 
 function start() {
@@ -139,7 +129,7 @@ function start() {
         })
     annotatePage = new AnnotateContent();
     stepBar = new StepBar(fetchDatasetAt);
-    labels = new Labels(onSetLabel)
+    labels = new LabelGroup(onSetLabel)
     updateUnansweredBtnsVisibility();
     fetchDatasetAt(currentIndex);
     // other stuff

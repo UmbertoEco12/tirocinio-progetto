@@ -8,7 +8,7 @@ else
 
 
 const annotatePage = new AnnotateContent()
-const labels = new Labels(onSetLabel);
+const labels = new LabelGroup(onSetLabel);
 let currentTitle = null;
 class UserAnswer {
     constructor(label, percentage, users) {
@@ -48,6 +48,7 @@ function showLabelAnswers(answers) {
 
 }
 
+
 function fetchCompareAt(index) {
     console.log("index ", index);
     fetch(`/compare/${index}/json`).then(res => res.json()).then(res => {
@@ -61,18 +62,19 @@ function fetchCompareAt(index) {
 
         console.log(res.answers);
         const answerMap = new Map();
-        // init map
-        res.labels.forEach(element => {
-            answerMap.set(element, []);
-        });
+
         answerMap.set(null, []);
         let answersCount = 0;
         for (const prop in res.answers) {
             //console.log(`${prop}: ${res.answers[prop]}`)
             const key = res.answers[prop];
+            if (!answerMap.has(key)) {
+                answerMap.set(key, []);
+            }
             let val = answerMap.get(key);
             val.push(prop)
             answerMap.set(key, val);
+
             answersCount++;
         }
         console.log(answerMap);
