@@ -55,8 +55,8 @@
 
 .label-input {
     margin: 25px;
-    max-width: 200px;
-    width: 200px;
+    max-width: 250px;
+    width: 250px;
     height: 50px;
     font-size: large;
     text-align: center;
@@ -64,6 +64,10 @@
 
 .label-input:hover {
     background-color: #daf9fd;
+}
+
+.label-input::placeholder {
+    font-size: smaller;
 }
 
 .label-input-container {

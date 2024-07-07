@@ -12,7 +12,11 @@ function onFilterButtonClick(filter) {
     else
         showDatasetInTable(currentDatasetResult, filter);
 }
-const filterButtons = new FilterButtons(document.getElementById("show-fixes"), document.getElementById("show-conflicts"), onFilterButtonClick);
+const filterButtons = new FilterButtons(
+    document.getElementById("show-fixes"),
+    document.getElementById("show-conflicts"),
+    document.getElementById("show-unanswered"),
+    onFilterButtonClick);
 let tabelPaginationControl = new TablePaginationControls(5, () => {
     if (resultsTable.currentPage < resultsTable.getPageCount()) {
         goToTablePage(resultsTable.currentPage + 1);
@@ -51,6 +55,9 @@ function filterData(filter, data) {
     }
     else if (filter == TABLE_ACTIVE_FILTER.FIX) {
         return data.isFixed();
+    }
+    else if (filter == TABLE_ACTIVE_FILTER.UNANSWERED) {
+        return data.isUnanswered();
     }
     return false;
 }

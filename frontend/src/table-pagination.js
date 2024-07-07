@@ -257,7 +257,7 @@ function getLabelsAnswers(userAnswers, title) {
         totalAnswers += answersCount;
     })
     // some users didn t answer this
-    if (totalAnswers < usersCount) {
+    if (totalAnswers < usersCount && totalAnswers != 0) {
         answers.push(new AnswerPercentage("no answer", ((usersCount - (totalAnswers)) / usersCount) * 100));
     }
     // no user answered this
@@ -283,6 +283,12 @@ class DatasetDataResult {
         }
         // check if it has conflicts
         this.hasConflict = this.fix == null && this.answers.length > 1;
+
+        this.hasNoAnswer = false;
+        if (this.answers.length == 1 &&
+            this.answers[0].label == "No answers" && this.answers[0].percentage == 0) {
+            this.hasNoAnswer = true;
+        }
     }
 
     isConflict() {
@@ -291,6 +297,10 @@ class DatasetDataResult {
 
     isFixed() {
         return this.fix != null;
+    }
+
+    isUnanswered() {
+        return this.hasNoAnswer && this.fix == null;
     }
 
     getResult() {
@@ -361,17 +371,26 @@ class DatasetResults {
         });
         return c;
     }
+
+    getUnansweredCount() {
+        let c = 0;
+        this.dataResults.forEach(r => {
+            if (r.isUnanswered()) c++;
+        });
+        return c;
+    }
 }
 const TABLE_ACTIVE_FILTER = {
-    NONE: "n", CONFLICT: "c", FIX: "f"
+    NONE: "n", CONFLICT: "c", FIX: "f", UNANSWERED: "u"
 };
 class FilterButtons {
-    constructor(fixBtn, conflictBtn, onFilterButtonClick) {
+    constructor(fixBtn, conflictBtn, unansweredBtn, onFilterButtonClick) {
         this.fixBtn = fixBtn;
         this.conflictBtn = conflictBtn;
+        this.unansweredBtn = unansweredBtn;
         this.fixBtn.addEventListener("click", () => onFilterButtonClick(TABLE_ACTIVE_FILTER.FIX));
         this.conflictBtn.addEventListener("click", () => onFilterButtonClick(TABLE_ACTIVE_FILTER.CONFLICT));
-
+        this.unansweredBtn.addEventListener("click", () => onFilterButtonClick(TABLE_ACTIVE_FILTER.UNANSWERED));
     }
 
     #resetClassList() {
@@ -379,17 +398,23 @@ class FilterButtons {
         this.conflictBtn.classList.remove("selected");
         this.fixBtn.classList.remove("hidden");
         this.fixBtn.classList.remove("selected");
+        this.unansweredBtn.classList.remove("hidden");
+        this.unansweredBtn.classList.remove("selected");
     }
 
     show(dataset, filter) {
         const conflictsCount = dataset.getConflictCount();
         const fixCount = dataset.getFixCount();
+        const unansweredCount = dataset.getUnansweredCount();
         this.#resetClassList();
         if (conflictsCount == 0) {
             this.conflictBtn.classList.add("hidden");
         }
         if (fixCount == 0) {
             this.fixBtn.classList.add("hidden");
+        }
+        if (unansweredCount == 0) {
+            this.unansweredBtn.classList.add("hidden");
         }
 
         if (filter == TABLE_ACTIVE_FILTER.FIX) {
@@ -398,8 +423,13 @@ class FilterButtons {
         else if (filter == TABLE_ACTIVE_FILTER.CONFLICT) {
             this.conflictBtn.classList.add("selected");
         }
+        else if (filter == TABLE_ACTIVE_FILTER.UNANSWERED) {
+            this.unansweredBtn.classList.add("selected");
+        }
 
         this.conflictBtn.textContent = `${conflictsCount} Conflicts`;
         this.fixBtn.textContent = `${fixCount} Fixes`;
+        this.unansweredBtn.textContent = `${unansweredCount} Unanswered`;
+
     }
 }

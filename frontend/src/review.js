@@ -14,7 +14,7 @@ const username = getPathParameterAt(1);
 //let currentIndex = Number(getPathParameterAt(2)) ? Number(getPathParameterAt(2)) : 1;
 let currentIndex = Number(getArg("index")) ? Number(getArg("index")) : 1;
 let currentDataset;
-
+let datasetName = "";
 const prevUnansweredBtn = document.getElementById("prev-unanswered-btn")
 const nextUnansweredBtn = document.getElementById("next-unanswered-btn")
 const percentageText = document.getElementById("percentage-text");
@@ -81,6 +81,7 @@ function fetchDatasetAt(index, updatePath = true) {
                 currentIndex = index;
                 // parse dataset
                 console.log(`Dataset ${index}`, res);
+                datasetName = res.dataset;
                 currentDataset = new Dataset(res.data.title, res.data.content, res.labels, res.data.answer);
                 // show page
                 annotatePage.show(currentDataset);
@@ -113,7 +114,7 @@ function downloadResults() {
             alert("Answer all the questions first");
         }
         else {
-            downloadJSON(res, `${username}-results.json`);
+            downloadJSON(res, `${datasetName}-${username}-results.json`);
         }
     });
 }

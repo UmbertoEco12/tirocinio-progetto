@@ -85,6 +85,7 @@ class NumberLabels {
 
         this.min = min;
         this.max = max;
+        this.input.placeholder = `Number between ${min} and ${max}`;
         this.input.setAttribute("min", min);
         this.input.setAttribute("max", max);
         this.currentValue = answer;

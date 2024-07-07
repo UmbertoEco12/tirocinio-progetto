@@ -5,7 +5,7 @@ from server.server import app
 from server.dataset import Dataset
 import json
 from server.agreement_function import fleiss_kappa, kappa_to_text
-
+from server.dataset_results import DataResult, DatasetResults, download_results_file
 db : None | Database = None
 dataset : None | Dataset = None 
 
@@ -160,21 +160,22 @@ def download_results():
         if answer is None:
             print(f"{title} does not have an answer")
             return jsonify(None)
-        results.append({
-            "id": id,
-            "title" : title,
-            "answer" : answer
-        })
-
-    res_json = {
-        'dataset': dataset.name,
-        'results' : results,
-    }
+        results.append(DataResult(id, answer))
+        # results.append({
+        #     "id": id,
+        #     "title" : title,
+        #     "answer" : answer
+        # })
+    return jsonify(download_results_file(DatasetResults(dataset.name, results)).to_dict())
+    # res_json = {
+    #     'dataset': dataset.name,
+    #     'results' : results,
+    # }
     
-    return jsonify({
-        'filename' : f'{dataset.name}_results.json',
-        'data': json.dumps(res_json)
-    })
+    # return jsonify({
+    #     'filename' : f'{dataset.name}_results.json',
+    #     'data': json.dumps(res_json)
+    # })
 
 @app.route('/dataset/agreement')
 def get_agreement():
@@ -183,6 +184,10 @@ def get_agreement():
     labels = {None: 0}
     answers = {}
     users = len(res) 
+    if users <= 1 :
+        return jsonify({
+        'agreement' : ""
+    })
     for userAnswer in res :
         user = userAnswer["user"]
         ans = userAnswer["answers"]
@@ -197,16 +202,16 @@ def get_agreement():
                 answers[a["title"]] = {a["label"] : 1}
             if a['label'] not in labels:
                 labels[a['label']] = len(labels)
-    print(labels)
     # create matrix
     matrix = []
     for ans in answers.values():
         arr = []
         # create row with all 0s
-        for i in range(0, users):
+        for i in range(0, len(labels)):
             arr.append(0)
         for label, count in ans.items():
             index = labels[label]
+            print("index",index)
             arr[index] = count
         # check if row sum is = to users
         sum = 0
