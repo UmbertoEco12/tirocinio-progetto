@@ -1,53 +1,6 @@
 import json
 import sys
-current_name = 0
-
-class LabelGroup :
-    def __init__(self) -> None:
-        global current_name
-        self.labels = []
-        self.name = current_name
-        current_name = current_name + 1
-        pass
-    
-    def add_label(self, label : str) :
-        self.labels.append(label)
-        return self
-
-    def get_labels(self) -> list :
-        return {
-            "labels": {
-                'type': 'text',
-                'data':self.labels,},
-            "name": self.name
-        }
-
-class NumberLabelGroup :
-    def __init__(self, min: float = sys.float_info.min, max:float = sys.float_info.max) -> None:
-        global current_name
-        self.labels = []
-        self.name = current_name
-        self.min = min
-        self.max = max
-        current_name = current_name + 1
-        pass
-    
-    def set_min(self, min : float) :
-        self.min = min
-        return self
-    def set_max(self, max : float) :
-        self.max = max
-        return self
-
-    def get_labels(self) -> list :
-        return {
-            "labels": {
-                'type' : 'number',
-                'min' : self.min,
-                'max' : self.max
-            },
-            "name": self.name
-        }
+from .labels import LabelGroup, NumberLabelGroup, NumberValueType, ImageLabelGroup
 
 class HtmlDataView:
     def __init__(self) -> None:
@@ -75,9 +28,13 @@ class HtmlDataView:
     def add_text(self, text: str):
         self.content += (f"<p> {text} </p>")
         return self
-    def add_img(self, source: str):
-        self.content += (f'<img src="{source}" width="500">')
+    def add_img(self, source: str, id :str | None = None):
+        if id:
+            self.content += (f'<img id={id} src="{source}" width="500">')
+        else:
+            self.content += (f'<img src="{source}" width="500">')
         return self
+    
 
 class DataSet :
     def __init__(self,name :str) -> None:

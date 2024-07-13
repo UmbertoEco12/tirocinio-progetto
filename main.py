@@ -222,8 +222,10 @@ def get_agreement():
             arr[0] = users - sum
         matrix.append(arr)    
     k = fleiss_kappa(matrix)
+    k_str = "%.2f"%k
     return jsonify({
-        'agreement' : kappa_to_text(k)
+
+        'agreement' : f'(Fleiss {k_str}) : {kappa_to_text(k)}'
     })
 
 def run():

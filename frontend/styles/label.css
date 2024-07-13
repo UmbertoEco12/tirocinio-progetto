@@ -73,3 +73,41 @@
 .label-input-container {
     align-items: center;
 }
+
+.label-range {
+    -webkit-appearance: none;
+    max-width: 250px;
+    width: 250px;
+    height: 15px;
+    border-radius: 5px;
+    background: white;
+    border: 2px solid #b0c2f8;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-bottom: 15px;
+}
+
+.label-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4d77f5;
+    cursor: pointer;
+}
+
+.label-range::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4d77f5;
+    cursor: pointer;
+}
+
+.label-target-image {
+    -webkit-user-drag: none;
+    user-select: none;
+}

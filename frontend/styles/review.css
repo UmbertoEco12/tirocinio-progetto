@@ -40,6 +40,8 @@
 }
 
 .control-btn {
+    z-index: 100;
+    /* always on top */
     position: fixed;
     top: 50%;
     /* Center-height */

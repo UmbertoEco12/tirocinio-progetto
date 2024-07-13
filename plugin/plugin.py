@@ -33,8 +33,7 @@ def return_github_issues_dataset():
     dataset.build()
 
 def return_road_signs_dataset():
-    label1 = LabelGroup()
-    label1.add_label("traffic light").add_label("stop").add_label("speedlimit").add_label("crosswalk")
+    label1 = ImageLabelGroup("road-sign-id")
     label2 = NumberLabelGroup(0, 10)
 
     dataset = DataSet("road signs")
@@ -52,7 +51,7 @@ def return_road_signs_dataset():
             title= f"sign-{i}"
             i += 1
             data.set_title(title)
-            data.add_img(file_path)
+            data.add_img(file_path, "road-sign-id")
             dataset.add_data(title, data, label1)
     data = HtmlDataView()
     title = "video test"
