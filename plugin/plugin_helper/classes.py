@@ -1,6 +1,6 @@
 import json
 import sys
-from .labels import LabelGroup, NumberLabelGroup, NumberValueType, ImageLabelGroup
+from .labels import LabelGroup, NumberLabelGroup, NumberValueType, ImageLabelGroup, TimestampLabelGroup
 
 class HtmlDataView:
     def __init__(self) -> None:

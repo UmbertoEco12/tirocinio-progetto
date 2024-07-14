@@ -6,6 +6,7 @@ class LabelGroup {
         this.textLabels = new TextLabels(onSetLabel);
         this.numberLabels = new NumberLabels(onSetLabel);
         this.imageLabels = new ImageLabels(onSetLabel);
+        this.timestampLabels = new TimestampLabels(onSetLabel);
     }
 
     show(labels, answer = null) {
@@ -26,6 +27,10 @@ class LabelGroup {
             case 'image':
                 this.imageLabels.show(labels.imgId, answer);
                 this.currentLabelGroup = this.imageLabels;
+                break;
+            case 'timestamp':
+                this.timestampLabels.show(labels.mediaId, answer);
+                this.currentLabelGroup = this.timestampLabels;
                 break;
         }
     }
@@ -240,6 +245,97 @@ class TextLabels {
     }
 }
 
+
+class ImageLabelValue {
+    constructor(startX = 0, startY = 0, endX = 0, endY = 0) {
+        this.startX = startX;
+        this.startY = startY;
+        this.endX = endX;
+        this.endY = endY;
+    }
+
+    setValue(strAnswer) {
+        let answer = null;
+        try {
+            answer = JSON.parse(strAnswer);
+
+        }
+        catch {
+            answer = null;
+        }
+        finally {
+            if (answer) {
+                this.startX = answer.startX;
+                this.startY = answer.startY;
+                this.endX = answer.endX;
+                this.endY = answer.endY;
+            }
+            else {
+                this.startX = 0;
+                this.startY = 0;
+                this.endX = 0;
+                this.endY = 0;
+            }
+        }
+
+    }
+
+    getStringValue() {
+        if (this.startX == this.endX && this.startY == this.endY) {
+            return null;
+        }
+        else {
+            return JSON.stringify({
+                'startX': this.startX,
+                'startY': this.startY,
+                'endX': this.endX,
+                'endY': this.endY
+            });
+        }
+    }
+}
+
+class ImageHelperContainer {
+    constructor(onResetClick, onSetColor) {
+        this.container = document.createElement("div");
+        this.container.classList.add("helper-container");
+        // add style
+        this.helpText = document.createElement("h4");
+        this.helpText.classList.add("helper-text");
+        this.helpText.textContent = "Draw a rect on the image";
+        this.resetBtn = document.createElement("button");
+        this.resetBtn.addEventListener("click", onResetClick);
+        this.resetBtn.classList.add("reset-button")
+        this.resetBtn.textContent = "Reset";
+        this.selectColorInput = document.createElement("input");
+        this.selectColorInput.setAttribute("type", "color");
+        this.selectColorInput.setAttribute("value", "#ff0000");
+        this.selectColorInput.addEventListener("change", (e) => {
+            onSetColor(e.target.value);
+        })
+        this.container.appendChild(this.selectColorInput);
+        this.container.appendChild(this.helpText);
+        this.container.appendChild(this.resetBtn);
+    }
+
+    getContainer() {
+        return this.container;
+    }
+
+    updateValue(strValue) {
+        const value = JSON.parse(strValue);
+        if (value != null) {
+            this.helpText.textContent = `rect coords: (${value.startX}, ${value.startY}), (${value.endX}, ${value.endY})`;
+            this.resetBtn.classList.remove("hidden");
+
+        }
+        else {
+            this.helpText.textContent = "Draw a rect on the image";
+            this.resetBtn.classList.add("hidden");
+        }
+    }
+}
+
 class ImageLabels {
     constructor(onSetLabel) {
         this.onSetLabel = onSetLabel;
@@ -249,18 +345,16 @@ class ImageLabels {
         this.added = false;
         this.imageId = null;
         this.isDrawnig = false;
-        this.startX = null;
-        this.startY = null;
-        this.endX = null;
-        this.endY = null;
+        this.currentValue = new ImageLabelValue();
+        this.currentColor = "#ff0000";
         // add canvas draw events
         this.canvas.addEventListener("mousedown", (e) => {
             const rect = this.canvas.getBoundingClientRect();
-            this.startX = e.clientX - rect.left;
-            this.startY = e.clientY - rect.top;
+            this.currentValue.startX = e.clientX - rect.left;
+            this.currentValue.startY = e.clientY - rect.top;
 
-            this.endX = this.startX;
-            this.endY = this.startY;
+            this.currentValue.endX = this.currentValue.startX;
+            this.currentValue.endY = this.currentValue.startY;
             this.#drawRect()
             this.isDrawing = true;
             console.log("start drawing");
@@ -268,63 +362,52 @@ class ImageLabels {
         this.canvas.addEventListener("mousemove", (e) => {
             if (!this.isDrawing) return;
             const rect = this.canvas.getBoundingClientRect();
-            this.endX = e.clientX - rect.left;
-            this.endY = e.clientY - rect.top;
+            this.currentValue.endX = e.clientX - rect.left;
+            this.currentValue.endY = e.clientY - rect.top;
             this.#drawRect()
             console.log("drawing");
 
         })
         window.addEventListener("mouseup", (e) => {
+            if (this.isDrawing) {
+                onSetLabel(this.currentValue.getStringValue());
+            }
             this.isDrawing = false;
-            console.log("end drawing");
-
         })
-        // inputs for precise movements
-        this.inputs = [];
-        for (let index = 0; index < 4; index++) {
-            const input = document.createElement("input");
-            input.setAttribute("class", "label-input");
-            input.setAttribute("type", "number");
-            input.setAttribute("step", "1");
-            // when changed
-            this.inputs.push(input);
-        }
+        this.helperContainer = new ImageHelperContainer(() => {
+            this.#resetRect()
+        }, (color) => {
+            this.currentColor = color;
+            // redraw
+            this.#drawRect();
+        });
+    }
+    #resetRect() {
+        this.currentValue.setValue(null);
+        this.onSetLabel(null);
+        this.helperContainer.updateValue(null);
+        this.#drawRect();
     }
     #drawRect() {
+        console.log("current value", this.currentValue);
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.ctx.beginPath();
-        this.ctx.rect(this.startX, this.startY, this.endX - this.startX, this.endY - this.startY);
+        this.ctx.rect(this.currentValue.startX, this.currentValue.startY,
+            this.currentValue.endX - this.currentValue.startX,
+            this.currentValue.endY - this.currentValue.startY);
         this.ctx.lineWidth = 2;
-        this.ctx.strokeStyle = 'red';
+        this.ctx.strokeStyle = this.currentColor;
         this.ctx.stroke();
-        this.#updateInputs();
-        //coords.textContent = `(${startX}, ${startY}); (${endX}, ${endY}).`
-    }
-    #updateInputs() {
-        // null
-        if (this.startX == this.endX && this.startY == this.endY) {
-            this.inputs.forEach(i => {
-                i.value = null;
-            })
-        }
-        else {
-            this.inputs[0].value = this.startX;
-            this.inputs[1].value = this.startY;
-            this.inputs[2].value = this.endX;
-            this.inputs[3].value = this.endY;
-        }
+        this.helperContainer.updateValue(this.currentValue.getStringValue());
     }
     #clear() {
         // set drawing to false
         this.isDrawing = false;
         if (this.added) {
             this.labelsContainer.removeChild(this.canvas);
-            this.inputs.forEach(i => {
-                this.labelsContainer.removeChild(i);
-            })
+            this.labelsContainer.removeChild(this.helperContainer.getContainer());
             this.added = false;
         }
-
     }
     delete() {
         this.#clear();
@@ -350,18 +433,166 @@ class ImageLabels {
         const img = document.getElementById(imageId);
         img.classList.add("label-target-image");
         // Ensure the image is loaded before getting its dimensions
+        this.currentValue.setValue(answer);
         img.onload = () => {
             this.#setCanvasFromImage(img);
+            this.#drawRect();
         };
         this.labelsContainer.append(this.canvas);
-        this.inputs.forEach(i => {
-            this.labelsContainer.append(i);
-        })
+        this.labelsContainer.append(this.helperContainer.getContainer());
         this.added = true;
         // If the image is already loaded (cached), trigger the onload handler manually
         if (img.complete) {
             img.onload();
         }
 
+    }
+}
+
+class TimestampLabelValue {
+    constructor() {
+        this.start = null;
+        this.end = null;
+    }
+
+    setStartValue(value) {
+        this.start = Number(value.toFixed(2));
+        if (this.end == null || this.start > this.end) {
+            this.end = this.start
+        }
+    }
+
+    setEndValue(value) {
+        this.end = Number(value.toFixed(2));
+        if (this.start == null || this.start > this.end) {
+            this.start = 0.0;
+        }
+    }
+
+    setAnswer(strAnswer) {
+        let answer = null;
+        try {
+            answer = JSON.parse(strAnswer);
+        }
+        catch {
+            answer = null;
+        }
+        if (answer) {
+            this.start = answer.start.toFixed(2);
+            this.end = answer.end.toFixed(2);
+        }
+        else {
+            this.reset();
+        }
+    }
+
+    reset() {
+        this.start = this.end = null;
+    }
+
+    getStringValue() {
+        if (this.start == null || this.end == null) {
+            return null;
+        }
+        else {
+            return JSON.stringify(
+                {
+                    'start': Number(this.start),
+                    'end': Number(this.end)
+                }
+            );
+        }
+    }
+}
+class TimestampLabels {
+    constructor(onSetLabel) {
+        this.onSetLabel = onSetLabel;
+        this.labelsContainer = document.getElementById("labels");
+        this.currentValue = new TimestampLabelValue();
+        this.added = false;
+        this.currentMedia = null;
+        // 
+        this.startButton = document.createElement("button");
+        this.helpText = document.createElement("h3");
+        this.helpText.classList.add("helper-text");
+        this.helpText.textContent = "Click buttons to take the current time";
+        this.endButton = document.createElement("button");
+        this.startButton.classList.add("label-button");
+        this.endButton.classList.add("label-button");
+
+        this.resetBtn = document.createElement("button");
+        this.resetBtn.textContent = "Reset";
+        this.resetBtn.classList.add("reset-button")
+        this.resetBtn.addEventListener("click", () => {
+            this.currentValue.reset();
+            this.#updateButtons();
+            const label = this.currentValue.getStringValue();
+            onSetLabel(label);
+        });
+        this.container = document.createElement("div");
+
+        this.container.appendChild(this.helpText);
+        this.container.appendChild(this.startButton);
+        this.container.appendChild(this.endButton);
+        this.container.appendChild(this.resetBtn);
+        this.container.classList.add("helper-container")
+        this.startButton.addEventListener("click", () => {
+            if (this.currentMedia) {
+                this.currentValue.setStartValue(this.currentMedia.currentTime);
+            }
+            this.#updateButtons();
+            const label = this.currentValue.getStringValue();
+            onSetLabel(label);
+
+        })
+        this.endButton.addEventListener("click", () => {
+            if (this.currentMedia) {
+                this.currentValue.setEndValue(this.currentMedia.currentTime);
+            }
+            this.#updateButtons();
+            const label = this.currentValue.getStringValue();
+            onSetLabel(label);
+
+        })
+        this.#updateButtons();
+    }
+    onResize() {
+
+    }
+
+    #clear() {
+        if (this.added) {
+            this.labelsContainer.removeChild(this.container);
+            this.added = false;
+        }
+    }
+
+    #updateButtons() {
+        if (this.currentValue.start != null) {
+            this.startButton.textContent = `Starting time ${this.currentValue.start}`;
+        }
+        else {
+            this.startButton.textContent = `Click to set Starting time`;
+        }
+        if (this.currentValue.end != null) {
+            this.endButton.textContent = `Ending time ${this.currentValue.end}`;
+        }
+        else {
+            this.endButton.textContent = `Click to set Ending time`;
+        }
+    }
+
+    delete() {
+        this.#clear();
+    }
+
+    show(mediaId, answer = null) {
+        this.#clear();
+        console.log("answer,", answer);
+        this.currentValue.setAnswer(answer);
+        this.#updateButtons();
+        this.currentMedia = document.getElementById(mediaId);
+        this.labelsContainer.appendChild(this.container);
+        this.added = true;
     }
 }

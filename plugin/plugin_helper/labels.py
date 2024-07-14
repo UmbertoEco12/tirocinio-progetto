@@ -84,3 +84,22 @@ class ImageLabelGroup :
             },
             "name": self.name
         }
+
+class TimestampLabelGroup:
+    def __init__(self, media_id : str) -> None:
+        global current_name
+        self.labels = []
+        self.name = current_name
+        self.media_id = media_id
+        current_name = current_name + 1
+        pass
+
+    def get_labels(self) -> list :
+        
+        return {
+            "labels": {
+                'type' : 'timestamp',
+                'mediaId' :self.media_id
+            },
+            "name": self.name
+        }

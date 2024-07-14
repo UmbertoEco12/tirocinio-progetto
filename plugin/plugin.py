@@ -34,7 +34,7 @@ def return_github_issues_dataset():
 
 def return_road_signs_dataset():
     label1 = ImageLabelGroup("road-sign-id")
-    label2 = NumberLabelGroup(0, 10)
+    label2 = TimestampLabelGroup("timestamp-media")
 
     dataset = DataSet("road signs")
     dataset.add_labels(label1).add_labels(label2)
@@ -42,7 +42,7 @@ def return_road_signs_dataset():
     file_path = 'plugin/100-issue-classification.csv'
 
     folder_path = "plugin/res/road-signs-dataset"
-
+    
     i = 0
     for filename in os.listdir(folder_path):
         if filename.endswith(".png"):
@@ -56,9 +56,34 @@ def return_road_signs_dataset():
     data = HtmlDataView()
     title = "video test"
     data.set_title(title)
-    data.add_html(' <iframe width="560" height="315" src="https://www.youtube.com/embed/WO2b03Zdu4Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+    # add video as test
+    data.add_external_html('/res/video-test.html')
     dataset.add_data(title, data, label2)
     dataset.build()
 
+def return_video_test_dataset() :
+    label2 = TimestampLabelGroup("timestamp-media")
+
+    dataset = DataSet("road signs")
+    dataset.add_labels(label2)
+    for i in range(1, 4):
+        data = HtmlDataView()
+        title = f"video test {i}"
+        data.set_title(title)
+        # add video as test
+        data.add_external_html('/res/video-test.html')
+        dataset.add_data(title, data, label2)
+
+    #add audio test    
+    data = HtmlDataView()
+    title = "audio test"
+    data.set_title(title)
+    # add video as test
+    data.add_external_html('/res/audio-test.html')
+    dataset.add_data(title, data, label2)    
+    dataset.build()
+
+
 return_road_signs_dataset()
+#return_video_test_dataset()
 #return_github_issues_dataset()

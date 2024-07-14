@@ -1,0 +1,62 @@
+{
+  "answers": [
+    {
+      "label": "{\"startX\":154,\"startY\":70.125,\"endX\":416,\"endY\":532.125}",
+      "title": "sign-0"
+    },
+    {
+      "label": "{\"startX\":135.5,\"startY\":56.125,\"endX\":377.5,\"endY\":334.125}",
+      "title": "sign-1"
+    },
+    {
+      "label": "{\"startX\":105.5,\"startY\":30.125,\"endX\":414.5,\"endY\":536.125}",
+      "title": "sign-10"
+    },
+    {
+      "label": "{\"startX\":163.5,\"startY\":174.125,\"endX\":295.5,\"endY\":307.125}",
+      "title": "sign-11"
+    },
+    {
+      "label": "{\"startX\":209.5,\"startY\":391.125,\"endX\":306.5,\"endY\":583.125}",
+      "title": "sign-12"
+    },
+    {
+      "label": "{\"startX\":195.5,\"startY\":159.125,\"endX\":317.5,\"endY\":445.125}",
+      "title": "sign-13"
+    },
+    {
+      "label": "{\"startX\":138.5,\"startY\":10.125,\"endX\":366.5,\"endY\":323.125}",
+      "title": "sign-2"
+    },
+    {
+      "label": "{\"startX\":223.5,\"startY\":110.125,\"endX\":267.5,\"endY\":176.125}",
+      "title": "sign-3"
+    },
+    {
+      "label": "{\"startX\":187.5,\"startY\":115.125,\"endX\":270.5,\"endY\":229.125}",
+      "title": "sign-4"
+    },
+    {
+      "label": "{\"startX\":104.5,\"startY\":107.125,\"endX\":405.5,\"endY\":697.125}",
+      "title": "sign-5"
+    },
+    {
+      "label": "{\"startX\":241.5,\"startY\":348.125,\"endX\":425.5,\"endY\":648.125}",
+      "title": "sign-6"
+    },
+    {
+      "label": "{\"startX\":216.5,\"startY\":109.125,\"endX\":289.5,\"endY\":198.125}",
+      "title": "sign-7"
+    },
+    {
+      "label": "{\"startX\":270.5,\"startY\":41.125,\"endX\":323.5,\"endY\":114.125}",
+      "title": "sign-8"
+    },
+    {
+      "label": "{\"startX\":167.5,\"startY\":186.125,\"endX\":315.5,\"endY\":342.125}",
+      "title": "sign-9"
+    }
+  ],
+  "dataset": "road signs",
+  "user": "name1"
+}
