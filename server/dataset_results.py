@@ -76,5 +76,5 @@ def append_results_to_csv(results: DatasetResults, csv_filepath: str, id_key: st
     return DatasetDownload(Path(new_csv_filename).stem + ".csv", csv_content)
 
 def download_results_file(results: DatasetResults) -> DatasetDownload:
-    return append_results_to_csv(results, "plugin/100-issue-classification.csv", "id")
-    # return results_to_json(results)
+    #return append_results_to_csv(results, "plugin/100-issue-classification.csv", "id")
+    return results_to_json(results)

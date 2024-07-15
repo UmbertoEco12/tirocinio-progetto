@@ -53,18 +53,12 @@ def return_road_signs_dataset():
             data.set_title(title)
             data.add_img(file_path, "road-sign-id")
             dataset.add_data(title, data, label1)
-    data = HtmlDataView()
-    title = "video test"
-    data.set_title(title)
-    # add video as test
-    data.add_external_html('/res/video-test.html')
-    dataset.add_data(title, data, label2)
     dataset.build()
 
 def return_video_test_dataset() :
     label2 = TimestampLabelGroup("timestamp-media")
 
-    dataset = DataSet("road signs")
+    dataset = DataSet("video-datatet")
     dataset.add_labels(label2)
     for i in range(1, 4):
         data = HtmlDataView()
@@ -83,7 +77,23 @@ def return_video_test_dataset() :
     dataset.add_data(title, data, label2)    
     dataset.build()
 
+def return_number_label_dataset() :
+    label1 = NumberLabelGroup(0, 10, NumberValueType.INT)
+    label2 = NumberLabelGroup(0, 10, NumberValueType.FLOAT)
 
-return_road_signs_dataset()
+    dataset = DataSet("number-label-datatet")
+    dataset.add_labels(label1).add_labels(label2)
+    data = HtmlDataView()
+    title = "int number label"
+    data.set_title(title)
+    dataset.add_data(title, data, label1)
+    data = HtmlDataView()
+    title = "float number label"
+    data.set_title(title)
+    dataset.add_data(title, data, label2)
+    dataset.build()
+
+#return_road_signs_dataset()
 #return_video_test_dataset()
 #return_github_issues_dataset()
+return_number_label_dataset()

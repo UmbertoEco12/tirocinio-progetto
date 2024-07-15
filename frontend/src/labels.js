@@ -83,6 +83,7 @@ class NumberLabels {
         console.log("changed to ", value);
         console.log("n", n);
         if (n != null) {
+
             //this.#onValueChanged(n, event.target.value);
             if (n < this.min || n > this.max) {
                 // set previous value
@@ -90,9 +91,14 @@ class NumberLabels {
                 this.slider.value = this.currentValue;
             }
             else {
-                this.currentValue = value;
+                if (this.input.step == 1) {
+                    this.currentValue = String(n.toFixed(0));
+                    this.input.value = this.currentValue;
+                }
+                else {
+                    this.currentValue = value;
+                }
                 this.onSetLabel(this.currentValue);
-                this.input.value = this.currentValue;
                 this.slider.value = this.currentValue;
             }
         }

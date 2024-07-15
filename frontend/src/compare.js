@@ -146,9 +146,20 @@ function downloadFixedResults() {
             if (res == null) {
                 alert("fix all data first");
             }
-            else if (res.filename && res.data) {
-                download(res.data, res.filename)
+            else {
+                if (res.path) {
+                    alert(`Results downloaded in ${res.path}`);
+                }
+                else {
+                    alert("Something went wrong");
+                }
             }
+            // if (res == null) {
+            //     alert("fix all data first");
+            // }
+            // else if (res.filename && res.data) {
+            //     download(res.data, res.filename)
+            // }
         });
 }
 

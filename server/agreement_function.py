@@ -1,5 +1,23 @@
 import numpy as np
 
+from sklearn.metrics import cohen_kappa_score
+
+def cohen_kappa(annotator1, annotator2):
+    """
+    Calculate Cohen's kappa for two annotators using scikit-learn.
+    
+    Parameters:
+    annotator1 (list): Ratings by annotator 1
+    annotator2 (list): Ratings by annotator 2
+    
+    Returns:
+    float: Cohen's kappa value
+    """
+    if (len(annotator1) != len(annotator2)):
+        raise ValueError("The length of the annotations must be the same for both annotators")
+
+    return cohen_kappa_score(annotator1, annotator2)
+
 def fleiss_kappa(matrix) -> float:
     M = np.array(matrix)
     """

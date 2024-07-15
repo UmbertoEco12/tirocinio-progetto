@@ -4,8 +4,9 @@ from server.database import Database, Answer, FixedAnswer
 from server.server import app
 from server.dataset import Dataset
 import json
-from server.agreement_function import fleiss_kappa, kappa_to_text
+from server.agreement_function import fleiss_kappa, kappa_to_text, cohen_kappa
 from server.dataset_results import DataResult, DatasetResults, download_results_file
+import os
 db : None | Database = None
 dataset : None | Dataset = None 
 
@@ -166,7 +167,13 @@ def download_results():
         #     "title" : title,
         #     "answer" : answer
         # })
-    return jsonify(download_results_file(DatasetResults(dataset.name, results)).to_dict())
+    results = download_results_file(DatasetResults(dataset.name, results))
+    res_path = download_file(results.filename, results.data)
+
+    return jsonify({
+        'path' : res_path
+    })
+    # return jsonify(download_results_file(DatasetResults(dataset.name, results)).to_dict())
     # res_json = {
     #     'dataset': dataset.name,
     #     'results' : results,
@@ -220,13 +227,47 @@ def get_agreement():
         # if not add that some user didn t answer
         if sum < users:
             arr[0] = users - sum
-        matrix.append(arr)    
-    k = fleiss_kappa(matrix)
-    k_str = "%.2f"%k
-    return jsonify({
+        matrix.append(arr)
+    # if there are 2 users
+    # use cohen
+    if users == 2:
+        k = cohen_kappa(matrix[0], matrix[1])
+        k_str = "%.2f"%k
+        k = fleiss_kappa(matrix)
+        k_str = "%.2f"%k
+        return jsonify({
+            'agreement' : f'(Cohen {k_str}) : {kappa_to_text(k)}'
+        })
+    else:
+        k = fleiss_kappa(matrix)
+        k_str = "%.2f"%k
+        return jsonify({
 
-        'agreement' : f'(Fleiss {k_str}) : {kappa_to_text(k)}'
-    })
+            'agreement' : f'(Fleiss {k_str}) : {kappa_to_text(k)}'
+        })
+
+def download_file(filename, data):
+    print("data ",data)
+    # Get the directory where this script is located
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    dir_name = 'result-downloads'
+    # Define the result-downloads directory path
+    result_dir = os.path.join(script_dir, dir_name)
+    
+    # Create the result-downloads directory if it doesn't exist
+    if not os.path.exists(result_dir):
+        os.makedirs(result_dir)
+    
+    # Define the full path for the new file
+    file_path = os.path.join(result_dir, filename)
+    
+    # Write data to the file
+    with open(file_path, 'w') as file:
+        file.write(data)
+    
+    return file_path
+
 
 def run():
     global db, dataset
